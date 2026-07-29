@@ -1,0 +1,771 @@
+{
+  "_declaration": {
+    "_attributes": {
+      "version": "1.0",
+      "encoding": "UTF-8"
+    }
+  },
+  "feed": {
+    "_attributes": {
+      "xmlns": "http://www.w3.org/2005/Atom",
+      "xml:lang": "sv-SE"
+    },
+    "id": {
+      "_text": "https://www.cert.se/"
+    },
+    "title": {
+      "_text": "CERT-SE"
+    },
+    "updated": {
+      "_text": "2026-07-15T13:30:00+02:00"
+    },
+    "link": {
+      "_attributes": {
+        "rel": "self",
+        "href": "https://www.cert.se/feed/atom.xml"
+      }
+    },
+    "entry": [
+      {
+        "title": {
+          "_text": "Patchtisdag juli 2026 â€“ samlad information om mÃ¥nadens sÃ¤kerhetsuppdateringar"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Flera leverantÃ¶rer har slÃ¤ppt sina mÃ¥natliga sÃ¤kerhetsuppdateringar fÃ¶r juli. Nedan finns en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar som Cisco, Microsoft, SAP, Ivanti, Fortinet och Adobe har publicerat infÃ¶r och i samband\n            med patchtisdagen. FÃ¶lj lÃ¤nkarna fÃ¶r att komma till respektive leverantÃ¶rs uppdateringar. [1, 2, 3, 4, 5, 6]</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Flera leverantÃ¶rer har slÃ¤ppt sina mÃ¥natliga sÃ¤kerhetsuppdateringar fÃ¶r juli. Nedan finns en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar som Cisco, Microsoft, SAP, Ivanti, Fortinet och Adobe har publicerat infÃ¶r och i samband\n            med patchtisdagen. FÃ¶lj lÃ¤nkarna fÃ¶r att komma till respektive leverantÃ¶rs uppdateringar. [1, 2, 3, 4, 5, 6]</p> <p>CISA har publicerat en artikel och uppmanar verksamheter att hÃ¤rda on-prem SharePoint server-instanser och\n            noggrant undersÃ¶ka berÃ¶rda SharePoint-servrar efter tecken pÃ¥ exploatering eller ovanlig aktivitet. [7] CERT-SE rekommenderar en genomlÃ¤sning av CISA:s publicering och att dÃ¤refter vidta lÃ¤mpliga Ã¥tgÃ¤rder.</p> <p>Separata\n            sÃ¥rbarhetsartiklar publiceras om CERT-SE bedÃ¶mer att det finns behov av extra information och skyndsam hantering.</p> <p>Urval av sÃ¤kerhetsuppdateringar (exempelvis hÃ¶gre CVSS-klassificering, att Proof of concept-kod (PoC)\n            publicerats och/eller att sÃ¥rbarheten utnyttjas aktivt):</p> <ul> <li>CVE-2026-56164: Microsoft Office SharePoint. CISA har lagt till sÃ¥rbarheten i KEV-katalogen (Known Exploited Vulnerabilities catalog). [8]</li>\n            <li>CVE-2026-56155: Microsoft Active Directory Federation Services. CISA har lagt till sÃ¥rbarheten i KEV-katalogen (Known Exploited Vulnerabilities catalog). [8]</li> <li>CVE-2026-20190: Cisco Identity Services Engine.</li>\n            </ul> <p>Detta Ã¤r endast ett urval, kontrollera samtliga publicerade sÃ¤kerhetsuppdateringar mot era system.</p> <h2 id=\"pÃ¥verkade-produkter\">PÃ¥verkade produkter</h2> <p>FÃ¶r mer information\n            om vilka produkter som pÃ¥verkas, se [1, 2, 3, 4, 5, 6].</p> <h2 id=\"rekommendationer\">Rekommendationer</h2> <p>CERT-SE rekommenderar att sÃ¥ snart som mÃ¶jligt installera sÃ¤kerhetsuppdateringarna i enlighet\n            med leverantÃ¶rens anvisningar.</p> <p>CERT-SE rekommenderar Ã¤ven en genomlÃ¤sning av CISA:s publicering â€œCISA Urges SharePoint Hardening After New Exploitationsâ€ [7] och att dÃ¤refter vidta lÃ¤mpliga Ã¥tgÃ¤rder.</p>\n            <h2 id=\"kÃ¤llor\">KÃ¤llor</h2> <p>[1] <a href=\"https://sec.cloudapps.cisco.com/security/center/publicationListing.x\">https://sec.cloudapps.cisco.com/security/center/publicationListing.x</a><br\n            /> [2] <a href=\"https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul\">https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul</a><br /> [3] <a href=\"https://support.sap.com/en/my-support/knowledge-base/security-notes-news/july-2026.html\">https://support.sap.com/en/my-support/knowledge-base/security-notes-news/july-2026.html</a><br\n            /> [4] <a href=\"https://www.ivanti.com/blog/july-2026-security-update\">https://www.ivanti.com/blog/july-2026-security-update</a><br /> [5] <a href=\"https://fortiguard.fortinet.com/psirt/\">https://fortiguard.fortinet.com/psirt/</a><br\n            /> [6] <a href=\"https://helpx.adobe.com/security/security-bulletin.html\">https://helpx.adobe.com/security/security-bulletin.html</a><br /> [7] <a href=\"https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations\">https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations</a><br\n            /> [8] <a href=\"https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog\">https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-07-15T13:30:00+02:00"
+        },
+        "published": {
+          "_text": "2026-07-15T13:30:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/07/patchtisdag-juli-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/07/patchtisdag-juli-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Kritiska sÃ¥rbarheter i SonicWall SMA1000"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>SonicWall har publicerat sÃ¤kerhetsuppdateringar gÃ¤llande tvÃ¥ sÃ¥rbarheter (CVE-2026-15409 och CVE-2026-15410) i SMA1000-serien. [1] CISA har lagt till dessa sÃ¥rbarheter i KEV-katalogen (Known Exploited Vulnerabilities catalog). [2]</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>SonicWall har publicerat sÃ¤kerhetsuppdateringar gÃ¤llande tvÃ¥ sÃ¥rbarheter (CVE-2026-15409 och CVE-2026-15410) i SMA1000-serien. [1] CISA har lagt till dessa sÃ¥rbarheter i KEV-katalogen (Known Exploited Vulnerabilities catalog). [2]</p>\n            <p>SÃ¥rbarheten CVE-2026-15409 har fÃ¥tt en CVSS-klassning pÃ¥ 10.0 och framgÃ¥ngsrikt utnyttjande av den innebÃ¤r att en oautentiserad angripare kan kÃ¶ra fÃ¶rfrÃ¥gningar. [3]</p> <p>FramgÃ¥ngsrikt utnyttjande av sÃ¥rbarheten\n            CVE-2026-15410 innebÃ¤r att en fjÃ¤rrautentiserad angripare kan kÃ¶ra godtyckliga OS-kommandon som admin. [4]</p> <h2 id=\"pÃ¥verkade-produkter\">PÃ¥verkade produkter</h2> <p>SMA1000-modellerna 6210, 7210, 8200v.</p>\n            <p>FÃ¶ljande versioner pÃ¥verkas:</p> <ul> <li>12.4.3-03245, 12.4.3-03387 och 12.4.3-03434 (platform-hotfix)</li> <li>12.5.0-02283, 12.5.0-02624 och 12.5.0-02800 (platform-hotfix)</li> </ul>\n            <h2 id=\"rekommendationer\">Rekommendationer</h2> <p>CERT-SE rekommenderar att installera sÃ¤kerhetsuppdateringarna sÃ¥ snart som mÃ¶jligt, undersÃ¶ka miljÃ¶n om intrÃ¥ng skett samt att fÃ¶lja leverantÃ¶rens anvisningar\n            i Ã¶vrigt.</p> <h2 id=\"kÃ¤llor\">KÃ¤llor</h2> <p>[1] <a href=\"https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008\">https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008</a><br\n            /> [2] <a href=\"https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog\">https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog</a><br\n            /> [3] <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-15409\">https://www.cve.org/CVERecord?id=CVE-2026-15409</a><br /> [4] <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-15410\">https://www.cve.org/CVERecord?id=CVE-2026-15410</a></p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-07-15T12:40:00+02:00"
+        },
+        "published": {
+          "_text": "2026-07-15T12:40:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/07/kritiska-sarbarheter-i-sonicwall.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/07/kritiska-sarbarheter-i-sonicwall.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Skadliga npm-paket"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Ett koordinerat leveranskedjeangrepp har drabbat separata AsyncAPI GitHub-repon. Angripare har utnyttjat en sÃ¥rbarhet i GitHub Actions. [1]</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Ett koordinerat leveranskedjeangrepp har drabbat separata AsyncAPI GitHub-repon. Angripare har utnyttjat en sÃ¥rbarhet i GitHub Actions. [1]</p> <p>npm-paketen innehÃ¥ller en multi-stage payload som upprÃ¤ttar persistens och\n            kopplar till kommando- och kontrollinfrastruktur. [2]</p> <h2 id=\"pÃ¥verkade-paket\">PÃ¥verkade paket</h2> <ul> <li>@asyncapi/generator, skadlig version 3.3.1</li> <li>@asyncapi/generator-helpers,\n            skadlig version 1.1.1</li> <li>@asyncapi/generator-components, skadlig version 0.7.1</li> <li>@asyncapi/specs, skadlig version 6.11.2</li> </ul> <h2 id=\"rekommendationer\">Rekommendationer</h2>\n            <p>CERT-SE uppmanar organisationer med risk fÃ¶r att ha blivit drabbade att undersÃ¶ka sina utvecklings- och byggmiljÃ¶er och vidta lÃ¤mpliga Ã¥tgÃ¤rder. Mer information finns att lÃ¤sa i artiklarna nedan.</p> <h2 id=\"kÃ¤llor\">KÃ¤llor</h2>\n            <p>[1] <a href=\"https://www.stepsecurity.io/blog/compromised-next-branch-pushes-malicious-asyncapi-generator-generator-helpers-and-generator-components-to-npm\">https://www.stepsecurity.io/blog/compromised-next-branch-pushes-malicious-asyncapi-generator-generator-helpers-and-generator-components-to-npm</a><br\n            /> [2] <a href=\"https://www.wiz.io/blog/m-red-team-asyncapi-supply-chain-compromise-via-github-actions\">https://www.wiz.io/blog/m-red-team-asyncapi-supply-chain-compromise-via-github-actions</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-07-14T15:25:00+02:00"
+        },
+        "published": {
+          "_text": "2026-07-14T15:25:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/07/skadliga-npm-paket.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/07/skadliga-npm-paket.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.26"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>FortsÃ¤tt att fÃ¥ vÃ¥ra utskick - FÃ¶r att ytterligare stÃ¤rka Sveriges motstÃ¥ndskraft inom cybersÃ¤kerhet blir CERT-SE en del av Nationellt cybersÃ¤kerhetscenter den 1 juli 2026. Det innebÃ¤r att vi mÃ¥ste inhÃ¤mta nytt medgivande fÃ¶r\n            fortsatt behandling av personuppgifter och att du som har en e-postadress med personuppgifter behÃ¶ver ge ditt medgivande fÃ¶r att fortsÃ¤tta att ta del av utskicken frÃ¥n CERT-SE. Det kan du gÃ¶ra frÃ¥n den 1 juli pÃ¥ cert.se dÃ¤r information\n            om detta publiceras.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>FortsÃ¤tt att fÃ¥ vÃ¥ra utskick - FÃ¶r att ytterligare stÃ¤rka Sveriges motstÃ¥ndskraft inom cybersÃ¤kerhet blir CERT-SE en del av Nationellt cybersÃ¤kerhetscenter den 1 juli 2026. Det innebÃ¤r att vi mÃ¥ste inhÃ¤mta nytt medgivande fÃ¶r\n            fortsatt behandling av personuppgifter och att du som har en e-postadress med personuppgifter behÃ¶ver ge ditt medgivande fÃ¶r att fortsÃ¤tta att ta del av utskicken frÃ¥n CERT-SE. Det kan du gÃ¶ra frÃ¥n den 1 juli pÃ¥ cert.se dÃ¤r information\n            om detta publiceras.</p> <hr /> <p>I veckans brev hittar du lÃ¤sning om den skadliga koden FortiGate Sniffer som kopplas samman med lÃ¶senordslÃ¤ckan och den pÃ¥gÃ¥ende hotkampanjen FortiBleed. Du kan Ã¤ven lÃ¤sa om NCSC:s\n            medverkan i Almedalen 2026, dÃ¤r cybersÃ¤kerhet, AI, geopolitik och samhÃ¤llets motstÃ¥ndskraft stod hÃ¶gt pÃ¥ agendan.</p> <p>CERT-SE vill ocksÃ¥ passa pÃ¥ att informera om att veckobrevet tar ett sommaruppehÃ¥ll under juli och\n            kommer tillbaka i augusti, men redan pÃ¥ tisdag skickar vi en pÃ¥minnelse om anmÃ¤lan till veckobrevet i samband med att CERT-SE blir en del av NCSC.</p> <p>Trevlig helg Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter\n            frÃ¥n veckan</h2> <p>FÃ¶r nÃ¥gon vecka sedan genomfÃ¶rde myndigheter frÃ¥n Kanada, NederlÃ¤nderna, Tyskland och USA, i samarbete med Europol och Eurojust, en insats fÃ¶r att beslagta infrastruktur kopplad till SocGolish, ett ramverk\n            fÃ¶r skadlig kod. Nu har nÃ¤sta insats genomfÃ¶rts inom Operation Endgame dÃ¤r infrastruktur kopplad till skadlig kod gÃ¤llande StealC och Amedy har beslagtagits. Sammantaget bedÃ¶ms tillslagen starkt fÃ¶rsvaga distributionen av de skadliga\n            kodramverken.<br /> (HelpNet Security, 24/6)<br /> <a href=\"https://www.helpnetsecurity.com/2026/06/24/operation-endgame-stealc-amadey-malware-disrupted/\">https://www.helpnetsecurity.com/2026/06/24/operation-endgame-stealc-amadey-malware-disrupted/</a></p>\n            <p>Microsoft har Ã¥tgÃ¤rdat sÃ¥rbarheter i programmet Autogen Studio, som gjort det mÃ¶jligt att lura AI-agenter att besÃ¶ka skadliga webbplatser. AnvÃ¤ndare som laddat ner Autogen Studio frÃ¥n Github uppmanas att snarast uppdatera till\n            den senaste versionen samt anvÃ¤nda strikta begrÃ¤nsningar fÃ¶r systemmiljÃ¶n.<br /> (Computer Sweden, 23/6)<br /> <a href=\"https://computersweden.se/article/4188309/microsoft-tapper-till-allvarliga-sarbarheter-i-autogen-studio.html\">https://computersweden.se/article/4188309/microsoft-tapper-till-allvarliga-sarbarheter-i-autogen-studio.html</a>\n            â€¦<br /> (Bleeping Computer, 22/6)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/microsoft-fixes-autogen-studio-flaw-that-enabled-code-execution/\">https://www.bleepingcomputer.com/news/security/microsoft-fixes-autogen-studio-flaw-that-enabled-code-execution/</a></p>\n            <p>Den multilaterala underrÃ¤ttelsealliansen Five Eyes, som bestÃ¥r av Australien, Kanada, Storbritannien, Nya Zeeland och USA, har i ett gemensamt uttalande formulerat riskerna med Ã¶kad fÃ¶rmÃ¥ga bland cyberkriminella till fÃ¶ljd av\n            den senaste tidens AI-utveckling och uppmanar till omedelbara Ã¥tgÃ¤rder fÃ¶r att mÃ¶ta utvecklingen. <br /> (Reuters, 23/6)<br /> <a href=\"https://www.reuters.com/world/asia-pacific/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk-2026-06-22/\">https://www.reuters.com/world/asia-pacific/five-eyes-intelligence-alliance-warns-that-new-ai-models-pose-urgent-cyber-risk-2026-06-22/</a></p>\n            <p>Ã–ver 4 000 routrar har angripits av skadlig kod via ett nytt botnÃ¤t kallat AryStinger. Ã„ldre sÃ¥rbarheter som CVE-2013-3307, CVE-2016-5681 och CVE-2025-11837 har exploaterats fÃ¶r att fÃ¥ tillgÃ¥ng till fjÃ¤rrstyrning som bland\n            annat gÃ¶r det mÃ¶jligt att manipulera DNS-instÃ¤llningar och stjÃ¤la nÃ¤tverkstrafik. Sydkorea och Kina Ã¤r vÃ¤rst drabbade men 6,4 procent av de infekterade routrarna finns i Sverige. Routrar av mÃ¤rket D-Link, frÃ¤mst DIR-850L och DIR-818LW,\n            Ã¤r mÃ¥l fÃ¶r AryStinger.<br /> (Bleeping Computer, 21/6) <a href=\"https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/\">https://www.bleepingcomputer.com/news/security/arystinger-botnet-infected-thousands-of-d-link-routers-worldwide/</a></p>\n            <h2 id=\"rapporter-och-analyser\">Rapporter och analyser</h2> <p>En ny svÃ¥rupptÃ¤ckt bakdÃ¶rr som fÃ¥tt namnet Mistic dÃ¶ljs bakom liknande profil och utseende som Microsofts legitima sÃ¤kerhetssystem fÃ¶r att skydda\n            klienter. BakdÃ¶rren har installerats i systemmiljÃ¶er hos verksamheter inom ett flertal sektorer sedan april, och rapporter gÃ¤llande Mistic fortsÃ¤tter att komma in. I analysen frÃ¥n Symantec finns mer detaljer och Ã¤ven IOC:er att ta del\n            av.<br /> (CyberSecurityNews, 24/6)<br /> <a href=\"https://cybersecuritynews.com/mistic-backdoor-blends-with-microsoft-endpoint-security/\">https://cybersecuritynews.com/mistic-backdoor-blends-with-microsoft-endpoint-security/</a></p>\n            <p>I en rapport frÃ¥n cybersÃ¤kerhetsfÃ¶retaget Mandiant beskrivs hur angripare riktat in sig pÃ¥ SD-WAN-infrastruktur hos tjÃ¤nsteleverantÃ¶rer. Efter att angriparna tillskansat sig initial Ã¥tkomst exploaterades nolldagarssÃ¥rbarheten\n            CVE-2026-20245 i Cisco Catalyst SD-WAN Manager fÃ¶r att eskalera privilegier hos ett komprometterat konto till root-Ã¥tkomst. SÃ¥rbarheten kopplas till filuppladdningsfunktionen, dÃ¤r det funnits brister i fÃ¶rmÃ¥gan att filtrera skadlig kod.\n            Mandiant beskriver vidare hur angriparna konsekvent tillÃ¤mpat anti-forensiska tekniker fÃ¶r att dÃ¶lja sin nÃ¤rvaro i systemen. <br /> (Mandiant, 24/6)<br /> <a href=\"https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager\">https://cloud.google.com/blog/topics/threat-intelligence/zero-day-exploitation-cisco-catalyst-sd-wan-manager</a></p>\n            <p>Den skadliga koden FortiGate Sniffer kopplas samman med lÃ¶senordslÃ¤ckan och den pÃ¥gÃ¥ende hotkampanjen FortiBleed dÃ¤r hotaktÃ¶rer anvÃ¤nder stulna lÃ¶senord fÃ¶r att genomfÃ¶ra intrÃ¥ng via FortiGate-brandvÃ¤ggar. FortiGate Sniffer\n            innebÃ¤r att ytterligare kÃ¤nslig information, som till exempel kontouppgifter gÃ¤llande andra system, kan stjÃ¤las av hotaktÃ¶ren. <br /> (Bleeping Computer, 22/6) <a href=\"https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/\">https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/</a></p>\n            <h2 id=\"Ã¶vrigt\">Ã–vrigt</h2> <p>NCSC har publicerat en Ã¥rsberÃ¤ttelse fÃ¶r 2025 som sammanfattar verksamhetsÃ¥ret, cyberhot och insatser som genomfÃ¶rts tillsammans med partners fÃ¶r att stÃ¤rka Sveriges digitala\n            motstÃ¥ndskraft.<br /> (NCSC, 25/6)<br /> <a href=\"https://www.ncsc.se/sv/aktuellt/arsberattelse-2025/\">https://www.ncsc.se/sv/aktuellt/arsberattelse-2025/</a></p> <p>SÃ¤kerhetspolisen har publicerat\n            en artikel gÃ¤llande sprÃ¥kmodellers pÃ¥verkan pÃ¥ cybersÃ¤kerhet. I artikeln lyfts bland annat vikten av att sÃ¤kerstÃ¤lla handlingskraft och att se Ã¶ver cyberhygien dÃ¤r exponeringen minskas och angreppskedjor fÃ¶rsvÃ¥ras.<br /> (SÃ¤kerhetspolisen,\n            24/6)<br /> <a href=\"https://sakerhetspolisen.se/sakerhetsskydd/aktuellt-inom-sakerhetsskydd/ai-modellers-paverkan-pa-cybersakerheten.html\">https://sakerhetspolisen.se/sakerhetsskydd/aktuellt-inom-sakerhetsskydd/ai-modellers-paverkan-pa-cybersakerheten.html</a></p>\n            <p>FÃ¶rsvarsmakten har tagit ett steg nÃ¤rmare en Ã¶kad digital suverÃ¤nitet i form av en ny stridsmolnslÃ¶sning. Med inspiration frÃ¥n Ukraina bygger nu den europeiska molnaktÃ¶ren Evroc, tillsammans med FÃ¶rsvarsmakten, en plattform\n            fÃ¶r ledning och samverkan i militÃ¤ra operationer. <br /> (Aktuell SÃ¤kerhet, 23/6)<br /> <a href=\"https://www.aktuellsakerhet.se/forsvarsmakten-bygger-ny-stridsmolnslosning-med-europeisk-molnleverantor/\">https://www.aktuellsakerhet.se/forsvarsmakten-bygger-ny-stridsmolnslosning-med-europeisk-molnleverantor/</a></p>\n            <p>NCSC har deltagit i flera seminarier och samtal under Almedalsveckan 2026. HÃ¶gt pÃ¥ agendan stod cybersÃ¤kerhet, AI, geopolitik och samhÃ¤llets motstÃ¥ndskraft. NCSC bidrog bland annat med perspektiv pÃ¥ hur offentlig sektor, nÃ¤ringsliv\n            och civilsamhÃ¤lle tillsammans kan stÃ¤rka Sveriges cyberresiliens samt AI:s pÃ¥verkan pÃ¥ sÃ¤kerhetsarbetet och Sveriges framtida digitala kapacitet.<br /> (NCSC, 18/6)<br /> <a href=\"https://www.ncsc.se/sv/aktuellt/almedalen-2026/\">https://www.ncsc.se/sv/aktuellt/almedalen-2026/</a></p>\n            <h2 id=\"frÃ¥n-cert-se\">FrÃ¥n CERT-SE</h2> <p>BrandvÃ¤ggar Ã¤r en Ã¥terkommande utmaning gÃ¤llande angrepp frÃ¥n hotaktÃ¶rer. Nu senast den uppmÃ¤rksammade FortiBleed-lÃ¤ckan, dÃ¤r hotaktÃ¶rer utnyttjar lÃ¤ckta inloggningsuppgifter\n            i stor skala. Med anledning av angrepp mot brandvÃ¤ggar har CERT-SE publicerat rekommendationer till berÃ¶rda organisationer i Sverige.<br /> (CERT-SE, 22/6)<br /> <a href=\"https://www.cert.se/2026/06/cert-se-information-gallande-sakerhet-i-brandvaggar.html\">https://www.cert.se/2026/06/cert-se-information-gallande-sakerhet-i-brandvaggar.html</a></p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-06-26T14:55:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-26T14:55:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/cert-se-veckobrev-v26.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/cert-se-veckobrev-v26.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Information och rekommendationer gÃ¤llande sÃ¤kerhet kring brandvÃ¤ggar"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>BrandvÃ¤ggar Ã¤r en Ã¥terkommande utmaning gÃ¤llande angrepp frÃ¥n hotaktÃ¶rer. Nu senast den uppmÃ¤rksammade FortiBleed-lÃ¤ckan, dÃ¤r hotaktÃ¶rer utnyttjar lÃ¤ckta inloggningsuppgifter i stor skala. [1] Med anledning av angrepp mot brandvÃ¤ggar\n            publicerar CERT-SE information och rekommendationer till berÃ¶rda organisationer i Sverige.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>BrandvÃ¤ggar Ã¤r en Ã¥terkommande utmaning gÃ¤llande angrepp frÃ¥n hotaktÃ¶rer. Nu senast den uppmÃ¤rksammade FortiBleed-lÃ¤ckan, dÃ¤r hotaktÃ¶rer utnyttjar lÃ¤ckta inloggningsuppgifter i stor skala. [1] Med anledning av angrepp mot brandvÃ¤ggar\n            publicerar CERT-SE information och rekommendationer till berÃ¶rda organisationer i Sverige.</p> <h2 id=\"cert-se-rekommenderar-samtliga-organisationer-som-anvÃ¤nder-brandvÃ¤ggar-att\">CERT-SE rekommenderar samtliga organisationer\n            som anvÃ¤nder brandvÃ¤ggar att:</h2> <ol> <li> <p>AnvÃ¤nda multifaktorautentisering. TillÃ¤mpa nÃ¤tfiske-resistent multifaktorautentisering pÃ¥ samtliga administrativa konton samt konton fÃ¶r fjÃ¤rrinloggning.</p>\n            </li> <li> <p>Reducera attackytan och begrÃ¤nsa behÃ¶righeter. Se till att det inte gÃ¥r att skapa Ã¥tkomst till brandvÃ¤ggsinstÃ¤llningar via internet, samt ta bort och inaktivera konton som inte Ã¤r nÃ¶dvÃ¤ndiga fÃ¶r organisationen.</p>\n            </li> <li> <p>Ã–vervaka system. SÃ¤kerstÃ¤ll lÃ¶pande Ã¶vervakning av system och inloggningshistorik fÃ¶r att upptÃ¤cka misstÃ¤nkt aktivitet. Detta kan till exempel gÃ¤lla inloggning vid en tid som ni inte brukar logga in,\n            frÃ¥n en plats ni inte befinner er pÃ¥ eller aktivitet frÃ¥n ett konto som inte bÃ¶r vara aktivt.</p> </li> </ol> <h2 id=\"cert-se-rekommenderar-organisationer-som-anvÃ¤nder-fortinet-fortigate-brandvÃ¤ggar-med-tillhÃ¶rande-secure-socket-layer-ssl-vpn-gateways-att\">CERT-SE\n            rekommenderar organisationer som anvÃ¤nder Fortinet FortiGate-brandvÃ¤ggar med tillhÃ¶rande Secure Socket Layer (SSL) VPN gateways att:</h2> <ol> <li> <p>UndersÃ¶ka om er domÃ¤n berÃ¶rs av FortiBleed. Med hjÃ¤lp av\n            verktyg som â€FortiBleed Checkâ€ kan organisationer undersÃ¶ka om deras domÃ¤ner/IP-adresser Ã¤r pÃ¥verkade av FortiBleed. [2]</p> </li> <li> <p>Avsluta sessioner och byt lÃ¶senord. PÃ¥verkade organisationer bÃ¶r\n            snarast avsluta aktiva sessioner och byta lÃ¶senord kopplade till Fortinet-brandvÃ¤ggarna.</p> </li> <li> <p>UndersÃ¶k inloggningshistorik. PÃ¥verkade organisationer bÃ¶r undersÃ¶ka inloggningshistorik samt systemloggar\n            och leta efter misstÃ¤nkt aktivitet.</p> </li> <li> <p>Rapportera och ta hjÃ¤lp vid behov. PÃ¥verkade organisationer bÃ¶r rapportera eventuella intrÃ¥ng och vid behov ta hjÃ¤lp av it-sÃ¤kerhetsspecialister. CERT-SE\n            Ã¤r tillgÃ¤ngliga dygnet runt alla dagar om Ã¥ret fÃ¶r att kunna agera och inom vÃ¥rt uppdrag hjÃ¤lpa verksamheter som har drabbats av it-sÃ¤kerhetsincidenter. Kontakta oss pÃ¥ 010-240 40 40 eller via e-post cert@cert.se.</p> </li>\n            </ol> <p>FÃ¶r mer information och vÃ¤gledning gÃ¤llande FortiBleed, se kÃ¤llor nedan:</p> <p>[1] <a href=\"https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure\">https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure</a></p>\n            <p>[2] <a href=\"https://socradar.io/free-tools/fortibleed\">https://socradar.io/free-tools/fortibleed</a></p> <p>[3] <a href=\"https://socradar.io/blog/fortibleed-fortinet-firewalls-compromised/\">https://socradar.io/blog/fortibleed-fortinet-firewalls-compromised/</a></p>\n            <p>[4] <a href=\"https://www.ncsc.gov.uk/news/advice-following-global-targeting-of-fortinet-firewalls-and-vpn-gateways\">https://www.ncsc.gov.uk/news/advice-following-global-targeting-of-fortinet-firewalls-and-vpn-gateways</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-06-22T16:20:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-22T16:20:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/cert-se-information-gallande-sakerhet-i-brandvaggar.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/cert-se-information-gallande-sakerhet-i-brandvaggar.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.25"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Veckobrevet bestÃ¥r som vanligt av nyheter och annan lÃ¤sning inom cybersÃ¤kerhetssfÃ¤ren, bland annat om att NCSC har publicerat information om Ã¥rets nationella cybersÃ¤kerhetskonferens â€œSvensk Cyber 2026â€. CERT-SE vill Ã¤ven passa\n            pÃ¥ att informera om att veckobrevet tar sommaruppehÃ¥ll under juli och Ã¤r tillbaka i augusti.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Veckobrevet bestÃ¥r som vanligt av nyheter och annan lÃ¤sning inom cybersÃ¤kerhetssfÃ¤ren, bland annat om att NCSC har publicerat information om Ã¥rets nationella cybersÃ¤kerhetskonferens â€œSvensk Cyber 2026â€. CERT-SE vill Ã¤ven passa\n            pÃ¥ att informera om att veckobrevet tar sommaruppehÃ¥ll under juli och Ã¤r tillbaka i augusti.</p> <p>Glad sommar Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter frÃ¥n veckan</h2> <p>SÃ¤kerhetsexperter\n            har rapporterat att hotaktÃ¶rer lyckats forcera 74 000 Fortinet-brandvÃ¤ggar utspridda globalt. Omfattningen beskrivs berÃ¶ra mÃ¥nga olika sektorer och pÃ¥verka en mÃ¤ngd organisationer. AnvÃ¤ndare av Fortinet-brandvÃ¤ggar uppmanas att undersÃ¶ka\n            spÃ¥r av intrÃ¥ng i deras system.<br /> (Computer Sweden, 18/6)<br /> <a href=\"https://computersweden.se/article/4186723/inloggningsuppgifter-till-tusentals-fortinet-brandvaggar-lackta.html\">https://computersweden.se/article/4186723/inloggningsuppgifter-till-tusentals-fortinet-brandvaggar-lackta.html</a></p>\n            <p>EuroparÃ¥det undersÃ¶ker ett pÃ¥stÃ¥tt angrepp mot organisationen. HotaktÃ¶ren som pÃ¥stÃ¥r sig ha utfÃ¶rt angreppet hotar med att publicera nÃ¤rmare 300 GB data som ska innehÃ¥lla information frÃ¥n bland annat HR-avdelningen, sekretariatet,\n            den parlamentariska fÃ¶rsamlingen och Europeiska direktoratet fÃ¶r lÃ¤kemedelskvalitet och hÃ¤lso- och sjukvÃ¥rd.<br /> (Computer Sweden, 15/6)<br /> <a href=\"https://computersweden.se/article/4185067/hackargrupp-utpressar-europaradet.html\">https://computersweden.se/article/4185067/hackargrupp-utpressar-europaradet.html</a>\n            â€¦<br /> (Bleeping Computer, 15/6)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/council-of-europe-investigates-shinyhunters-data-breach-claims/\">https://www.bleepingcomputer.com/news/security/council-of-europe-investigates-shinyhunters-data-breach-claims/</a></p>\n            <p>FÃ¶retaget Anthropic har avaktiverat AI-modellerna Claude Fable 5 och Claude Mythos 5 fÃ¶r alla kunder runt om i vÃ¤rlden. Beslutet kommer efter att amerikanska myndigheter valde att infÃ¶ra ett exportfÃ¶rbud fÃ¶r modellerna och hÃ¤nvisade\n            till den nationella sÃ¤kerheten. <br /> (Computer Sweden, 15/6)<br /> <a href=\"https://computersweden.se/article/4185003/anthropic-drar-tillbaka-fable-5-och-mythos-5-for-alla-kunder.html\">https://computersweden.se/article/4185003/anthropic-drar-tillbaka-fable-5-och-mythos-5-for-alla-kunder.html</a>\n            â€¦<br /> (Anthropic, 12/6) <a href=\"https://www.anthropic.com/news/fable-mythos-access\">https://www.anthropic.com/news/fable-mythos-access</a></p> <p>Github meddelar att â€œnpm installâ€ inte lÃ¤ngre\n            kommer kunna kÃ¶ras automatiskt. Detta efter vÃ¥rens leverantÃ¶rskedjeangrepp, dÃ¤ribland den sjÃ¤lvreplikerande skadliga koden Shai-Hulud, dÃ¤r hotaktÃ¶rer utnyttjat npm-ekosystemet fÃ¶r att sprida skadlig kod. LÃ¤s mer hur er organisation\n            kan anpassa er till fÃ¶rÃ¤ndringen nedan.<br /> (The Security Week, 13/6)<br /> <a href=\"https://www.securityweek.com/npm-12-will-change-script-execution-behavior-to-prevent-supply-chain-attacks/\">https://www.securityweek.com/npm-12-will-change-script-execution-behavior-to-prevent-supply-chain-attacks/</a>\n            â€¦<br /> (Github, 9/6) <a href=\"https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/\">https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/</a></p> <p>Tidningen\n            Dagens ETC utsattes under fredagen fÃ¶r ett Ã¶verbelastningsangrepp som resulterade i att tidningens hemsida och publiceringssystem slutade att fungera. Efter drygt en timme ska hemsidan Ã¥terigen ha fungerat, enligt Dagens Nyheter. <br\n            /> (Dagens Nyheter, 12/6) <a href=\"https://www.dn.se/direkt/2026-06-12/dagens-etc-utsatt-for-overbelastningsattack\">https://www.dn.se/direkt/2026-06-12/dagens-etc-utsatt-for-overbelastningsattack</a></p> <p>Det\n            danska lÃ¤kemedelsfÃ¶retaget Novo Nordisk har utsatts fÃ¶r ett intrÃ¥ng. FÃ¶retaget, som Ã¤r en av vÃ¤rldens stÃ¶rsta producenter av insulin, uppger pÃ¥ sin webbplats att en obehÃ¶rig part har haft Ã¥tkomst till en begrÃ¤nsad mÃ¤ngd information\n            kopplad till patienter som deltagit i studier. Informationen ska, enligt fÃ¶retaget, inte innehÃ¥lla nÃ¥gon identifierande information.<br /> (Novo Nordisk, 11/6)<br /> <a href=\"https://www.novonordisk.com/news-and-media/latest-news/incident-update.html\">https://www.novonordisk.com/news-and-media/latest-news/incident-update.html</a>\n            â€¦<br /> (Bleeping Computer, 12/6) <a href=\"https://www.bleepingcomputer.com/news/security/pharmaceutical-giant-novo-nordisk-discloses-security-breach/\">https://www.bleepingcomputer.com/news/security/pharmaceutical-giant-novo-nordisk-discloses-security-breach/</a></p>\n            <h2 id=\"Ã¶vrigt\">Ã–vrigt</h2> <p>NCSC har publicerat information om Ã¥rets nationella cybersÃ¤kerhetskonferens Svensk Cyber 2026. Konferensen Ã¤ger rum den 23 november 2026, och samlar offentliga och privata aktÃ¶rer\n            frÃ¥n hela Sverige och Europa. IntresseanmÃ¤lan fÃ¶r fysiska platser Ã¶ppnar i hÃ¶st. Digitalt deltagande Ã¤r begrÃ¤nsat. <br /> (NCSC, 16/6) <a href=\"https://www.ncsc.se/sv/aktuellt/svensk-cyber-2026/\">https://www.ncsc.se/sv/aktuellt/svensk-cyber-2026/</a></p>\n            <p>Ukraina kan nu aktivera EU:s krisstÃ¶d fÃ¶r hantera storskaliga cybersÃ¤kerhetsincidenter som ett led i att Europeiska unionens rÃ¥d godkÃ¤nt att landet inkluderas i EU-cybersÃ¤kerhetsreserven.<br /> (Europeiska kommissionen,\n            15/6) <a href=\"https://digital-strategy.ec.europa.eu/sv/news/eu-provides-cyber-support-ukraine-against-major-attacks\">https://digital-strategy.ec.europa.eu/sv/news/eu-provides-cyber-support-ukraine-against-major-attacks</a></p>\n            <p>I USA har FBI byggt upp en replika av en liten stad pÃ¥ ett campus i Huntsville, Alabama, med syfte att simulera cyberangrepp i en verklighetstrogen och mer handgriplig utbildningsmiljÃ¶. FÃ¶rutom verklighetstrogna trafikljus och\n            vÃ¤gar Ã¤r anlÃ¤ggningen utrustad med bland annat ett hotell, bensinstation, livsmedelsbutik, sjukhus och energifÃ¶retag.<br /> (Tech Crunch, 13/6) <a href=\"https://techcrunch.com/2026/06/13/the-fbi-built-its-own-replica-small-town-to-simulate-real-world-cyberattacks/\">https://techcrunch.com/2026/06/13/the-fbi-built-its-own-replica-small-town-to-simulate-real-world-cyberattacks/</a></p>\n            <p>Europol har i en internationellt koordinerad insats genomfÃ¶rt ett tillslag mot â€œAudiA6â€, en kriminell kryptotjÃ¤nst som misstÃ¤nkts ha anvÃ¤nts av hotaktÃ¶rer inom utpressningsangrepp och andra cyberkriminella fÃ¶r att tvÃ¤tta\n            pengar. Europol har kopplat samman tjÃ¤nsten till Ã¶ver 15 internationella utredningar inom cyberbrottslighet. <br /> (The Hacker News, 12/6) <a href=\"https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html\">https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html</a></p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-06-18T15:00:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-18T15:00:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/cert-se-veckobrev-v25.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/cert-se-veckobrev-v25.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.24"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>FortsÃ¤tt att fÃ¥ vÃ¥ra utskick - FÃ¶r att ytterligare stÃ¤rka Sveriges motstÃ¥ndskraft inom cybersÃ¤kerhet blir CERT-SE en del av Nationellt cybersÃ¤kerhetscenter den 1 juli 2026. Det innebÃ¤r att vi mÃ¥ste inhÃ¤mta nytt medgivande fÃ¶r\n            fortsatt behandling av personuppgifter och att du behÃ¶ver ge ditt medgivande fÃ¶r att fortsÃ¤tta att ta del av utskicken frÃ¥n CERT-SE. Det kan du gÃ¶ra frÃ¥n den 1 juli pÃ¥ cert.se dÃ¤r information om detta publiceras.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>FortsÃ¤tt att fÃ¥ vÃ¥ra utskick - FÃ¶r att ytterligare stÃ¤rka Sveriges motstÃ¥ndskraft inom cybersÃ¤kerhet blir CERT-SE en del av Nationellt cybersÃ¤kerhetscenter den 1 juli 2026. Det innebÃ¤r att vi mÃ¥ste inhÃ¤mta nytt medgivande fÃ¶r\n            fortsatt behandling av personuppgifter och att du behÃ¶ver ge ditt medgivande fÃ¶r att fortsÃ¤tta att ta del av utskicken frÃ¥n CERT-SE. Det kan du gÃ¶ra frÃ¥n den 1 juli pÃ¥ cert.se dÃ¤r information om detta publiceras.</p> <hr />\n            <p>I veckans brev hittar du som vanligt ett urval av nyheter, analyser och rapporter inom cybersÃ¤kerhetsomrÃ¥det frÃ¥n veckan som har gÃ¥tt.</p> <p>Trevlig helg Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter\n            frÃ¥n veckan</h2> <p>Tchap, en statlig meddelandetjÃ¤nst i Frankrike, har utsatts fÃ¶r ett intrÃ¥ng. IntrÃ¥nget pÃ¥verkar konton fÃ¶r Ã¶ver 73 000 anstÃ¤llda i offentlig sektor. Tchap utvecklades 2018 av DINUM, den franska myndigheten\n            fÃ¶r digital fÃ¶rvaltning, i samarbete med ANSSI, den franska cybersÃ¤kerhetsmyndigheten, och Ã¤r utformad exklusivt fÃ¶r offentlig sektor. Enligt DINUM ska angriparen tillskansat sig Ã¥tkomst till tjÃ¤nsten genom ett komprometterat konto.\n            <br /> (Bleeping Computer, 12/6)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/french-govt-says-tchap-breach-affected-over-73-000-accounts/\">https://www.bleepingcomputer.com/news/security/french-govt-says-tchap-breach-affected-over-73-000-accounts/</a></p>\n            <p>I veckan slÃ¤ppte Microsoft sÃ¤kerhetsuppdateringar gÃ¤llande Ã¶ver 200 sÃ¤kerhetsbrister. Det gÃ¶r mÃ¥nadens patchtisdag till den mest omfattande hittills, enligt Microsoft, som i ett blogginlÃ¤gg skriver att mÃ¤ngden sÃ¤kerhetsuppdateringar\n            delvis beror pÃ¥ att avancerade AI-modeller bidrar till bredare och snabbare upptÃ¤ckt. Se CERT-SE:s sammanfattning av mÃ¥nadens patchtisdag nedan. <br /> (Microsoft, 12/6)<br /> <a href=\"https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday\">https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday</a>\n            â€¦<br /> (The Record, 10/6)<br /> <a href=\"https://therecord.media/microsoft-ships-largest-patch-tuesday-on-record\">https://therecord.media/microsoft-ships-largest-patch-tuesday-on-record</a></p> <p>E-bokstjÃ¤nsten\n            Biblio har utsatts fÃ¶r ett angrepp. FÃ¶retaget Wedobooks, som tillhandahÃ¥ller e-bokstjÃ¤nsten, upptÃ¤ckte angreppet nÃ¤r runt 8 000 anvÃ¤ndare skapades under ett par timmar pÃ¥ fyra olika bibliotek. Efter angreppet har fÃ¶retaget stÃ¤ngt\n            ned utlÃ¥ningsfunktionen fÃ¶r konton som anvÃ¤nder ett lÃ¥nekort eller personnummer och en fyrsiffrig pinkod fÃ¶r att logga in, enligt Dagens Nyheter. <br /> (Dagens Nyheter, 4/6)<br /> <a href=\"https://www.dn.se/kultur/stor-hackerattack-mot-bibliotekstjanst-lantagare-maste-byta-kod/\">https://www.dn.se/kultur/stor-hackerattack-mot-bibliotekstjanst-lantagare-maste-byta-kod/</a></p>\n            <h2 id=\"rapporter-och-analyser\">Rapporter och analyser</h2> <p>Fortinet har publicerat en rapport om hur hotaktÃ¶rer anvÃ¤nder intresset fÃ¶r AI fÃ¶r att leverera skadliga filer. I rapporten beskrivs hur skadlig\n            kod dÃ¶ljs i falska AI-relaterade dokument vars mÃ¥ltavla Ã¤r personer som sÃ¶ker efter kunskap och vÃ¤gledning inom omrÃ¥det. Fortinet beskriver en komplex angreppskedja, dÃ¤r hotaktÃ¶ren bland annat dÃ¶ljer sin aktivitet i flera steg samt\n            installerar bakdÃ¶rrar till system. <br /> (Fortinet, 11/6)<br /> <a href=\"https://www.fortinet.com/blog/threat-research/threat-actors-weaponize-ai-hype-to-deliver-asyncrat\">https://www.fortinet.com/blog/threat-research/threat-actors-weaponize-ai-hype-to-deliver-asyncrat</a></p>\n            <p>HotaktÃ¶ren Shinyhunters genomfÃ¶r angrepp genom att utnyttja kedjade sÃ¥rbarheter fÃ¶r intrÃ¥ng och informationsstÃ¶ld i Oracle Peoplesoft-servrar. Shinyhunters pÃ¥stÃ¥r att de stulit information frÃ¥n fler Ã¤n 100 organisationer\n            genom intrÃ¥ng i Peoplesoft som anvÃ¤nds fÃ¶r till exempel HR-funktioner, ekonomihantering och inkÃ¶p. Drabbade har fÃ¥tt utpressningsmeddelanden frÃ¥n hotaktÃ¶ren och i vissa fall uppges stulen data redan vara publicerad. Exempelvis har universitetet\n            i Nottingham utsatts fÃ¶r ett intrÃ¥ng, som pÃ¥verkar Ã¶ver 450 000 studenter och alumner.<br /> (Bleeping Computer, 10/6)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/\">https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/</a>\n            â€¦<br /> (Bleeping Computer, 11/6)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/nottingham-university-data-breach-affects-over-450-000-students\">https://www.bleepingcomputer.com/news/security/nottingham-university-data-breach-affects-over-450-000-students</a></p>\n            <p>HotaktÃ¶rer anvÃ¤nder sig allt mer av samarbetsverktyg som Microsoft Teams, enligt Unit 42. I en analys beskrivs hur hotaktÃ¶rer maskerar sin identitet genom att bland annat upptrÃ¤da som IT-support fÃ¶r att sedan initiera Teams-chattar\n            med anstÃ¤llda. Unit 42 lyfter vidare fram att det inte finns samma medvetenhet bland organisationer kring nÃ¤tfiske via samarbetsverktyg som det finns kring nÃ¤tfiske via mejl, dÃ¤r anstÃ¤llda bland annat genomgÃ¥r utbildningar och nÃ¤tfiske-Ã¶vningar.\n            <br /> (Unit 42, 8/6)<br /> <a href=\"https://unit42.paloaltonetworks.com/microsoft-teams-phishing/\">https://unit42.paloaltonetworks.com/microsoft-teams-phishing/</a></p> <h2 id=\"Ã¶vrigt\">Ã–vrigt</h2>\n            <p>NCSC-UK har publicerat en artikel om hur organisationer kan skydda sig mot leveranskedjeangrepp och utvÃ¤rdera beroenden fÃ¶r att reducera risker. NCSC-UK redogÃ¶r bland annat fÃ¶r hur leveranskedjeangrepp utvecklas, hur moderna mjukvaru-utvecklingssystem\n            kan exploateras, hur organisationer kan identifiera pÃ¥verkan samt fÃ¶rslag pÃ¥ omedelbara Ã¥tgÃ¤rder fÃ¶r att reducera risker.<br /> (NCSC-UK, 4/6) <a href=\"https://www.ncsc.gov.uk/blogs/software-supply-chain-attacks-check-your-dependencies\">https://www.ncsc.gov.uk/blogs/software-supply-chain-attacks-check-your-dependencies</a></p>\n            <h2 id=\"frÃ¥n-cert-se\">FrÃ¥n CERT-SE</h2> <p>Den 1 juli Ã¶vergÃ¥r cyberverksamheten frÃ¥n Myndigheten fÃ¶r civilt fÃ¶rsvar (MCF) till Nationellt cybersÃ¤kerhetscenter (NCSC) vid FÃ¶rsvarets radioanstalt (FRA) med\n            syftet att stÃ¤rka Sveriges cybersÃ¤kerhet. DÃ¤rmed blir CERT-SE en del av Nationellt cybersÃ¤kerhetscenter. <br /> (CERT-SE, 12/6) <a href=\"https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html\">https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html</a></p>\n            <p>CERT-SE har publicerat en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar som Cisco, Microsoft, SAP, Ivanti, Fortinet och Adobe har publicerat i samband med patchtisdagen. CERT-SE:s sammanstÃ¤llning Ã¤r endast ett urval, kontrollera\n            samtliga publicerade sÃ¤kerhetsuppdateringar mot era system.<br /> (CERT-SE, 10/6) <a href=\"https://www.cert.se/2026/06/patchtisdag-juni-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html\">https://www.cert.se/2026/06/patchtisdag-juni-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-06-12T13:15:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-12T13:15:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/cert-se-veckobrev-v24.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/cert-se-veckobrev-v24.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "FortsÃ¤tt att fÃ¥ vÃ¥ra utskick"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>CERT-SE blir den 1 juli 2026 en del av Nationellt cybersÃ¤kerhetscenter som en del i arbetet med att ytterligare stÃ¤rka Sveriges motstÃ¥ndskraft inom cybersÃ¤kerhet. Du kan lÃ¤sa mer om detta hÃ¤r: <a href=\"https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html\">https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html</a></p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>CERT-SE blir den 1 juli 2026 en del av Nationellt cybersÃ¤kerhetscenter som en del i arbetet med att ytterligare stÃ¤rka Sveriges motstÃ¥ndskraft inom cybersÃ¤kerhet. Du kan lÃ¤sa mer om detta hÃ¤r: <a href=\"https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html\">https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html</a></p>\n            <p>Eftersom CERT-SE Ã¶verfÃ¶rs till ny myndighet mÃ¥ste vi inhÃ¤mta nytt medgivande fÃ¶r fortsatt behandling av personuppgifter. Det innebÃ¤r att du som prenumererar med en e-postadress som innehÃ¥ller personuppgifter behÃ¶ver anmÃ¤la\n            dig igen fÃ¶r att fortsatt ta del av utskick frÃ¥n CERT-SE.</p> <p>FrÃ¥n 1 juli kommer du att ha mÃ¶jlighet att ge ditt medgivande genom att Ã¥teranmÃ¤la dig till vÃ¥ra utskick pÃ¥ <a href=\"https://www.cert.se/prenumerera/\">https://www.cert.se/prenumerera/</a>.</p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-06-12T12:30:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-12T12:30:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/fortsatt-att-fa-vara-utskick.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/fortsatt-att-fa-vara-utskick.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Nu samlas cyberverksamheten hos Nationellt cybersÃ¤kerhetscenter â€“ ska ge stÃ¤rkt motstÃ¥ndskraft"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Den 1 juli Ã¶vergÃ¥r cyberverksamheten frÃ¥n Myndigheten fÃ¶r civilt fÃ¶rsvar (MCF) till Nationellt cybersÃ¤kerhetscenter (NCSC) vid FÃ¶rsvarets radioanstalt (FRA), enligt regeringens beslut den 20 november 2025. Syftet Ã¤r att stÃ¤rka\n            Sveriges cybersÃ¤kerhet.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Den 1 juli Ã¶vergÃ¥r cyberverksamheten frÃ¥n Myndigheten fÃ¶r civilt fÃ¶rsvar (MCF) till Nationellt cybersÃ¤kerhetscenter (NCSC) vid FÃ¶rsvarets radioanstalt (FRA), enligt regeringens beslut den 20 november 2025. Syftet Ã¤r att stÃ¤rka\n            Sveriges cybersÃ¤kerhet.</p> <p>De funktioner och kompetenser inom cyber som idag finns inom MCF samlas hos NCSC fÃ¶r att fortsÃ¤tta utveckla Sveriges fÃ¶rmÃ¥ga att fÃ¶rebygga, upptÃ¤cka och hantera cyberhot och sÃ¤kerstÃ¤lla att\n            samhÃ¤llets mest kritiska funktioner fungerar oavsett omvÃ¤rldslÃ¤ge. Detta omfattar bland annat CERT-SE som Sveriges nationella CSIRT med ansvar fÃ¶r att fÃ¶rebygga och hantera cyberincidenter. Dessutom rollen som cyberkrishanteringsmyndighet\n            och nationell kontaktpunkt enligt NIS2-direktivet, uppdrag enligt cybersÃ¤kerhetslagen samt Sveriges nationella samordningscenter fÃ¶r forskning och innovation inom cybersÃ¤kerhet (NCC-SE).</p> <p>Eftersom cybersÃ¤kerhet Ã¤r en\n            central del av det civila fÃ¶rsvaret kommer MCF och NCSC att ha ett nÃ¤ra samarbete Ã¤ven fortsÃ¤ttningsvis. Samverkan mellan myndigheter, nÃ¤ringsliv och andra samhÃ¤llsaktÃ¶rer Ã¤r avgÃ¶rande fÃ¶r att bygga ett robust och motstÃ¥ndskraftigt\n            Sverige.</p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-06-12T12:00:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-12T12:00:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/nu-samlas-cyberverksamheten-hos-nationellt-cybersakerhetscenter.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Patchtisdag juni 2026 â€“ samlad information om mÃ¥nadens sÃ¤kerhetsuppdateringar"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Flera leverantÃ¶rer har slÃ¤ppt sina mÃ¥natliga sÃ¤kerhetsuppdateringar fÃ¶r juni. Nedan finns en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar som Cisco, Microsoft, SAP, Ivanti, Fortinet och Adobe har publicerat infÃ¶r och i samband\n            med patchtisdagen. FÃ¶lj lÃ¤nkarna fÃ¶r att komma till respektive leverantÃ¶rs uppdateringar. [1, 2, 3, 4, 5, 6]</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Flera leverantÃ¶rer har slÃ¤ppt sina mÃ¥natliga sÃ¤kerhetsuppdateringar fÃ¶r juni. Nedan finns en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar som Cisco, Microsoft, SAP, Ivanti, Fortinet och Adobe har publicerat infÃ¶r och i samband\n            med patchtisdagen. FÃ¶lj lÃ¤nkarna fÃ¶r att komma till respektive leverantÃ¶rs uppdateringar. [1, 2, 3, 4, 5, 6]</p> <p>Separata sÃ¥rbarhetsartiklar publiceras om CERT-SE bedÃ¶mer att det finns behov av extra information och skyndsam\n            hantering.</p> <p>Urval av sÃ¤kerhetsuppdateringar (exempelvis hÃ¶gre CVSS-klassificering, att Proof of concept-kod (PoC) publicerats och/eller att sÃ¥rbarheten utnyttjas aktivt):</p> <ul> <li>CVE-2026-20230:\n            Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME)</li> <li>CVE-2026-47291, CVE-2026-49160: Microsoft HTTP.sys</li> <li>CVE-2026-45657:\n            Microsoft Windows Kernel</li> <li>CVE-2026-44815: Microsoft Windows DHCP Client Service</li> <li>CVE-2026-44748: SAP NetWeaver AS ABAP and ABAP Platform</li> <li>CVE-2026-10520, CVE-2026-10523: Ivanti Sentry</li>\n            <li>CVE-2026-25089: Fortinet FortiSandbox, FortiSandbox Cloud and FortiSandbox PaaS</li> </ul> <p>Detta Ã¤r endast ett urval, kontrollera samtliga publicerade sÃ¤kerhetsuppdateringar mot era system.</p> <h2\n            id=\"pÃ¥verkade-produkter\">PÃ¥verkade produkter</h2> <p>FÃ¶r mer information om vilka produkter som pÃ¥verkas, se [1, 2, 3, 4, 5, 6].</p> <h2 id=\"rekommendationer\">Rekommendationer</h2> <p>CERT-SE\n            rekommenderar att sÃ¥ snart som mÃ¶jligt installera sÃ¤kerhetsuppdateringarna i enlighet med leverantÃ¶rens anvisningar.</p> <h2 id=\"kÃ¤llor\">KÃ¤llor</h2> <p>[1] <a href=\"https://sec.cloudapps.cisco.com/security/center/publicationListing.x?product=Cisco&amp;last_published=2026%20Jun&amp;sort=-day_sir#~Vulnerabilities\">https://sec.cloudapps.cisco.com/security/center/publicationListing.x?product=Cisco&amp;last_published=2026%20Jun&amp;sort=-day_sir#~Vulnerabilities</a><br\n            /> [2] <a href=\"https://msrc.microsoft.com/update-guide/releaseNote/2026-Jun\">https://msrc.microsoft.com/update-guide/releaseNote/2026-Jun</a><br /> [3] <a href=\"https://support.sap.com/en/my-support/knowledge-base/security-notes-news/june-2026.html\">https://support.sap.com/en/my-support/knowledge-base/security-notes-news/june-2026.html</a><br\n            /> [4] <a href=\"https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-10520-CVE-2026-10523?language=en_US\">https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Sentry-CVE-2026-10520-CVE-2026-10523?language=en_US</a><br\n            /> [5] <a href=\"https://fortiguard.fortinet.com/psirt/FG-IR-26-141\">https://fortiguard.fortinet.com/psirt/FG-IR-26-141</a><br /> [6] <a href=\"https://helpx.adobe.com/security/security-bulletin.html\">https://helpx.adobe.com/security/security-bulletin.html</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-06-10T14:00:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-10T14:00:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/patchtisdag-juni-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/patchtisdag-juni-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.23"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans brev hittar du lÃ¤sning om â€œHTTP/2 Bombâ€, en metod fÃ¶r Ã¶verbelastningsangrepp som kombinerar flera tekniker fÃ¶r att gÃ¶ra servrar otillgÃ¤ngliga. Du hittar Ã¤ven information om EU-kommissionens nya Ã¥tgÃ¤rdspaket fÃ¶r\n            att minska beroendet av amerikanska teknikfÃ¶retag samt en varning frÃ¥n FBI infÃ¶r sommarens fotbolls-VM.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans brev hittar du lÃ¤sning om â€œHTTP/2 Bombâ€, en metod fÃ¶r Ã¶verbelastningsangrepp som kombinerar flera tekniker fÃ¶r att gÃ¶ra servrar otillgÃ¤ngliga. Du hittar Ã¤ven information om EU-kommissionens nya Ã¥tgÃ¤rdspaket fÃ¶r\n            att minska beroendet av amerikanska teknikfÃ¶retag samt en varning frÃ¥n FBI infÃ¶r sommarens fotbolls-VM.</p> <p>UtÃ¶ver detta finns ett urval av veckans nyheter, analyser och rapporter frÃ¥n cybersÃ¤kerhetsomrÃ¥det.</p>\n            <p>Trevlig helg Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter frÃ¥n veckan</h2> <p>Cisco varnar fÃ¶r en sÃ¥rbarhet i Catalyst SD-WAN, CVE-2026-20245, som aktivt exploateras. Ett utnyttjande\n            av sÃ¥rbarheten kan ge en angripare root-rÃ¤ttigheter. FÃ¶r att utnyttja sÃ¥rbarheten krÃ¤vs antingen netadmin-rÃ¤ttigheter eller att nÃ¥gon av sÃ¥rbarheterna CVE-2026-20182 eller CVE-2026-20127 exploateras. Det finns ingen uppdatering fÃ¶r\n            CVE-2026-20245 tillgÃ¤nglig, men Cisco uppmanar till att Ã¥tgÃ¤rda CVE-2026-20182. Patch finns ocksÃ¥ tillgÃ¤nglig fÃ¶r CVE-2026-20127.<br /> (Cisco, 4/6) <a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx</a></p>\n            <p>En metod fÃ¶r Ã¶verbelastningsangrepp som fÃ¥tt namnet â€œHTTP/2 Bombâ€ kombinerar flera olika tekniker fÃ¶r att gÃ¶ra servrar otillgÃ¤ngliga pÃ¥ kort tid. Metoden riktas mot servrar som har standardkonfiguration fÃ¶r HTTP/2 och\n            pÃ¥verkar webbservrar som NGINX, Apache HTTP Server, Microsoft IIS, Envoy samt Cloudflare Pingora.<br /> (Bleeping Computer, 3/6) <a href=\"https://www.bleepingcomputer.com/news/security/new-http-2-bomb-dos-attack-crashes-web-servers-in-under-a-minute/\">https://www.bleepingcomputer.com/news/security/new-http-2-bomb-dos-attack-crashes-web-servers-in-under-a-minute/</a></p>\n            <p>Under onsdagen presenterade EU-kommissionen ett Ã¥tgÃ¤rdspaket fÃ¶r att minska beroendet av amerikanska teknikfÃ¶retag. Det paket som presenterades innehÃ¶ll flera punkter, bland annat Ã¶nskar EU-kommissionen att trippla kapaciteten\n            fÃ¶r datacentrum under kommande Ã¥r samt bygga ut kapaciteten fÃ¶r moln och AI. Unionen ska Ã¤ven satsa pÃ¥ Ã¶ppen kÃ¤llkod och â€œChips act 2.0â€, vars syfte Ã¤r att fortsÃ¤tta frÃ¤mja tillverkningen av chip i Europa.<br /> (SVT Nyheter,\n            3/6) <a href=\"https://www.svt.se/nyheter/utrikes/eus-plan-frigora-sig-fran-usas-techdominans\">https://www.svt.se/nyheter/utrikes/eus-plan-frigora-sig-fran-usas-techdominans</a></p> <p>Fler aktÃ¶rer ska fÃ¥\n            tillgÃ¥ng till AI-modellen Mythos, meddelade fÃ¶retaget Anthropic i tisdags. Project Glasswing utÃ¶kas dÃ¤rmed med cirka 150 organisationer i Ã¶ver 15 lÃ¤nder. I meddelandet framkommer inte vilka organisationerna som kommer att fÃ¥ tillgÃ¥ng\n            till modellen, men enligt Anthropic ska organisationerna frÃ¤mst vara leverantÃ¶rer av kritisk infrastruktur.<br /> (Computer Sweden, 3/6) <a href=\"https://computersweden.se/article/4180538/uppgifter-sverige-far-tillgang-till-mythos.html\">https://computersweden.se/article/4180538/uppgifter-sverige-far-tillgang-till-mythos.html</a>\n            â€¦<br /> (Anthropic, 2/6) <a href=\"https://www.anthropic.com/news/expanding-project-glasswing\">https://www.anthropic.com/news/expanding-project-glasswing</a></p> <p>Amerikanska cybersÃ¤kerhetsmyndigheten\n            CISA informerar om angrepp riktade mot Automatic Tank Gauge (ATG)-system, som anvÃ¤nds fÃ¶r att Ã¶vervaka brÃ¤nslenivÃ¥er inom exempelvis energi, kemiindustrin, livsmedelsindustrin och transport. Angriparna kan exempelvis manipulera vÃ¤rdet\n            fÃ¶r brÃ¤nslenivÃ¥ eller inaktivera varningsmeddelanden. En rekommendation frÃ¥n CISA Ã¤r att undvika att exponera ATG-system, inklusive portar och webbgrÃ¤nssnitt, mot internet.<br /> (CISA, 2/6) <a href=\"https://www.cisa.gov/resources-tools/resources/cisa-and-partners-urge-hardening-automatic-tank-gauge-systems\">https://www.cisa.gov/resources-tools/resources/cisa-and-partners-urge-hardening-automatic-tank-gauge-systems</a></p>\n            <p>Forskare vid Sansec har upptÃ¤ckt en kritisk sÃ¥rbarhet i e-handelsplattformen Magento som kan utnyttjas fÃ¶r fjÃ¤rrexekvering av kod utan autentisering. SÃ¥rbarheten, CVE-2026-45247, har fÃ¥tt en CVSS score pÃ¥ 9.8. AnvÃ¤ndare rekommenderas\n            att uppdatera till den senaste versionen av Magento, 1.11.12, snarast.<br /> (CyberSecurityNews, 1/6) <a href=\"https://cybersecuritynews.com/magento-cache-plugin-vulnerability\">https://cybersecuritynews.com/magento-cache-plugin-vulnerability</a></p>\n            <p>Acer informerar om tvÃ¥ kritiska sÃ¥rbarheter i routern Acer Wave 7. SÃ¥rbarheterna kan bland annat utnyttjas fÃ¶r att exfiltrera inloggningsuppgifter till routern, i klartext. Det finns ingen uppdatering och Acer meddelar att de\n            planerar tillgÃ¤ngliggÃ¶ra detta i slutet av juni.<br /> (Acer, 1/6) <a href=\"https://community.acer.com/en/kb/articles/19673\">https://community.acer.com/en/kb/articles/19673</a> â€¦<br /> (Bleeping Computer,\n            3/6) <a href=\"https://www.bleepingcomputer.com/news/security/acer-warns-of-max-severity-zero-days-affecting-wave-7-routers/\">https://www.bleepingcomputer.com/news/security/acer-warns-of-max-severity-zero-days-affecting-wave-7-routers/</a></p>\n            <h2 id=\"rapporter-och-analyser\">Rapporter och analyser</h2> <p>Ett kriminellt hotkluster med kopplingar till Kina som tidigare bedÃ¶ms varit enbart inriktade pÃ¥ mÃ¥ltavlor i Asien, har nu identifierats i angrepp\n            riktade mot lÃ¤nder i Europa. Hotklustret som benÃ¤mns TA4922 anvÃ¤nder angreppsflÃ¶den och skadlig kod som kopplats till mer renodlade spionagehotaktÃ¶rer, fÃ¶r att skapa otillbÃ¶rlig Ã¥tkomst och stjÃ¤la information samt kontouppgifter.\n            Proofpoint ger i denna analys en inblick i hur hotklustret arbetar.<br /> (Proofpoint, 3/6) <a href=\"https://www.proofpoint.com/us/blog/threat-insight/ta4922-suspected-chinese-crime-group-going-global\">https://www.proofpoint.com/us/blog/threat-insight/ta4922-suspected-chinese-crime-group-going-global</a></p>\n            <p>Ã–ver 30 Red Hat npm-paket har komprometterats i syfte att sprida vidare skadlig kod och stjÃ¤la kÃ¤nslig information. Den skadliga koden liknar, enligt cybersÃ¤kerhetsfÃ¶retaget Aikido, Mini Shai-Hulud som tidigare offentliggjorts\n            av en hotaktÃ¶r. De kompromentterade paketen ska ha publicerats via GitHub Actions OIDC.<br /> (Aikido, 1/6) <a href=\"https://www.aikido.dev/blog/red-hat-npm-packages-compromised-credential-stealing-worm\">https://www.aikido.dev/blog/red-hat-npm-packages-compromised-credential-stealing-worm</a></p>\n            <h2 id=\"Ã¶vrigt\">Ã–vrigt</h2> <p>NCSC har initierat ett arbete fÃ¶r att stÃ¤rka Sveriges fÃ¶rmÃ¥ga att hantera AI-relaterade cyberhot, med syfte att Ã¶ka fÃ¶rstÃ¥elsen fÃ¶r hotet, skapa en lÃ¤gesbild samt stÃ¶dja\n            prioriteringar och stÃ¤rka motstÃ¥ndskraften i samhÃ¤llsviktiga verksamheter. Arbetet samlar myndigheter, nÃ¤ringsliv, akademi och andra expertmiljÃ¶er och bygger vidare pÃ¥ det samverkansintiativ och webbinarium som genomfÃ¶rdes i april.<br\n            /> (NCSC, 4/6) <a href=\"https://www.ncsc.se/sv/aktuellt/nationellt-arbete-for-att-mota-ai-drivna-cyberhot/\">https://www.ncsc.se/sv/aktuellt/nationellt-arbete-for-att-mota-ai-drivna-cyberhot/</a></p> <p>HotaktÃ¶rer\n            ska ha tillskansat sig Ã¥tkomst till Instagramkonton genom en sÃ¤kerhetsbrist i Metas egen AI-support. HotaktÃ¶rer ska ha bett AI-supporten att koppla en ny mejladdress till ett specifikt anvÃ¤ndarkonto fÃ¶r att sedan kunna motta en verifieringskod.\n            NÃ¤r hotaktÃ¶ren sedan uppgav verifieringskoden fÃ¶r AI-supporten, gav AI-supporten tillbaka en lÃ¤nk fÃ¶r att byta lÃ¶senord till anvÃ¤ndarkontot. Under mÃ¥ndagen uppgav en talesperson fÃ¶r Meta att sÃ¥rbarheten var Ã¥tgÃ¤rdad.<br />\n            (HackRead, 2/6) <a href=\"https://hackread.com/hackers-abuse-meta-ai-bot-hijack-instagram-accounts/\">https://hackread.com/hackers-abuse-meta-ai-bot-hijack-instagram-accounts/</a></p> <p>I ett inslag i P1 Morgon\n            diskuterades hur Sverige kan tackla hybridattacker, bland annat menar Johan Wiktorin, sÃ¤kerhetsexpert och medlem av Kungliga krigsvetenskapsakademien, att lagar kan behÃ¶va Ã¤ndras fÃ¶r att mÃ¶ta den ryska krigfÃ¶ringen.<br /> (Sveriges\n            Radio, 2/6) <a href=\"https://www.sverigesradio.se/artikel/kan-andrade-lagar-stoppa-hybridattacker\">https://www.sverigesradio.se/artikel/kan-andrade-lagar-stoppa-hybridattacker</a></p> <p>FBI har infÃ¶r fotbolls-VM\n            i sommar gÃ¥tt ut med en varning fÃ¶r falska webbplatser som imiterar det internationella fotbollsfÃ¶rbundet FIFA. FBI uppger i ett meddelande att flera falska domÃ¤ner har identifierats, vars syfte har varit att komma Ã¥t personlig och finansiell\n            information.<br /> (FBI, 27/5) <a href=\"https://www.ic3.gov/PSA/2026/PSA260527\">https://www.ic3.gov/PSA/2026/PSA260527</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-06-05T14:50:00+02:00"
+        },
+        "published": {
+          "_text": "2026-06-05T14:50:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/06/cert-se-veckobrev-v23.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/06/cert-se-veckobrev-v23.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.22"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans lÃ¤sning finns ett urval av nyheter, analyser och rapporter inom cybersÃ¤kerhetsomrÃ¥det frÃ¥n veckan som har gÃ¥tt.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans lÃ¤sning finns ett urval av nyheter, analyser och rapporter inom cybersÃ¤kerhetsomrÃ¥det frÃ¥n veckan som har gÃ¥tt.</p> <p>Trevlig helg Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter\n            frÃ¥n veckan</h2> <p>FBI varnar fÃ¶r en phishing-as-a-service-plattform som fÃ¥tt namnet Kali365. Kali365 anvÃ¤nds av angripare fÃ¶r att kapa Microsoft365-konton och har kunnat anvÃ¤ndas fÃ¶r att genomfÃ¶ra avancerade angrepp genom\n            â€œdevice code phishingâ€. Genom denna typ av angrepp kan hotaktÃ¶rer fÃ¥ lÃ¥ngvarig tillgÃ¥ng till tjÃ¤nster som exempelvis Outlook, Teams eller OneDrive. CERT-SE har tidigare publicerad rÃ¥d och rekommendationer kring hantering av nÃ¤tfiske,\n            respektive fÃ¶rebyggande Ã¥tgÃ¤rder i Microsoft 365-miljÃ¶er.<br /> (Bleeping Computer, 25/5) <a href=\"https://www.bleepingcomputer.com/news/security/fbi-warns-of-kali365-phishing-service-targeting-microsoft-365-accounts/\">https://www.bleepingcomputer.com/news/security/fbi-warns-of-kali365-phishing-service-targeting-microsoft-365-accounts/</a>\n            â€¦<br /> (CERT-SE 30/4, uppdaterad 7/5) <a href=\"https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html\">https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html</a></p>\n            <p>AI-modellen Claude Mythos, en av flera modeller som kan anvÃ¤ndas fÃ¶r att hitta tekniska sÃ¥rbarheter, har hittat mer Ã¤n 10 000 kritiska eller allvarliga sÃ¥rbarheter i viktig mjukvara som anvÃ¤nds Ã¶ver hela vÃ¤rden, enligt fÃ¶retaget\n            Anthropic. I en artikel pÃ¥ fÃ¶retagets webbplats redogÃ¶rs lÃ¤rdomar frÃ¥n de fÃ¶rsta resultaten.<br /> (Anthropic, 22/5) <a href=\"https://www.anthropic.com/research/glasswing-initial-update\">https://www.anthropic.com/research/glasswing-initial-update</a>\n            â€¦<br /> (The Hacker News, 23/5) <a href=\"https://thehackernews.com/2026/05/claude-mythos-ai-finds-10000-high.html\">https://thehackernews.com/2026/05/claude-mythos-ai-finds-10000-high.html</a></p> <p>Europol\n            har tillsammans med myndigheter i Europa stÃ¤ngt ned en VPN-tjÃ¤nst som har anvÃ¤nts av cyberkriminella fÃ¶r att dÃ¶lja utpressningsattacker, datastÃ¶lder och annan brottslighet. VPN-tjÃ¤nsten erbjÃ¶d anvÃ¤ndare anonyma betalningar, dold infrastruktur\n            och andra tjÃ¤nster som var sÃ¤rskilt utformade fÃ¶r brottsliga syften. Enligt Europol var VPN-tjÃ¤nsten vÃ¤letablerad i cyberbrottslighetens ekosystem, och har fÃ¶rekommit i nÃ¤stan alla stÃ¶rre utredningar gÃ¤llande cyberbrottslighet under\n            de senaste Ã¥ren.<br /> (Europol, 21/5) <a href=\"https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown\">https://www.europol.europa.eu/media-press/newsroom/news/cybercriminal-vpn-used-ransomware-actors-dismantled-in-global-crackdown</a></p>\n            <h2 id=\"rapporter-och-analyser\">Rapporter och analyser</h2> <p>CybersÃ¤kerhetsfÃ¶retaget CheckPoint Research har publicerat en rapport som redogÃ¶r fÃ¶r tekniker hos hotaktÃ¶ren Nimbus Manticore, Ã¤ven kallad UNC1549,\n            under de senaste mÃ¥naderna. HotaktÃ¶ren har imiterat organisationer inom luftfarts- och mjukvarusektorn i USA, Europa och MellanÃ¶stern, och enligt rapporten fokuserat pÃ¥ tekniker som kapning av applikationsdomÃ¤ner, AI-stÃ¶dd utveckling\n            av skadlig kod samt SEO-fÃ¶rgiftning.<br /> (CheckPoint Research, 22/5) <a href=\"https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/\">https://research.checkpoint.com/2026/fast-and-furious-nimbus-manticore-operations-during-the-iranian-conflict/</a></p>\n            <p>En studie publicerad av cybersÃ¤kerhetsfÃ¶retaget Aikido visar att Googles API-nycklar Ã¤r aktiva i flera minuter efter att de har raderats. CybersÃ¤kerhetsfÃ¶retaget har genomfÃ¶rt tio kontrollerade tester Ã¶ver tvÃ¥ dagar fÃ¶r att\n            mÃ¤ta API-nycklarnas Ã¥terkallningsfÃ¶nster och kom fram till att det lÃ¤ngsta fÃ¶nstret var nÃ¤rmare 23 minuter, det kortaste fÃ¶nstret var knappt Ã¥tta minuter. Medianen var runt 16 minuter. Detta innebÃ¤r att en angripare kan ha fortsatt\n            Ã¥tkomst till system under en tidsperiod, trots att API-nyckeln Ã¤r Ã¥terkallad.<br /> (Aikido, 21/5) <a href=\"https://www.aikido.dev/blog/google-api-keys-deletion\">https://www.aikido.dev/blog/google-api-keys-deletion</a>\n            â€¦<br /> (HackRead, 21/5) <a href=\"https://hackread.com/deleted-google-api-keys-active-23-minutes/\">https://hackread.com/deleted-google-api-keys-active-23-minutes/</a></p> <p>Cyberkriminella anvÃ¤nder\n            falska webbplatser fÃ¶r populÃ¤ra AI-verktyg i angrepp mot utvecklare. I en rapport frÃ¥n sÃ¤kerhetsfÃ¶retaget EclecticIQ redogÃ¶rs fÃ¶r hur hotaktÃ¶rer utnyttjar anvÃ¤ndares fÃ¶rtroende fÃ¶r AI-verktyg, fÃ¶r att ladda ned skadlig kod. TillvÃ¤gagÃ¥ngssÃ¤ttet\n            involverar SEO-fÃ¶rgiftning som ett fÃ¶rsta steg, dÃ¤r falska installationssidor hamnar pÃ¥ toppen av sÃ¶kresultaten i Google, och dÃ¤r anvÃ¤ndaren sedan hamnar pÃ¥ typosquattade domÃ¤ner som kontrolleras av angriparen.<br /> (EclecticIQ,\n            21/5) <a href=\"https://blog.eclecticiq.com/seo-poisoning-campaign-leverages-gemini-and-claude-code-impersonation-to-deliver-infostealer\">https://blog.eclecticiq.com/seo-poisoning-campaign-leverages-gemini-and-claude-code-impersonation-to-deliver-infostealer</a>\n            â€¦<br /> (HackRead, 26/5) <a href=\"https://hackread.com/trojan-gemini-claude-installers-developers-seo-poisoning/\">https://hackread.com/trojan-gemini-claude-installers-developers-seo-poisoning/</a></p> <h2\n            id=\"Ã¶vrigt\">Ã–vrigt</h2> <p>Regeringen har beslutat om en molnpolicy fÃ¶r offentlig fÃ¶rvaltning. Den nya molnpolicyn syftar till att stÃ¤rka sÃ¤kerheten, minska beroenden och ge bÃ¤ttre kontroll Ã¶ver data men Ã¤ven\n            att gÃ¶ra det enklare fÃ¶r myndigheter, regioner och kommuner att vÃ¤lja och byta ut digitala lÃ¶sningar.<br /> (Regeringen, 28/5) <a href=\"https://www.regeringen.se/pressmeddelanden/2026/05/ny-molnpolicy-ska-bidra-till-okad-digital-suveranitet-i-offentlig-forvaltning/\">https://www.regeringen.se/pressmeddelanden/2026/05/ny-molnpolicy-ska-bidra-till-okad-digital-suveranitet-i-offentlig-forvaltning/</a></p>\n            <p>NCSC har publicerat rekommendationer gÃ¤llande hur Sverige bÃ¶r genomfÃ¶ra Ã¶vergÃ¥ngen till kvantsÃ¤ker kryptografi. NCSC skriver att mÃ¥let Ã¤r att Ã¶vergÃ¥ngen ska vara genomfÃ¶rd senast 2035, men fÃ¶r sÃ¤rskilt skyddsvÃ¤rda verksamheter\n            redan 2030. Rekommendationerna riktar sig till samhÃ¤llet i stort, med fokus pÃ¥ verksamheter som omfattas av NIS2-direktivet.<br /> (NCSC, 27/5) <a href=\"https://www.ncsc.se/sv/aktuellt/kvantsaker-kryptografi/\">https://www.ncsc.se/sv/aktuellt/kvantsaker-kryptografi/</a></p>\n            <p>Trafikverket varnar fÃ¶r att det cirkulerar falska sms med krav pÃ¥ betalning av trafikbÃ¶ter. PÃ¥ sin hemsida uppger Trafikverket att myndigheten aldrig skickar ut uppmaningar om betalningar eller utlÃ¤mnande av kontouppgifter via\n            mejl eller sms. PÃ¥ CERT-SE:s webbplats hittar du rÃ¥d och stÃ¶d fÃ¶r att fÃ¶rebygga och hantera nÃ¤tfiske.<br /> (RÃ¥d &amp; RÃ¶n, 27/5) <a href=\"https://www.radron.se/bluffvarningar/varning-for-bluff-med-trafikverket/\">https://www.radron.se/bluffvarningar/varning-for-bluff-med-trafikverket/</a></p>\n            <p>VetenskapsrÃ¥det har tagit fram riktlinjer fÃ¶r att utveckla, fÃ¶rbÃ¤ttra och frÃ¤mja anvÃ¤ndningen av cybersÃ¤kerhetsverktyg och sÃ¤ker nÃ¤tinfrastruktur inom forskarvÃ¤rlden.<br /> (VetenskapsrÃ¥det, 27/5) <a href=\"https://www.vr.se/aktuellt/nyheter/nyhetsarkiv/2026-05-27-riktlinjer-ger-stod-i-arbetet-med-cybersakerhet.html\">https://www.vr.se/aktuellt/nyheter/nyhetsarkiv/2026-05-27-riktlinjer-ger-stod-i-arbetet-med-cybersakerhet.html</a></p>\n            <p>Studio Ett ger en fÃ¶rdjupning kring hur nya AI-modeller vÃ¥llar oro i finansvÃ¤rlden. Europeiska centralbanken (ECB) har varnat fÃ¶r cybersÃ¤kerhetsriskerna med AI-modeller, och menar att bankerna mÃ¥ste bli snabbare pÃ¥ att upptÃ¤cka\n            sÃ¥rbarheter i sina system och tÃ¤ppa till sÃ¤kerhetsluckor. Under onsdagen hÃ¶lls ett stormÃ¶te med Eurozonens storbanker fÃ¶r att prata hoten frÃ¥n AI.<br /> (Sveriges Radio, 26/5) <a href=\"https://www.sverigesradio.se/artikel/europeiska-centralbanken-varnar-for-risker-med-ai\">https://www.sverigesradio.se/artikel/europeiska-centralbanken-varnar-for-risker-med-ai</a></p>\n            <p>Det senaste avsnittet av GrÃ¤ns i Sveriges Radio handlar om den ryska cyberkrigfÃ¶ringen. Bland annat beskriver FOI-forskaren David Lindahl kopplingarna mellan cyberkriminella och den ryska staten.<br /> (Sveriges Radio GrÃ¤ns,\n            25/5) <a href=\"https://www.sverigesradio.se/avsnitt/sa-ska-sverige-sta-emot-den-ryska-cyberkrigforingen\">https://www.sverigesradio.se/avsnitt/sa-ska-sverige-sta-emot-den-ryska-cyberkrigforingen</a></p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-05-29T14:49:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-29T14:49:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/cert-se-veckobrev-v22.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/cert-se-veckobrev-v22.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.21"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans lÃ¤sning finns ett urval av nyheter, analyser och rapporter inom cybersÃ¤kerhetsomrÃ¥det frÃ¥n veckan som har gÃ¥tt.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans lÃ¤sning finns ett urval av nyheter, analyser och rapporter inom cybersÃ¤kerhetsomrÃ¥det frÃ¥n veckan som har gÃ¥tt.</p> <p>Trevlig helg Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter\n            frÃ¥n veckan</h2> <p>Under torsdagen resulterade en driftstÃ¶rning hos fÃ¶retaget Nets i problem med att genomfÃ¶ra kortbetalningar i Sverige, Norge och Danmark, enligt SVT Nyheter. Nets meddelade vid 17-tiden pÃ¥ torsdagen att\n            problemen var lÃ¶sta. I Norden anvÃ¤nder sig Ã¶ver 140 000 fÃ¶retag av betallÃ¶sningar genom fÃ¶retaget, vars preliminÃ¤ra bedÃ¶mning Ã¤r att det tekniska felet var internt. <br /> (SVT Nyheter, 21/5)<br /> <a href=\"https://www.svt.se/nyheter/inrikes/problem-med-kortbetalningar-efter-driftstorning\">https://www.svt.se/nyheter/inrikes/problem-med-kortbetalningar-efter-driftstorning</a></p>\n            <p>GitHub har utsatts fÃ¶r ett angrepp dÃ¤r angripare tillskansat sig Ã¥tkomst till nÃ¤rmare 4 000 interna repositories. FÃ¶retaget bekrÃ¤ftar att obehÃ¶rig Ã¥tkomst till repositories har identifierats, samt att grundorsaken kan kopplas\n            till att en Github-anstÃ¤lld installerat ett skadligt tillÃ¤gg till VS Code. GitHubs utredning visar att angriparen enbart, men framgÃ¥ngsrikt, exfiltrerat data frÃ¥n GitHubs interna repositories, utan nÃ¥gon bekrÃ¤ftad pÃ¥verkan pÃ¥ publika\n            eller kundhostade repositories. <br /> (Cyber Security News, 20/5)<br /> <a href=\"https://cybersecuritynews.com/github-data-breach/\">https://cybersecuritynews.com/github-data-breach/</a></p> <p>SjÃ¤lvreplikerande\n            skadlig kod Ã¤r fortsatt en utmaning, bland de aktuella hÃ¤ndelserna finns en upptÃ¤ckt av fyra nya npm-paket som innehÃ¥ller skadlig kod och som kan leda till informationsstÃ¶ld. Ett av dessa paket Ã¤r en klon av Shai-Hulud, paketet â€œchalk-tempalteâ€.\n            AnvÃ¤ndare som har laddat ner paketen bÃ¶r omedelbart avinstallera dem. Dessutom bÃ¶r anvÃ¤ndare identifiera och radera skadliga konfigurationer frÃ¥n exempelvis Claude Code, rotera kÃ¤nsliga uppgifter, kontrollera GitHub-repositories efter\n            strÃ¤ngen â€œA Mini Sha1-Hulud has Appearedâ€ och blockera nÃ¤tverksÃ¥tkomst till misstÃ¤nkta domÃ¤ner.<br /> (The Hacker News, 18/5)<br /> <a href=\"https://thehackernews.com/2026/05/four-malicious-npm-packages-deliver.html\">https://thehackernews.com/2026/05/four-malicious-npm-packages-deliver.html</a></p>\n            <p>AnalysfÃ¶retaget Grafana Labs har utsatts fÃ¶r ett dataintrÃ¥ng, dÃ¤r hotaktÃ¶rer tillskansat sig Ã¥tkomst till fÃ¶retagets kodbas, fÃ¶r att sedan utÃ¶va utpressning. FÃ¶retaget uppger att kunddata och personlig information inte har\n            varit en del av angreppet, samt att fÃ¶retagets kundsystem och drift inte har pÃ¥verkats. Grafana Labs har meddelat att fÃ¶retaget inte kommer att betala den lÃ¶sensumma som hotaktÃ¶ren krÃ¤vt fÃ¶retaget pÃ¥. CERT-SE rekommenderar att offer\n            fÃ¶r utpressningsangrepp aldrig betalar lÃ¶sensumma, dÃ¥ det inte finns nÃ¥gra garantier fÃ¶r systemÃ¥terstÃ¤llning.<br /> (The Record, 18/5)<br /> <a href=\"https://therecord.media/grafana-refuses-to-pay-ransom-codebase-theft\">https://therecord.media/grafana-refuses-to-pay-ransom-codebase-theft</a>\n            â€¦<br /> (CERT-SE) <a href=\"https://www.cert.se/tema/ransomware/\">https://www.cert.se/tema/ransomware/</a></p> <h2 id=\"rapporter-och-analyser\">Rapporter och analyser</h2> <p>Verizon\n            har publicerat sin Ã¥terkommande rapport gÃ¤llande analyser av dataintrÃ¥ng. I Ã¥rets rapport har fÃ¶retaget tittat pÃ¥ Ã¶ver 31 000 sÃ¤kerhetsincidenter och 22 000 intrÃ¥ng i 145 lÃ¤nder. Rapporten fÃ¶rstÃ¤rker bilden av AI som ett kraftfullt\n            och allt mer utbrett verktyg fÃ¶r hotaktÃ¶rer, som sÃ¤tter Ã¶kad press pÃ¥ verksamheter att snabbare Ã¥tgÃ¤rda sÃ¥rbarheter i sina system.<br /> (HackRead, 20/5)<br /> <a href=\"https://hackread.com/verizon-dbir-ai-hackers-exploit-vulnerabilities-breaches/\">https://hackread.com/verizon-dbir-ai-hackers-exploit-vulnerabilities-breaches/</a></p>\n            <p>Microsoft Threat Intelligence har publicerat information om hur hotaktÃ¶ren Storm-2949 riktat in sig pÃ¥ Microsoft 365 och Azure-produktionsmiljÃ¶er fÃ¶r att stjÃ¤la data och komma Ã¥t administrationsfunktioner hos anvÃ¤ndare. Genom\n            social manipulation riktad mot anvÃ¤ndare med privilegierade roller, som exempelvis it-personal eller ledande befattningshavare, lyckades hotakÃ¶ren fÃ¥ tillgÃ¥ng till data i Microsoft 365-applikationer. Genom Self-Service Password Reset (SSPR)\n            initieras en lÃ¶senordsÃ¥terstÃ¤llning, vilken sedan ska godkÃ¤nnas av offret med flerfaktorautentisering (MFA). HotaktÃ¶rerna har utgett sig fÃ¶r att vara it-support och dÃ¤rmed lyckats Ã¥terstÃ¤lla lÃ¶senord, ta bort MFA-kontroller och registrerat\n            Microsoft Authenticator pÃ¥ egna enheter. CERT-SE har tidigare publicerat rÃ¥d kring hur organisationer i fÃ¶rebyggande syfte, och med enkla medel, kan hÃ¶ja sÃ¤kerheten i Microsoft 365-miljÃ¶er. FÃ¶r mer information, se CERT-SE:s webbplats.\n            <br /> (Microsoft, 18/5)<br /> <a href=\"https://www.microsoft.com/en-us/security/blog/2026/05/18/storm-2949-turned-compromised-identity-into-cloud-wide-breach/\">https://www.microsoft.com/en-us/security/blog/2026/05/18/storm-2949-turned-compromised-identity-into-cloud-wide-breach/</a>\n            â€¦<br /> (Bleeping Computer, 19/5)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/microsoft-self-service-password-reset-abused-in-azure-data-theft-attacks/\">https://www.bleepingcomputer.com/news/security/microsoft-self-service-password-reset-abused-in-azure-data-theft-attacks/</a>\n            â€¦<br /> (CERT-SE, 7/5)<br /> <a href=\"https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html\">https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html</a></p>\n            <p>SANS har publicerat en komplettering till tidigare analyser av mdrfckr-kampanjen som belyser att det inte rÃ¤cker med att fÃ¶rlita sig pÃ¥ historiska indikatorer fÃ¶r att upptÃ¤cka en angripare. FÃ¶rr var det lÃ¤ttare att spÃ¥ra angripare\n            frÃ¥n kampanjen dÃ¥ samma SSH-fingeravtryck anvÃ¤ndes, men givet att angripare anvÃ¤nder en ny version av sitt SSH-bibliotek blir det svÃ¥rare att upptÃ¤cka. Analysen ger insikter gÃ¤llande att hotaktÃ¶rers smÃ¥ tekniska fÃ¶rÃ¤ndringar kan\n            rÃ¤cka fÃ¶r att kringgÃ¥ sÃ¤kerhetsÃ¥tgÃ¤rder.<br /> (SANS, 15/5)<br /> <a href=\"https://isc.sans.edu/diary/Guest+Diary+New+Malware+Libraries+means+New+Signatures/32986/\">https://isc.sans.edu/diary/Guest+Diary+New+Malware+Libraries+means+New+Signatures/32986/</a></p>\n            <h2 id=\"Ã¶vrigt\">Ã–vrigt</h2> <p>Cybercampus, Sweden Secure Tech Hub och SSF StÃ¶ldskyddsfÃ¶reningen har tagit fram en guidebok i cybersÃ¤kerhet som riktar sig till smÃ¥ och medelstora fÃ¶retag. Guiden innehÃ¥ller\n            konkreta rÃ¥d och expertperspektiv samt tipsar om vilka fÃ¶rsta steg organisationer kan ta fÃ¶r att komma igÃ¥ng med cybersÃ¤kerhetsarbetet.<br /> (Cybercampus, 19/5)<br /> <a href=\"https://www.cybercampus.se/articles/new-cybersecurity-guidebook-for-smes-1.1476289\">https://www.cybercampus.se/articles/new-cybersecurity-guidebook-for-smes-1.1476289</a></p>\n            <p>â€œThe backbone of business continuity is cyber resilienceâ€ slÃ¥r Security Week fast i en artikel, dÃ¤r de skriver att de organisationer som Ã¤r bÃ¤st fÃ¶rberedda pÃ¥ att mÃ¶ta stÃ¶rningar Ã¤r de som samordnar sÃ¤kerhet, kontinuitet\n            och riskhantering. FÃ¶rebyggande arbete och fÃ¶rberedande Ã¥tgÃ¤rder pÃ¥verkar i hÃ¶g grad hur vÃ¤l en organisation lyckas med incidenthanteringen nÃ¤r en it-sÃ¤kerhetsincident intrÃ¤ffar. Enligt Security Week behÃ¶ver organisationer pÃ¥ en\n            Ã¶vergripande nivÃ¥ ha eskaleringsrutiner, it-sÃ¤kerhetspolicys, kontinuitetplaner, krisplaner, utbildat sina anvÃ¤ndare, klargjort ansvar och mandat, etablerat kontakter och skapat kontaktlistor samt veta hur kommunikationen ska genomfÃ¶ras\n            vid en incident, skriver Security Week. <br /> (Security Week, 19/5)<br /> <a href=\"https://www.securityweek.com/cyber-resilience-is-the-new-business-continuity-plan/\">https://www.securityweek.com/cyber-resilience-is-the-new-business-continuity-plan/</a></p>\n            <p>SÃ¤kerhetskollen har publicerat information om att bedragare har skickat ut bluffmejl som ser ut att komma frÃ¥n branschorganisationen Svensk FÃ¶rsÃ¤kring. Enligt SÃ¤kerhetskollen Ã¤r det sannolikt att det handlar om fÃ¶rsÃ¶k till\n            bedrÃ¤geri och uppmanar mottagare att inte klicka pÃ¥ nÃ¥gra lÃ¤nkar i mejl som pÃ¥stÃ¥s komma frÃ¥n organisationen.<br /> (SÃ¤kerhetskollen, 18/5)<br /> <a href=\"https://sakerhetskollen.se/aktuella-brott/bluffmejl-som-pastas-komma-fran-svensk-forsakring\">https://sakerhetskollen.se/aktuella-brott/bluffmejl-som-pastas-komma-fran-svensk-forsakring</a></p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-05-22T14:15:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-22T14:15:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/cert-se-veckobrev-v21.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/cert-se-veckobrev-v21.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.20"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Denna vecka vill vi tipsa om att vi har publicerat enkla och korta â€Tabletopâ€-Ã¶vningar fÃ¶r hantering av utpressningsangrepp, Ã¶verbelastningsangrepp och nÃ¤tfiske. Du hittar Ã¶vningarna hÃ¤r: <a href=\"https://www.cert.se/tema/ovningar/\">https://www.cert.se/tema/ovningar/</a></p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Denna vecka vill vi tipsa om att vi har publicerat enkla och korta â€Tabletopâ€-Ã¶vningar fÃ¶r hantering av utpressningsangrepp, Ã¶verbelastningsangrepp och nÃ¤tfiske. Du hittar Ã¶vningarna hÃ¤r: <a href=\"https://www.cert.se/tema/ovningar/\">https://www.cert.se/tema/ovningar/</a></p>\n            <p>Som vanligt innehÃ¥ller veckobrevet blandade nyheter, analyser och rapporter frÃ¥n veckan som gÃ¥tt.</p> <p>Trevlig helg Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter frÃ¥n veckan</h2>\n            <p>Under tisdagen kom uppgifter om att det amerikanska fÃ¶retaget Instructure, leverantÃ¶r av utbildningsplattformen Canvas, nÃ¥tt en Ã¶verenskommelse med hotaktÃ¶ren Shinyhunters i syfte att fÃ¶rhindra att stulen data lÃ¤cks. Det var\n            den 29 april som fÃ¶retaget utsattes fÃ¶r ett angrepp dÃ¤r en mÃ¤ngd information, bland annat personuppgifter, stals. Den 7 maj utsattes fÃ¶retaget Ã¥terigen fÃ¶r ett angrepp, som ska ha koppling till hÃ¤ndelsen en vecka tidigare. I Sverige\n            anvÃ¤nds Canvas av flera lÃ¤rosÃ¤ten, ett antal av dessa valde under en period att stÃ¤nga ned plattformen, skriver SVT Nyheter. CERT-SE uppmanar de drabbade att fortsatt vara extra uppmÃ¤rksamma pÃ¥ fÃ¶rsÃ¶k till nÃ¤tfiske eller bedrÃ¤gerier\n            kopplat till den stulna informationen.<br /> (Bleeping Computer, 12/5)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/instructure-reaches-agreement-with-shinyhunters-to-stop-data-leak/\">https://www.bleepingcomputer.com/news/security/instructure-reaches-agreement-with-shinyhunters-to-stop-data-leak/</a>\n            â€¦<br /> (Instructure, 11/5)<br /> <a href=\"https://www.instructure.com/incident_update/\">https://www.instructure.com/incident_update/</a> â€¦ <br /> (SVT Nyheter, 9/5)<br /> <a href=\"https://www.svt.se/nyheter/inrikes/flera-svenska-universitet-drabbade-i-hackerattack\">https://www.svt.se/nyheter/inrikes/flera-svenska-universitet-drabbade-i-hackerattack</a></p>\n            <p>Checkmarx har publicerat information om att en skadlig version av deras Jenkins Application Security Testing (AST) plugin har publicerats pÃ¥ Jenkins Marketplace. HÃ¤ndelsen har kopplingar till den leveranskedjeattack som fÃ¶retaget\n            drabbades av tidigare i Ã¥r. Checkmarx har nu gjort nya versioner av Jenkins AST plugin tillgÃ¤ngliga i Jenkins Marketplace samt GitHub, och uppmanar anvÃ¤ndare att sÃ¤kerstÃ¤lla sÃ¥ att de anvÃ¤nder den senaste versionen.<br /> (SecurityWeek,\n            11/5)<br /> <a href=\"https://www.securityweek.com/checkmarx-jenkins-ast-plugin-compromised-in-supply-chain-attack/\">https://www.securityweek.com/checkmarx-jenkins-ast-plugin-compromised-in-supply-chain-attack/</a></p>\n            <p>DriftstÃ¶rningar i Transportstyrelsens it-system har den senaste veckan pÃ¥verkat myndighetens e-tjÃ¤nster. StÃ¶rningarna har bland annat medfÃ¶rt att det inte gÃ¥tt att stÃ¤lla pÃ¥ och av fordon pÃ¥ Mina sidor, eller skriva fÃ¶rarprov\n            hos Trafikverket. Problemen Ã¤r nu Ã¥tgÃ¤rdade och samtliga e-tjÃ¤nster och fÃ¶rarprov ska Ã¥terigen fungera. <br /> (Transportstyrelsen, 10/5)<br /> <a href=\"https://www.transportstyrelsen.se/sv/om-oss/pressrum/nyhetsarkiv/2026/storningar-paverkar-transportstyrelsens-system/\">https://www.transportstyrelsen.se/sv/om-oss/pressrum/nyhetsarkiv/2026/storningar-paverkar-transportstyrelsens-system/</a></p>\n            <p>En privilegieeskalerings-sÃ¥rbarhet i Linux-kÃ¤rnan, CVE-2026-43000, Ã¤ven kallad Fragnesia, har upptÃ¤ckts. En lokal anvÃ¤ndare kan genom att utnyttja sÃ¥rbarheten tillskansa sig root-rÃ¤ttigheter. SÃ¥rbarheten fÃ¶ljer efter de nyligen\n            uppmÃ¤rksammade sÃ¥rbarheterna Dirty Frag och Copy Fail. PoC (Proof of Concept) finns tillgÃ¤nglig och anvÃ¤ndare uppmanas att sÃ¤kerhetsuppdatera i enlighet med anvisningar frÃ¥n leverantÃ¶rer av respektive Linux-distrubution.<br />\n            (Linuxsecurity, 14/5)<br /> <a href=\"https://linuxsecurity.com/features/fragnesia-linux-privilege-escalation\">https://linuxsecurity.com/features/fragnesia-linux-privilege-escalation</a></p> <h2 id=\"rapporter-och-analyser\">Rapporter\n            och analyser</h2> <p>En ny vÃ¥g av angrepp baserade pÃ¥ den sjÃ¤lvreplikerande skadliga koden Shai-Hulud riktas mot ett stÃ¶rre antal utvecklarpaket inom NPM och PyPi. Det gÃ¤ller bland annat TanStack, Mistral AI, Guardrails AI,\n            UiPath och OpenSearch. HotaktÃ¶ren TeamPCP kopplas till angreppen dÃ¤r den skadliga koden sprids genom att giltiga OpenID Connect-tokens missbrukas fÃ¶r att publicera infekterade paket i verifierade versioner. De infekterade paketen har sammantaget\n            miljontals nedladdningar per vecka.<br /> (Bleeping Computer, 12/5)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/shai-hulud-attack-ships-signed-malicious-tanstack-mistral-npm-packages/\">https://www.bleepingcomputer.com/news/security/shai-hulud-attack-ships-signed-malicious-tanstack-mistral-npm-packages/</a>\n            â€¦<br /> (Step Security, 11/5)<br /> <a href=\"https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem\">https://www.stepsecurity.io/blog/mini-shai-hulud-is-back-a-self-spreading-supply-chain-attack-hits-the-npm-ecosystem</a></p>\n            <p>Google Threat Intelligence, GTI, har publicerat en rapport som beskriver hur hotaktÃ¶rer anvÃ¤nder sig av AI. FÃ¶r fÃ¶rsta gÃ¥ngen har GTI identiferat skadlig kod fÃ¶r att utnyttja en nolldagssÃ¥rbarhet, dÃ¤r koden bedÃ¶ms vara utvecklad\n            med hjÃ¤lp av en AI-modell. Den skadliga koden Ã¤r designad fÃ¶r att angripa ett populÃ¤rt verktyg byggt pÃ¥ Ã¶ppen kÃ¤llkod, som anvÃ¤nds fÃ¶r webbadministration. Vid analys av den skadliga koden hittade GTI tecken pÃ¥ att den Ã¤r skapad\n            med hjÃ¤lp av AI, bland annat en â€œhallucineradâ€ kommentar om en CVSS-score som inte existerar i verkligheten och format i kodstrukturen som fÃ¶ljer mÃ¶nster fÃ¶r trÃ¤ningsdata i LLM-modeller.<br /> (Google Threat Intelligence, 11/5)<br\n            /> <a href=\"https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access\">https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access</a>\n            â€¦<br /> (Hackread, 11/5)<br /> <a href=\"https://hackread.com/google-hackers-used-ai-develop-zero-day-exploit/\">https://hackread.com/google-hackers-used-ai-develop-zero-day-exploit/</a></p> <p>Check\n            Point Research beskriver hur ransomware-landskapet konsolideras, dÃ¤r ett fÃ¥tal stÃ¶rre grupper stÃ¥r fÃ¶r den absoluta majoriteten av angreppen. Rapporten lyfter sÃ¤rskilt fram hotaktÃ¶ren The Gentlemen, som snabbt vuxit genom att utnyttja\n            tusentals redan komprometterade Fortinet FortiGate-enheter.<br /> (Check Point, 11/5)<br /> <a href=\"https://research.checkpoint.com/2026/the-state-of-ransomware-q1-2026/\">https://research.checkpoint.com/2026/the-state-of-ransomware-q1-2026/</a></p>\n            <h2 id=\"Ã¶vrigt\">Ã–vrigt</h2> <p>AI-datafÃ¶rgiftning Ã¤r en dold risk fÃ¶r organisationer som anvÃ¤nder sig av stora sprÃ¥kmodeller och autonoma agenter. Genom att manipulera den interna processen fÃ¶r att trÃ¤na\n            AI-modeller kan angripare fÃ¶rvanska modellens fÃ¶rstÃ¥else av verkligheten och orsaka stor skada. Eftersom fÃ¶rgiftning av data tar sig andra uttryck Ã¤n traditionella cyberattacker kan de vara svÃ¥ra att upptÃ¤cka. Computer Sweden ger en\n            fÃ¶rdjupning om vad som Ã¤r viktigt att tÃ¤nka pÃ¥.<br /> (Computer Sweden, 11/5)<br /> <a href=\"https://computersweden.se/article/4168755/den-forvrangda-sanningen-det-dolda-sakerhetshotet-inom-foretags-ai.html\">https://computersweden.se/article/4168755/den-forvrangda-sanningen-det-dolda-sakerhetshotet-inom-foretags-ai.html</a></p>\n            <h2 id=\"frÃ¥n-cert-se\">FrÃ¥n CERT-SE</h2> <p>Cisco har publicerat information om en kritisk sÃ¥rbarhet som fÃ¥tt den hÃ¶gsta CVSS-klassningen pÃ¥ 10.0. SÃ¥rbarheten, CVE-2026-20182, utnyttjas aktivt och CISA har\n            lagt till den i KEV-katalogen (Known Exploited Vulnerabilities catalog). CERT-SE rekommenderar att uppdatera i enlighet med tillverkarens anvisningar, samt sÃ¶ka igenom system efter tecken pÃ¥ intrÃ¥ng.<br /> (CERT-SE, 15/5)<br />\n            <a href=\"https://www.cert.se/2026/05/kritisk-sarbarhet-i-cisco-sd-wan.html\">https://www.cert.se/2026/05/kritisk-sarbarhet-i-cisco-sd-wan.html</a></p> <p>CERT-SE har publicerat en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar\n            som publicerats av Microsoft, Fortinet, SAP, Ivanti och Adobe i samband med patchtisdagen. CERT-SE rekommenderar att sÃ¥ snart som mÃ¶jligt installera sÃ¤kerhetsuppdateringarna i enlighet med leverantÃ¶rens anvisningar.<br /> (CERT-SE,\n            12/5)<br /> <a href=\"https://www.cert.se/2026/05/patchtisdag-maj-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html\">https://www.cert.se/2026/05/patchtisdag-maj-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-05-15T13:15:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-15T13:15:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/cert-se-veckobrev-v20.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/cert-se-veckobrev-v20.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Kritisk sÃ¥rbarhet i Cisco Catalyst SD-WAN Controller och SD-WAN Manager"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Cisco har publicerat information om en kritisk sÃ¥rbarhet som fÃ¥tt den hÃ¶gsta CVSS-klassningen pÃ¥ 10.0. [1] SÃ¥rbarheten, CVE-2026-20182, utnyttjas aktivt och CISA har lagt till den i KEV-katalogen (Known Exploited Vulnerabilities\n            catalog). [2]</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Cisco har publicerat information om en kritisk sÃ¥rbarhet som fÃ¥tt den hÃ¶gsta CVSS-klassningen pÃ¥ 10.0. [1] SÃ¥rbarheten, CVE-2026-20182, utnyttjas aktivt och CISA har lagt till den i KEV-katalogen (Known Exploited Vulnerabilities\n            catalog). [2]</p> <p>FramgÃ¥ngsrikt utnyttjande av sÃ¥rbarheten innebÃ¤r att en oautentiserad angripare kan fÃ¶rbigÃ¥ autentisering och tillskansa sig administrativa behÃ¶righeter pÃ¥ pÃ¥verkade system och genom tillgÃ¥ng till\n            NETCONF kan en angripare manipulera nÃ¤tverkskonfigurationer fÃ¶r SD-WAN. [3]</p> <h2 id=\"rekommendationer\">Rekommendationer</h2> <p>CERT-SE rekommenderar att skyndsamt fÃ¶lja leverantÃ¶rens anvisningar fÃ¶r\n            uppdatering av system och noggrant undersÃ¶ka system efter tecken pÃ¥ intrÃ¥ng.</p> <h2 id=\"pÃ¥verkade-produkter\">PÃ¥verkade produkter</h2> <p>SÃ¥rbarheten pÃ¥verkar Cisco Catalyst SD-WAN Controller (tidigare\n            vSmart) och Cisco Catalyst SD-WAN Manager (tidigare vManage) och gÃ¤ller bÃ¥de lokala installationer och molntjÃ¤nster.</p> <p>FÃ¶r mer detaljer om berÃ¶rda produkter, se leverantÃ¶rens information. [1]</p> <h2 id=\"kÃ¤llor\">KÃ¤llor</h2>\n            <p>[1] <a href=\"https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW\">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW</a><br\n            /> [2] <a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a><br /> [3] <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-20182\">https://www.cve.org/CVERecord?id=CVE-2026-20182</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-05-15T10:45:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-15T10:45:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/kritisk-sarbarhet-i-cisco-sd-wan.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/kritisk-sarbarhet-i-cisco-sd-wan.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Patchtisdag maj 2026 â€“ samlad information om mÃ¥nadens sÃ¤kerhetsuppdateringar"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Flera leverantÃ¶rer har slÃ¤ppt sina mÃ¥natliga sÃ¤kerhetsuppdateringar fÃ¶r maj. Nedan finns en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar som Microsoft, Fortinet, SAP, Ivanti och Adobe har publicerat i samband med patchtisdagen.\n            FÃ¶lj lÃ¤nkarna fÃ¶r att komma till respektive leverantÃ¶rs uppdateringar. [1, 2, 3, 4, 5]</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Flera leverantÃ¶rer har slÃ¤ppt sina mÃ¥natliga sÃ¤kerhetsuppdateringar fÃ¶r maj. Nedan finns en sammanstÃ¤llning av de sÃ¤kerhetsuppdateringar som Microsoft, Fortinet, SAP, Ivanti och Adobe har publicerat i samband med patchtisdagen.\n            FÃ¶lj lÃ¤nkarna fÃ¶r att komma till respektive leverantÃ¶rs uppdateringar. [1, 2, 3, 4, 5]</p> <p>Urval av sÃ¤kerhetsuppdateringar (exempelvis hÃ¶gre CVSS-klassificering, att Proof of concept-kod (PoC) publicerats och/eller att\n            sÃ¥rbarheten utnyttjas aktivt):</p> <ul> <li>CVE-2026-26083: FortiSandbox</li> <li>CVE-2026-44277: FortiAuthenticator Identity and Access Management (IAM)</li> <li>CVE-2026-35421: Windows GDI</li>\n            <li>CVE-2026-40365: Microsoft SharePoint Server</li> <li>CVE-2026-41089: Windows Netlogon</li> <li>CVE-2026-41096: Windows DNS Client</li> <li>CVE-2026-34260: SAP S/4HANA</li> <li>CVE-2026-34263:\n            SAP Commerce Cloud</li> <li>CVE-2026-8043: Ivanti Xtraction</li> </ul> <p>Separata sÃ¥rbarhetsartiklar publiceras om CERT-SE bedÃ¶mer att det finns behov av extra information och skyndsam hantering.</p>\n            <h2 id=\"pÃ¥verkade-produkter\">PÃ¥verkade produkter</h2> <p>FÃ¶r mer information om vilka produkter som pÃ¥verkas, se [1, 2, 3, 4, 5].</p> <h2 id=\"rekommendationer\">Rekommendationer</h2>\n            <p>CERT-SE rekommenderar att sÃ¥ snart som mÃ¶jligt installera sÃ¤kerhetsuppdateringarna i enlighet med leverantÃ¶rens anvisningar.</p> <h2 id=\"kÃ¤llor\">KÃ¤llor</h2> <p>[1] <a href=\"https://msrc.microsoft.com/update-guide/releaseNote/2026-May\">https://msrc.microsoft.com/update-guide/releaseNote/2026-May</a><br\n            /> [2] <a href=\"https://fortiguard.fortinet.com/psirt\">https://fortiguard.fortinet.com/psirt</a><br /> [3] <a href=\"https://support.sap.com/en/my-support/knowledge-base/security-notes-news/may-2026.html\">https://support.sap.com/en/my-support/knowledge-base/security-notes-news/may-2026.html</a><br\n            /> [4] <a href=\"https://hub.ivanti.com/s/article/Security-Advisory---Ivanti-Xtraction-CVE-2026-8043?language=en_US\">https://hub.ivanti.com/s/article/Security-Advisory---Ivanti-Xtraction-CVE-2026-8043?language=en_US</a><br\n            /> [5] <a href=\"https://helpx.adobe.com/security/security-bulletin.html\">https://helpx.adobe.com/security/security-bulletin.html</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-05-12T10:32:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-12T10:32:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/patchtisdag-maj-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/patchtisdag-maj-2026-samlad-information-om-manadens-sakerhetsuppdateringar.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "CERT-SE:s veckobrev v.19"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans brev kan du lÃ¤sa om angreppet mot utbildningsplattformen Canvas, som tillhandahÃ¥lls av det amerikanska fÃ¶retaget Instructure. FÃ¶retaget har bekrÃ¤ftat att en hotaktÃ¶r har stulit en mÃ¤ngd information, dÃ¤ribland personuppgifter.\n            CERT-SE uppmanar organisationer och drabbade studenter att vara extra uppmÃ¤rksamma pÃ¥ fÃ¶rsÃ¶k till nÃ¤tfiske eller bedrÃ¤gerier kopplat till eventuell lÃ¤ckt information. CERT-SE rekommenderar Ã¤ven drabbade lÃ¤rosÃ¤ten att fÃ¶lja leverantÃ¶rens\n            Ã¥tgÃ¤rder.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>I veckans brev kan du lÃ¤sa om angreppet mot utbildningsplattformen Canvas, som tillhandahÃ¥lls av det amerikanska fÃ¶retaget Instructure. FÃ¶retaget har bekrÃ¤ftat att en hotaktÃ¶r har stulit en mÃ¤ngd information, dÃ¤ribland personuppgifter.\n            CERT-SE uppmanar organisationer och drabbade studenter att vara extra uppmÃ¤rksamma pÃ¥ fÃ¶rsÃ¶k till nÃ¤tfiske eller bedrÃ¤gerier kopplat till eventuell lÃ¤ckt information. CERT-SE rekommenderar Ã¤ven drabbade lÃ¤rosÃ¤ten att fÃ¶lja leverantÃ¶rens\n            Ã¥tgÃ¤rder.</p> <p>UtÃ¶ver detta hittar du som vanligt nyheter, rapporter och analyser inom cybersÃ¤kerhetsomrÃ¥det frÃ¥n veckan som har gÃ¥tt.</p> <p>Trevlig helg Ã¶nskar CERT-SE!</p> <h2 id=\"nyheter-frÃ¥n-veckan\">Nyheter\n            frÃ¥n veckan</h2> <p>Utbildningsplattformen Canvas, som tillhandahÃ¥lls av det amerikanska fÃ¶retaget Instructure, har utsatts fÃ¶r ett angrepp. FÃ¶retaget bekrÃ¤ftar pÃ¥ sin webbplats att en hotaktÃ¶r har stulit en mÃ¤ngd information\n            och enligt den interna utredningen ska det finnas personuppgifter bland den stulna datan. HotaktÃ¶ren ShinyHunters har tagit pÃ¥ sig angreppet, och hÃ¤vdar att de stulit uppgifter om studenter och personal frÃ¥n nÃ¤rmare 9 000 universitet,\n            hÃ¶gskolor och utbildningsplattformar. Canvas anvÃ¤nds av en mÃ¤ngd svenska lÃ¤rosÃ¤ten, bland annat skriver FÃ¶rsvarshÃ¶gskolan att de har drabbats men att omfattningen Ã¤r oklar. <br /> (Instructure, 7/5)<br /> <a href=\"https://status.instructure.com/\">https://status.instructure.com/</a>\n            â€¦<br /> (Bleeping Computer, 5/5)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/instructure-hacker-claims-data-theft-from-8-800-schools-universities/\">https://www.bleepingcomputer.com/news/security/instructure-hacker-claims-data-theft-from-8-800-schools-universities/</a>\n            â€¦<br /> (FÃ¶rsvarshÃ¶gskolan, 7/5)<br /> <a href=\"https://www.fhs.se/studentportalen/arkiv/nyheter-till-studenter/2026/2026-05-07-uppdatering-om-cybersakerhetsincident-i-larplattformen-canvas.html\">https://www.fhs.se/studentportalen/arkiv/nyheter-till-studenter/2026/2026-05-07-uppdatering-om-cybersakerhetsincident-i-larplattformen-canvas.html</a></p>\n            <p>Nationalmuseum har utsatts fÃ¶r ett dataintrÃ¥ng. I samband med intrÃ¥nget har phishingmejl med en lÃ¤nk till ett dokument skickats ut frÃ¥n en av organisationens officiella mejladresser. Nationalmuseum uppger till SVT att intrÃ¥nget\n            ska ha orsakats av ett nÃ¤tfiskeangrepp, och att myndighetens centrala system inte verkar vara pÃ¥verkade. <br /> (SVT, 5/5)<br /> <a href=\"https://www.svt.se/kultur/nationalmuseum-hackat-skickar-ut-phishingmejl\">https://www.svt.se/kultur/nationalmuseum-hackat-skickar-ut-phishingmejl</a></p>\n            <p>Progress Software varnar fÃ¶r sÃ¥rbarheterna CVE-2026-4670 samt CVE-2026-5174 gÃ¤llande grundlÃ¤ggande behÃ¶righetskontroll och mÃ¶jlighet att eskalera behÃ¶righeter i MOVEit Automation. SÃ¥rbarheterna kan utnyttjas av angripare pÃ¥\n            distans och Progress uppmanar kunder att skyndsamt genomfÃ¶ra sÃ¤kerhetsuppdateringar. SÃ¥rbarheter i MOVEit har tidigare utnyttjats fÃ¶r angrepp av hotaktÃ¶rer, bland annat omfattande utpressningsangrepp genomfÃ¶rda av hotaktÃ¶ren Clop. <br\n            /> (Bleeping Computer, 4/5)<br /> <a href=\"https://www.bleepingcomputer.com/news/security/moveit-automation-customers-warned-to-patch-critical-auth-bypass-flaw/\">https://www.bleepingcomputer.com/news/security/moveit-automation-customers-warned-to-patch-critical-auth-bypass-flaw/</a></p>\n            <p>CybersÃ¤kerhetsfÃ¶retaget Trellix har utsatts fÃ¶r ett angrepp dÃ¤r angriparen tillskansat sig tillgÃ¥ng till delar av fÃ¶retagets interna kodbas. Denna typ av angrepp skulle kunna leda till att hotaktÃ¶rer fÃ¥r mÃ¶jlighet att hitta\n            och utnyttja sÃ¥rbarheter, skapa bakdÃ¶rrar och genomfÃ¶ra leveranskedjeangrepp mot leverantÃ¶rens kunder. Trellix har inlett en utredning som i ett inledande skede visar att publicerad kod och produkter som kunderna anvÃ¤nder inte Ã¤r pÃ¥verkade.<br\n            /> (Cyber Security News, 2/5)<br /> <a href=\"https://cybersecuritynews.com/trellix-source-code-breach/\">https://cybersecuritynews.com/trellix-source-code-breach/</a></p> <h2 id=\"rapporter-och-analyser\">Rapporter\n            och analyser</h2> <p>Branschorganisationen Svenska BankfÃ¶reningen har publicerat sin hotbildsbedÃ¶mning fÃ¶r 2026. Rapporten beskriver bland annat hur cybersÃ¤kerhetsomrÃ¥det prÃ¤glas av en mer komplex hotbild dÃ¤r utpressningsangrepp\n            fortsÃ¤tter att Ã¶ka, liksom anvÃ¤ndningen av AI. <br /> (Svenska BankfÃ¶reningen, 4/5)<br /> <a href=\"https://www.financesweden.se/om-oss/aktuellt/aktuellt-fran-bankforeningen/hotbildsbedomning-for-sveriges-banker-2026/\">https://www.financesweden.se/om-oss/aktuellt/aktuellt-fran-bankforeningen/hotbildsbedomning-for-sveriges-banker-2026/</a></p>\n            <p>En ny skadlig kod i form av infostealer som fÃ¥tt namnet Microstealer, har pÃ¥ kort tid fÃ¥tt en betydande rÃ¤ckvidd. Den skadliga koden har visat sig vara effektiv gÃ¤llande att undvika upptÃ¤ckt av sÃ¤kerhetssystem, och har framfÃ¶rallt\n            anvÃ¤nts i angrepp riktade mot mÃ¥l inom telekom- och utbildningssektorerna. Bland informationen som Microstealer Ã¤r designad att stjÃ¤la finns kontouppgifter lagrade i webblÃ¤sare, sessionskakor, skÃ¤rmdumpar, data frÃ¥n plattformar som\n            Discord och Steam, samt filer kopplade till kryptovaluta. <br /> (Cyber Security News, 4/5)<br /> <a href=\"https://cybersecuritynews.com/new-microstealer-malware-actively-attacking/\">https://cybersecuritynews.com/new-microstealer-malware-actively-attacking/</a></p>\n            <p>CISA har tillsammans med andra amerikanska myndigheter publicerat en guide om hur zero trust-principer kan implementeras pÃ¥ OT-system. Guiden lyfter fram hur organisationer genom zero trust kan fÃ¶rbÃ¤ttra sÃ¤kerheten och motstÃ¥ndskraften\n            i sina OT-miljÃ¶er, inom allt frÃ¥n industriella styrsystem till automation. Detta fÃ¶r att bidra till en sÃ¤krare och mer pÃ¥litlig framtid gÃ¤llande bland annat kritisk infrastruktur.<br /> (CISA 29/4)<br /> <a href=\"https://www.cisa.gov/resources-tools/resources/adapting-zero-trust-principles-operational-technology\">https://www.cisa.gov/resources-tools/resources/adapting-zero-trust-principles-operational-technology</a>\n            â€¦<br /> (Infosecurity News, 30/4)<br /> <a href=\"https://www.infosecurity-magazine.com/news/zero-trust-guidance-operational/\">https://www.infosecurity-magazine.com/news/zero-trust-guidance-operational/</a></p>\n            <h2 id=\"Ã¶vrigt\">Ã–vrigt</h2> <p>I en artikel i tidningen Energi berÃ¤ttar Svenska KraftnÃ¤ts informationssÃ¤kerhetschef Cem GÃ¶cgÃ¶ren om vad som fungerade bra och bristerna som avslÃ¶jades i samband med dataintrÃ¥nget\n            under hÃ¶sten 2025. Cem GÃ¶cgÃ¶ren beskriver flera framgÃ¥ngsfaktorer, bland annat att de hade en krisstab som hade trÃ¤nat pÃ¥ den hÃ¤r typen av hÃ¤ndelser och att de inom staben hade tydliga roller. <br /> (Tidningen Energi, 4/5)<br\n            /> <a href=\"https://www.energi.se/artiklar/2026/maj-2026/datastolden-satte-svenska-kraftnat-pa-prov/\">https://www.energi.se/artiklar/2026/maj-2026/datastolden-satte-svenska-kraftnat-pa-prov/</a></p> <p>NCSC-UK\n            redogÃ¶r i ett blogginlÃ¤gg fÃ¶r hur organisationer kan fÃ¶rbereda sig pÃ¥ utvecklingen av AI-modeller. NCSC-UK skriver bland annat att organisationer bÃ¶r fÃ¶rbereda sig pÃ¥ en Ã¶kning av brÃ¥dskande sÃ¤kerhetsuppdateringar med anledning\n            av utvecklingen.<br /> (NCSC-UK, 1/5)<br /> <a href=\"https://www.ncsc.gov.uk/blogs/prepare-for-vulnerability-patch-wave\">https://www.ncsc.gov.uk/blogs/prepare-for-vulnerability-patch-wave</a></p> <h2\n            id=\"frÃ¥n-cert-se\">FrÃ¥n CERT-SE</h2> <p>CERT-SE har publicerat information om flera sÃ¥rbarheter i Ivanti Endpoint Manager Mobile (EPMM). En av sÃ¥rbarheterna, CVE-2026-6973, tillÃ¥ter en autentiserad angripare med\n            administrativa rÃ¤ttigheter att exekvera fjÃ¤rrstyrd kod. SÃ¥rbarheten har fÃ¥tt en CVSS-klassning pÃ¥ 7.2. Ivanti har fÃ¥tt in rapporter om att att sÃ¥rbarheten utnyttjas aktivt. SÃ¥rbarheten har Ã¤ven adderats i CISA:s KEV (Known Exploited\n            Vulnerabilities). UtÃ¶ver det Ã¥tgÃ¤rdas bland annat en sÃ¥rbarhet som ger en angripare mÃ¶jlighet att tillskansa sig administrativa rÃ¤ttigheter, och en sÃ¥rbarhet som tillÃ¥ter en oautentiserad att tillskansa sig certifikat.<br />\n            (CERT-SE, 8/5)<br /> <a href=\"https://www.cert.se/2026/05/flera-sarbarheter-i-ivanti-endpoint-manager-mobile-EPMM.html\">https://www.cert.se/2026/05/flera-sarbarheter-i-ivanti-endpoint-manager-mobile-EPMM.html</a></p>\n            <p>CERT-SE har publicerat ett dokument som innehÃ¥ller stÃ¶d fÃ¶r att kunna utreda och hantera en incident dÃ¤r ett Ã¶vertaget M365-konto skickat ut nÃ¤tfiskemejl internt och externt. Genom att fÃ¶lja rekommendationerna kan organisationer\n            skapa fÃ¶rhÃ¶jd sÃ¤kerhet utan att ha tillgÃ¥ng till de mest avancerade funktionerna.<br /> (CERT-SE, 7/5)<br /> <a href=\"https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html\">https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html</a></p>\n            <p>CERT-SE har publicerat information om en kritisk sÃ¥rbarhet i PAN-OS. SÃ¥rbarheten, CVE-2026-0300, har fÃ¥tt en CVSS-klassning pÃ¥ 9.3 och pÃ¥verkar USER-ID Autentication Portal. Ett framgÃ¥ngsrikt utnyttjande innebÃ¤r att en oautentiserad\n            anvÃ¤ndare kan exekvera godtycklig kod med root-rÃ¤ttigheter. <br /> (CERT-SE, 6/5)<br /> <a href=\"https://www.cert.se/2026/05/kritisk-sarbarhet-i-pan-os.html\">https://www.cert.se/2026/05/kritisk-sarbarhet-i-pan-os.html</a></p>\n            <p>CERT-SE har publicerat information om en allvarlig sÃ¥rbarhet i Apache HTTP Server. SÃ¥rbarheten, CVE-2026-23918, har fÃ¥tt en CVSS 3.1-klassning pÃ¥ 8.8. Ett framgÃ¥ngsrikt utnyttjande mÃ¶jliggÃ¶r fÃ¶r en oautentiserad angripare\n            att fjÃ¤rrkÃ¶ra skadlig kod. SÃ¥rbarheten pÃ¥verkar version 2.4.66.<br /> (CERT-SE, 6/5)<br /> <a href=\"https://www.cert.se/2026/05/allvarlig-sarbarhet-i-apache.html\">https://www.cert.se/2026/05/allvarlig-sarbarhet-i-apache.html</a></p>\n            <p>CERT-SE har publicerat information om en sÃ¥rbarhet som fÃ¥tt namnet â€œCopy Failâ€ berÃ¶r Linux-distributioner frÃ¥n 2017 och framÃ¥t. SÃ¥rbarheten CVE-2026-31431 har fÃ¥tt CVSS 3.1-klassning 7.8, och innebÃ¤r att en autentiserad\n            angripare kan eskalera rÃ¤ttigheter till root fÃ¶r systemet. SÃ¥rbarheten lades till i CISA:s KEV (Known Exploited Vulnerabilities)-katalog den 1 maj. <br /> (CERT-SE, 4/5)<br /> <a href=\"https://www.cert.se/2026/05/allvarlig-sarbarhet-i-flertal-linuxdistributioner.html\">https://www.cert.se/2026/05/allvarlig-sarbarhet-i-flertal-linuxdistributioner.html</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-05-08T15:10:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-08T15:10:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/cert-se-veckobrev-v19.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/cert-se-veckobrev-v19.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Flera sÃ¥rbarheter i Ivanti Endpoint Manager Mobile (EPMM)"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Ivanti har publicerat information om uppdateringar som Ã¥tgÃ¤rdar fem sÃ¥rbarheter.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Ivanti har publicerat information om uppdateringar som Ã¥tgÃ¤rdar fem sÃ¥rbarheter.</p> <p>CVE-2026-6973 tillÃ¥ter en autentiserad angripare med administrativa rÃ¤ttigheter att exekvera fjÃ¤rrstyrd kod. SÃ¥rbarheten har fÃ¥tt\n            en CVSS-klassning pÃ¥ 7.2. Ivanti skriver att de har fÃ¥tt rapporter om att sÃ¥rbarheten utnyttjas aktivt. [1] SÃ¥rbarheten har Ã¤ven adderats i CISA:s KEV (Known Exploited Vulnerabilities). [2]</p> <p>UtÃ¶ver det Ã¥tgÃ¤rdas bland\n            annat en sÃ¥rbarhet som ger en angripare mÃ¶jlighet att tillskansa sig administrativa rÃ¤ttigheter, och en sÃ¥rbarhet som tillÃ¥ter en oautentiserad att tillskansa sig certifikat.</p> <h2 id=\"pÃ¥verkade-produkter\">PÃ¥verkade\n            produkter</h2> <ul> <li>Ivanti Endpoint Manager Mobile (EPMM) tidigare Ã¤n 12.6.1.1</li> <li>Ivanti Endpoint Manager Mobile (EPMM) tidigare Ã¤n 12.7.0.1</li> <li>Ivanti Endpoint Manager Mobile (EPMM)\n            tidigare Ã¤n 12.8.0.1</li> </ul> <h2 id=\"rekommendationer\">Rekommendationer</h2> <p>CERT-SE rekommenderar att uppdatera i enlighet med tillverkarens rekommendationer.</p> <h2 id=\"kÃ¤llor\">KÃ¤llor</h2>\n            <p>[1] <a href=\"https://hub.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-Multiple-CVEs\">https://hub.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-Multiple-CVEs</a></p>\n            <p>[2] <a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></p>\n        "
+        },
+        "updated": {
+          "_text": "2026-05-08T09:50:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-08T09:50:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/flera-sarbarheter-i-ivanti-endpoint-manager-mobile-EPMM.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/flera-sarbarheter-i-ivanti-endpoint-manager-mobile-EPMM.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Ã…tgÃ¤rder fÃ¶r att sÃ¤kra upp Microsoft 365-miljÃ¶er"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Vid uppsÃ¤ttning av en klientorganisation (engelska: tenant) i Microsofts molnmiljÃ¶ Ã¤r flexibiliteten hÃ¶g och nya funktioner lÃ¤ggs till kontinuerligt. CERT-SE uppmanar organisationer att regelbundet se Ã¶ver aktiverade, eller inaktiverade,\n            instÃ¤llningar fÃ¶r att undvika att vanliga anvÃ¤ndare har mÃ¶jlighet att utfÃ¶ra Ã¥tgÃ¤rder som de ur sÃ¤kerhetssynpunkt inte bÃ¶r kunna gÃ¶ra.</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Vid uppsÃ¤ttning av en klientorganisation (engelska: tenant) i Microsofts molnmiljÃ¶ Ã¤r flexibiliteten hÃ¶g och nya funktioner lÃ¤ggs till kontinuerligt. CERT-SE uppmanar organisationer att regelbundet se Ã¶ver aktiverade, eller inaktiverade,\n            instÃ¤llningar fÃ¶r att undvika att vanliga anvÃ¤ndare har mÃ¶jlighet att utfÃ¶ra Ã¥tgÃ¤rder som de ur sÃ¤kerhetssynpunkt inte bÃ¶r kunna gÃ¶ra.</p> <p>CERT-SE har sammanstÃ¤llt ett dokument som syftar till att ge rÃ¥d och riktlinjer\n            kring hur organisationer i fÃ¶rebyggande syfte, och med enkla medel, kan hÃ¶ja sÃ¤kerheten i Microsoft 365-miljÃ¶er. CERT-SE uppmanar varje organisation att utvÃ¤rdera, testa och implementera eventuella lÃ¶sningar och funktioner utifrÃ¥n organisationens\n            fÃ¶rutsÃ¤ttningar.</p> <p>Vid det fall som en incident intrÃ¤ffar finns det Ã¤ven ett uppfÃ¶ljande dokument som innehÃ¥ller stÃ¶d fÃ¶r att kunna utreda och hantera en incident dÃ¤r ett Ã¶vertaget M365-konto skickat ut nÃ¤tfiskemejl\n            internt och externt.</p> <p>Dokumentet Ã¤r inte uttÃ¶mmande och bÃ¶r ses som ett stÃ¶d vid hantering av liknande incidenter. Genom att fÃ¶lja rekommendationerna kan er organisation skapa fÃ¶rhÃ¶jd sÃ¤kerhet utan att ha tillgÃ¥ng\n            till de mest avancerade funktionerna.</p> <p>HÃ¤r finns CERT-SE:s rÃ¥d och stÃ¶d fÃ¶r hantering av Microsoft 365-miljÃ¶er:</p> <ul> <li><a href=\"https://www.cert.se/assets/documents/cert-se_forebyggande-atgarder-for-att-sakra-upp-M365-miljoer.pdf\">FÃ¶rebyggande\n            Ã¥tgÃ¤rder fÃ¶r att sÃ¤kra upp Microsoft 365-miljÃ¶er</a> (PDF).</li> <li><a href=\"https://www.cert.se/assets/documents/CERT-SE_Atgarder-for-att-hantera-natfiske-i-M365.pdf\">Ã…tgÃ¤rder fÃ¶r att hantera nÃ¤tfiske\n            i Microsoft 365-miljÃ¶er</a> (PDF).</li> </ul> <h2 id=\"verifiera-pdf-filer\">Verifiera PDF-filer</h2> <ul> <li>FÃ¶rebyggande Ã¥tgÃ¤rder fÃ¶r att sÃ¤kra upp Microsoft 365-miljÃ¶er: Filens hashsumma\n            (sha256) Ã¤r:<br /> 4c7dcd6d734eb2b4dd7c8a3ed1aadb6e1c68a8383bbde3759b3ac72a3e4ffb23</li> <li>Ã…tgÃ¤rder fÃ¶r att hantera nÃ¤tfiske i Microsoft 365-miljÃ¶er: Filens hashsumma (sha256) Ã¤r: <br /> 66620f9812c9ffa6bbcda8d23adfd4128f280f0525ab6e7d08ec6ac310976825</li>\n            </ul>\n        "
+        },
+        "updated": {
+          "_text": "2026-05-07T16:10:00+02:00"
+        },
+        "published": {
+          "_text": "2026-03-30T11:10:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/03/forebyggande-atgarder-for-att-sakra-upp-m365-miljoer.html"
+        }
+      },
+      {
+        "title": {
+          "_text": "Kritisk sÃ¥rbarhet i PAN-OS"
+        },
+        "author": {
+          "name": {
+            "_text": "CERT-SE"
+          }
+        },
+        "summary": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Palo Alto Networks har publicerat information om en kritisk sÃ¥rbarhet i PAN-OS. SÃ¥rbarheten, CVE-2026-0300, har fÃ¥tt en CVSS-klassning pÃ¥ 9.3 och pÃ¥verkar USER-ID Autentication Portal. [1]</p>\n        "
+        },
+        "content": {
+          "_attributes": {
+            "type": "html"
+          },
+          "_text": "<p>Palo Alto Networks har publicerat information om en kritisk sÃ¥rbarhet i PAN-OS. SÃ¥rbarheten, CVE-2026-0300, har fÃ¥tt en CVSS-klassning pÃ¥ 9.3 och pÃ¥verkar USER-ID Autentication Portal. [1]</p> <p>Ett framgÃ¥ngsrikt utnyttjande\n            innebÃ¤r att en oautentiserad anvÃ¤ndare kan exekvera godtycklig kod med root-rÃ¤ttigheter. [1]</p> <p>Palo Alto Networks har observerat indikationer pÃ¥ att sÃ¥rbarheten utnyttjas aktivt. [1]</p> <h2 id=\"uppdatering-2026-05-06\">Uppdatering\n            2026-05-06</h2> <p>CISA har lagt till sÃ¥rbarheten i KEV (Known Exploited Vulnerabilities) catalog. [2]</p> <h2 id=\"pÃ¥verkade-produkter\">PÃ¥verkade produkter</h2> <p>PAN-OS 10.2 versioner tidigare\n            Ã¤n PAN-OS 10.2.7-h34, 10.2.10-h36, 10.2.13-h21, 10.2.16-h7, 10.2.18-h6<br /> PAN-OS 11.1 versioner tidigare Ã¤n PAN-OS 11.1.4-h33, 11.1.6-h32, 11.1.7-h6, 11.1.10-h25, 11.1.13-h5, 11.1.15<br /> PAN-OS 11.2 versioner tidigare Ã¤n\n            PAN-OS 11.2.4-h17, 11.2.7-h13, 11.2.10-h6, 11.2.12<br /> PAN-OS 12.1 versioner tidigare Ã¤n PAN-OS 12.1.4-h5, 12.1.7</p> <h2 id=\"rekommendationer\">Rekommendationer</h2> <p>CERT-SE rekommenderar att skyndsamt\n            fÃ¶lja leverantÃ¶rens rekommendationer samt att undersÃ¶ka sina system efter tecken pÃ¥ intrÃ¥ng. Notera att risken av att vara sÃ¥rbar minskas om Ã¥tkomst till USER-ID Autentication Portal sÃ¤kras, lÃ¤s mer i leverantÃ¶rens rekommendationer.\n            [1]</p> <h2 id=\"kÃ¤llor\">KÃ¤llor</h2> <p>[1] <a href=\"https://security.paloaltonetworks.com/CVE-2026-0300\">https://security.paloaltonetworks.com/CVE-2026-0300</a><br /> [2] <a\n            href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></p>\n\n        "
+        },
+        "updated": {
+          "_text": "2026-05-06T21:00:00+02:00"
+        },
+        "published": {
+          "_text": "2026-05-06T15:20:00+02:00"
+        },
+        "link": {
+          "_attributes": {
+            "rel": "alternate",
+            "href": "https://www.cert.se/2026/05/kritisk-sarbarhet-i-pan-os.html"
+          }
+        },
+        "id": {
+          "_text": "https://www.cert.se/2026/05/kritisk-sarbarhet-i-pan-os.html"
+        }
+      }
+    ]
+  }
+}
