@@ -6,9 +6,10 @@ export const articlesTable = sqliteTable("articles", {
   link: text().notNull(),
   description: text(),
   pubDate: integer({ mode: "timestamp" }).notNull(),
-  guid: text().notNull(),
+  guid: text().notNull().unique(),
   media_content: text(),
-  category: text({ mode: "json" }).$type<string[] | null>(),
+  sourceCategory: text(), //RSS might provide
+  categories: text({ mode: "json" }).$type<string[] | null>(), //AI added
 });
 
 export type Article = typeof articlesTable.$inferSelect;
