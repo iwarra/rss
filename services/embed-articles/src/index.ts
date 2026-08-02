@@ -1,4 +1,3 @@
-import feedData from './data/feed.json';
 import { type Category, categoryDefinitions } from './data/categories';
 import { subject } from './data/subject';
 import { clustering } from './data/clustering';
@@ -146,18 +145,4 @@ async function processArticles(articles: ArticleForProcessing[], env: Env): Prom
 		categories: article.isSubjectRelevant ? addCategories(article.embedding, categories) : [],
 		//similarTo: article.isSubjectRelevant ? findSimilarArticleIds(article, relevantArticles) : [],
 	}));
-}
-
-//
-//
-//
-//Temporary parsing helper that will be removed later:
-function getParsedArticle(article = feedData.feed.entry.at(0)) {
-	const title = article.title._text.replaceAll('â€“', '–').replaceAll('Ã¥', 'å');
-	const summary = article.summary._text.replaceAll('Ã¥', 'å').replaceAll('Ã¤', 'ä').replaceAll('Ã¶', 'ö').replaceAll('Ã©', 'é');
-	const parsedArticle = `${title} ${summary
-		.replace(/<[^>]*>/g, '')
-		.replace(/\s*\[\d+(?:,\s*\d+)*\]\s*$/g, '')
-		.trim()}`;
-	return parsedArticle;
 }
