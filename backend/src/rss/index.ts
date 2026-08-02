@@ -1,16 +1,16 @@
-import { type Feed, type Article, type NewFeed } from "@/db/schema";
+import { type Feed, type NewFeed, type NewArticle } from "@/db/schema";
 import { db } from "@/db/client";
 import { sql } from "drizzle-orm";
 import { fetchFeed } from "@/utils/fetchFeed";
 import type { RssFeed, Item } from "@/types";
 
 export async function getFeedsFromDatabase(title?: Feed["title"]) {
-  const filter = (condition: string) => (title ? sql`${condition}` : sql``);
+  const filter = title ? sql`WHERE title = ${title}` : sql``;
 
   return db.all<Feed>(sql`
     SELECT *
     FROM feeds
-    ${filter(`WHERE title = ${title}`)}
+    ${filter}
     `);
 }
 
@@ -24,17 +24,32 @@ export async function getItems(feed: Feed): Promise<Item[]> {
   return items;
 }
 
-export async function insertArticle(item: Item) {
-  const article = {
-    title: item.title,
-    link: item.link,
-    pubDate: new Date(item.pubDate),
-    guid: item.guid,
-  } as Article;
-
-  db.run(sql`
-    INSERT INTO articles (${sql.raw(Object.keys(article).join(","))})
-    VALUES (${article.title}, ${article.link}, ${article.pubDate.getTime()}, ${article.guid})
+export async function insertArticle(article: NewArticle) {
+  return db.run(sql`
+    INSERT INTO articles (
+      title,
+      link,
+      description,
+      pubDate,
+      guid,
+      media_content,
+      sourceCategory,
+      categories
+    )
+    VALUES (
+      ${article.title},
+      ${article.link},
+      ${article.description ?? null},
+      ${article.pubDate.getTime()},
+      ${article.guid},
+      ${article.media_content ?? null},
+      ${article.sourceCategory ?? null},
+      ${
+        article.categories === null || article.categories === undefined
+          ? null
+          : JSON.stringify(article.categories)
+      }
+    )
     ON CONFLICT (guid) DO NOTHING
   `);
 }
