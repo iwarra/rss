@@ -1,10 +1,13 @@
-//Can be send to get embeddings if needed
-type Category = {
+export type CategoryDefinition = {
 	name: string;
 	description: string;
 };
-//
-export const categories: Category[] = [
+
+export type Category = CategoryDefinition & {
+	embedding: number[];
+};
+
+export const categoryDefinitions: CategoryDefinition[] = [
 	{
 		name: 'angrepp',
 		description: 'Intrång, ransomware, sabotage eller spionage riktat mot digitala system eller organisationer.',
@@ -33,10 +36,14 @@ export const categories: Category[] = [
 
 export async function getCategoryEmbeddings(func: Function, env: Env, categories: Category[]) {
 	const descriptions = categories.map((cat) => cat.description);
-	return func(descriptions, env);
+	const categoriesEmbeddings = await func(descriptions, env);
+	categoriesEmbeddings.forEach((embedding) => {
+		categories.forEach((category) => (category.embedding = embedding));
+	});
+	return categoriesEmbeddings;
 }
 
-export const categoriesEmbeddings = [
+export const categoryEmbeddings = [
 	[
 		-0.041107177734375, 0.043731689453125, -0.014739990234375, -0.0113677978515625, -0.06219482421875, -0.01898193359375, 0.04046630859375,
 		0.0472412109375, 0.00797271728515625, -0.004840850830078125, 0.0184173583984375, 0.0121917724609375, -0.0250396728515625,
@@ -1022,3 +1029,8 @@ export const categoriesEmbeddings = [
 		0.0220489501953125, -0.00791168212890625,
 	],
 ];
+
+export const categories: Category[] = categoryDefinitions.map((category, index) => ({
+	...category,
+	embedding: categoryEmbeddings[index],
+}));
