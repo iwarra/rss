@@ -1,6 +1,6 @@
 import type { Item } from "@/types";
 import type { NewArticle } from "@/db/schema";
-import type { ProcessedArticle } from "@/utils/getProcessedArticles";
+import type { ProcessedArticle } from "@/types";
 
 export function getArticlesToPersist(
   items: Item[],

@@ -1,9 +1,9 @@
 import { addNewFeed } from "@/utils/addNewFeed";
 import { Hono } from "hono";
 
-const app = new Hono();
+const rss = new Hono();
 
-app.post("/rss/add-feeds", async (c) => {
+rss.post("/add-feeds", async (c) => {
   //Credentials sent over body as auth header works only over HTTPS because of encoding
   // To be replaced later on
   const { links, APIKey } = await c.req.json<{
@@ -29,4 +29,4 @@ app.post("/rss/add-feeds", async (c) => {
   }
 });
 
-export default app;
+export default rss;

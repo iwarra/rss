@@ -1,19 +1,11 @@
-import type { Item } from "@/types";
 import { getArticleText } from "./getArticleText";
-const workerUrl = "http://localhost:8787";
+import {
+  processArticlesResponseSchema,
+  type ProcessedArticle,
+  type Item,
+} from "@/types";
 
-export type ProcessedArticle = {
-  id: string;
-  embedding: number[];
-  isRelevant: boolean;
-  categories: string[];
-  similarTo?: string[];
-};
-
-type ProcessArticlesResponse = {
-  articles: ProcessedArticle[];
-};
-
+const workerUrl = process.env.WORKER_URL;
 export async function getProcessedArticles(
   articles: Item[],
 ): Promise<ProcessedArticle[]> {
@@ -32,8 +24,6 @@ export async function getProcessedArticles(
     throw new Error(`Article processing failed: ${response.status}`);
   }
 
-  const { articles: processedArticles } =
-    (await response.json()) as ProcessArticlesResponse;
-
-  return processedArticles;
+  const result = processArticlesResponseSchema.parse(await response.json());
+  return result.articles;
 }

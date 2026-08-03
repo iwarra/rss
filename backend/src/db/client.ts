@@ -1,7 +1,7 @@
 import { Database } from "bun:sqlite";
 import { drizzle } from "drizzle-orm/bun-sqlite";
 
-const client = new Database(`${import.meta.dir}/app.db`, {
+export const client = new Database(`${import.meta.dir}/app.db`, {
   create: true,
 });
 
