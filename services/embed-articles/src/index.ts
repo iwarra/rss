@@ -104,10 +104,7 @@ function checkRelevancy(embedding1: number[], embedding2: number[], treshold?: n
 	}
 
 	const cosineSimilarity = dotProduct / (Math.sqrt(magnitude1) * Math.sqrt(magnitude2));
-
-	console.log('Similarity score: ', cosineSimilarity);
 	const isRelevant = treshold ? cosineSimilarity >= treshold : cosineSimilarity >= 0.5;
-
 	return isRelevant;
 }
 

@@ -27,6 +27,7 @@ export async function getItems(feed: Feed): Promise<Item[]> {
 export async function insertArticle(article: NewArticle) {
   return db.run(sql`
     INSERT INTO articles (
+      feedId,
       title,
       link,
       description,
@@ -37,6 +38,7 @@ export async function insertArticle(article: NewArticle) {
       categories
     )
     VALUES (
+      ${article.feedId},
       ${article.title},
       ${article.link},
       ${article.description ?? null},
@@ -50,7 +52,7 @@ export async function insertArticle(article: NewArticle) {
           : JSON.stringify(article.categories)
       }
     )
-    ON CONFLICT (guid) DO NOTHING
+    ON CONFLICT (feedId, guid) DO NOTHING
   `);
 }
 

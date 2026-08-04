@@ -12,12 +12,12 @@ const linkSchema = z.url().refine(
 );
 
 export async function addNewFeed(url: string) {
-  const { channel } = await fetchFeed(url);
-  linkSchema.safeParse(url);
+  const validatedUrl = linkSchema.parse(url);
+  const { channel } = await fetchFeed(validatedUrl);
 
   const feedWithRSSLink = {
     ...channel,
-    rssLink: url,
+    rssLink: validatedUrl,
   } as RssFeed & {
     rssLink: string;
   };

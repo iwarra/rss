@@ -2,7 +2,8 @@ import type { Item } from "@/types";
 import type { NewArticle } from "@/db/schema";
 import type { ProcessedArticle } from "@/types";
 
-export function getArticlesToPersist(
+export function mapItemsToRelevantArticles(
+  feedId: number,
   items: Item[],
   processed: ProcessedArticle[],
 ): NewArticle[] {
@@ -18,6 +19,7 @@ export function getArticlesToPersist(
 
     return [
       {
+        feedId,
         title: item.title,
         link: item.link,
         description: item.description,
