@@ -1,7 +1,11 @@
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { feedsTable } from "@/db/schema";
 
 export const articlesTable = sqliteTable("articles", {
   id: integer().primaryKey({ autoIncrement: true }),
+  feedId: integer()
+    .notNull()
+    .references(() => feedsTable.id, { onDelete: "cascade" }), //KEEP?
   title: text().notNull(),
   link: text().notNull(),
   description: text(),
