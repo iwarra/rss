@@ -2,7 +2,7 @@ import type { Item } from "@/types";
 import type { NewArticle } from "@/db/schema";
 import type { ProcessedArticle } from "@/types";
 
-export function getArticlesToPersist(
+export function mapItemsToRelevantArticles(
   feedId: number,
   items: Item[],
   processed: ProcessedArticle[],
