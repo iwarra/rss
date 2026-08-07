@@ -4,7 +4,6 @@ import type { Item, ProcessedArticle } from "@/types";
 import { mapItemsToRelevantArticles } from "@/utils/mapItemsToRelevantArticles";
 import { getProcessedArticles } from "@/utils/getProcessedArticles";
 import { getItems } from "@/rss/index";
-import { sql } from "drizzle-orm";
 
 export interface IngestionCounts {
   fetched: number;
@@ -111,9 +110,7 @@ async function ingestFeed(feed: Feed): Promise<FeedIngestionResult> {
       feed.id,
       completeProcessedArticles,
     );
-    counts.irrelevant = classifications.filter(
-      (classification) => classification.status === "irrelevant",
-    ).length;
+    counts.irrelevant = classifications.length - articles.length;
     const persisted = saveIngestionResults(articles, classifications);
     counts.articlesPersisted = persisted.articles;
     counts.classificationsPersisted = persisted.classifications;
@@ -326,5 +323,8 @@ export function report(
 }
 
 export function errorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
+  if (!(error instanceof Error)) return String(error);
+  if (error.cause === undefined) return error.message;
+
+  return `${error.message}\nCaused by: ${errorMessage(error.cause)}`;
 }

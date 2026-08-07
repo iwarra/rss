@@ -2,3 +2,8 @@
 .guides
 .fallow
 *notes.md
+*.editorconfig
+*AGENTS.md
+*.prettierrc
+services/embed-articles/.prettierrc
+backend/logs/

@@ -142,6 +142,17 @@ describe("errorMessage", () => {
     expect(errorMessage(new Error("RSS unavailable"))).toBe("RSS unavailable");
   });
 
+  it("includes the underlying database error from a wrapped error", () => {
+    const databaseError = new Error(
+      "ON CONFLICT clause does not match any PRIMARY KEY or UNIQUE constraint",
+    );
+    const queryError = new Error("Failed query", { cause: databaseError });
+
+    expect(errorMessage(queryError)).toBe(
+      "Failed query\nCaused by: ON CONFLICT clause does not match any PRIMARY KEY or UNIQUE constraint",
+    );
+  });
+
   it("converts non-Error thrown values to strings", () => {
     expect(errorMessage("failed")).toBe("failed");
     expect(errorMessage(404)).toBe("404");

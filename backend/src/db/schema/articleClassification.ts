@@ -6,6 +6,7 @@ import {
 } from "drizzle-orm/sqlite-core";
 import { feedsTable } from "@/db/schema";
 
+// name suggestion: consumedArticles
 export const articleClassificationsTable = sqliteTable(
   "article_classifications",
   {
@@ -13,7 +14,7 @@ export const articleClassificationsTable = sqliteTable(
       .notNull()
       .references(() => feedsTable.id),
     guid: text().notNull(),
-    status: text().notNull(),
+    status: text().notNull(), // processing, done
     processedAt: integer({ mode: "timestamp" }).notNull(),
   },
   (table) => [

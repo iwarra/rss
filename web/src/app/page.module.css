@@ -1,0 +1,52 @@
+.page {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.eyebrow,
+.categories,
+.article p {
+  color: #666;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  font-family: monospace;
+}
+
+.page h1 {
+  font-size: 2rem;
+}
+
+.articles {
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+  list-style: none;
+}
+
+.article {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.article a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.article p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.categories {
+  font-size: 0.875rem;
+}
+
+.message {
+  margin-top: 32px;
+}

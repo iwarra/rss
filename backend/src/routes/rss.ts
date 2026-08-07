@@ -18,11 +18,10 @@ rss.post("/add-feeds", async (c) => {
     return c.status(401);
   }
   if (!links.length) return c.status(400);
-  const uniqueLinks = new Set(links);
 
   try {
-    uniqueLinks.forEach((link) => addNewFeed(link));
-    return c.status(202);
+    await Promise.all([...new Set(links)].map(addNewFeed));
+    return c.body(null, 202);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
     return c.json({ error: message }, 502);
