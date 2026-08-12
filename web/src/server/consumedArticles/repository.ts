@@ -4,7 +4,7 @@ import { getDb } from "../db/client";
 import { consumedArticlesTable } from "../db/schema";
 
 //TODO: must chunk large GUID lists
-export async function findConsumedGuids(
+export async function findExistingConsumedGuids(
   feedId: number,
   guids: string[],
 ): Promise<Set<string>> {

@@ -6,21 +6,17 @@ import {
   type NewArticle,
   type NewConsumedArticle,
 } from "@/server/db/schema";
+import { SaveIngestionResults } from "./types";
 
 type SaveIngestionInput = {
   articles: NewArticle[];
   consumedArticles: NewConsumedArticle[];
 };
 
-type SaveIngestionResult = {
-  numberOfSavedArticles: number;
-  numberOfConsumedArticles: number;
-};
-
 export async function saveIngestionResults({
   articles,
   consumedArticles: consumedArticlesData,
-}: SaveIngestionInput): Promise<SaveIngestionResult> {
+}: SaveIngestionInput): Promise<SaveIngestionResults> {
   if (consumedArticlesData.length === 0 && articles.length > 0) {
     throw new Error("Articles cannot be saved without consumed records.");
   }

@@ -1,12 +1,16 @@
 import type { Item } from "@/shared/types";
-import type { Feed, NewArticle } from "@/server/db/schema";
+import type { NewArticle, NewConsumedArticle } from "@/server/db/schema";
 import type {
   ArticleForProcessing,
   ProcessedArticle,
 } from "@/shared/types/article";
 import { load } from "cheerio";
-import { FeedIngestionResult, IngestionCounts, IngestionReport } from "./types";
-import { fetchFeed } from "@/utils/fetchFeed";
+import {
+  FeedIngestionInput,
+  FeedIngestionResult,
+  IngestionCounts,
+  IngestionReport,
+} from "./types";
 
 function normalizeText(
   input: string | null | undefined,
@@ -61,9 +65,9 @@ export function mapItemsToRelevantArticles(
     return [
       {
         feedId,
-        title: item.title,
+        title: normalizeText(item.title),
         link: item.link,
-        description: item.description,
+        description: normalizeText(item.description, true),
         pubDate: new Date(item.pubDate),
         guid: item.guid,
         media_content: item["media:content"]
@@ -87,6 +91,7 @@ export function removeDuplicateItems(items: Item[]): Item[] {
   });
 }
 
+//Processed as returned by embeddings worker
 export function validateProcessedArticles(
   items: Item[],
   processed: ProcessedArticle[],
@@ -142,12 +147,59 @@ export const resetCounts = (): IngestionCounts => ({
   processed: 0,
   irrelevant: 0,
   savedArticles: 0,
-  savedConsumedArticles: 0,
+  consumedArticles: 0,
 });
 
+export function createFeedIngestionResult(
+  input: FeedIngestionInput,
+): FeedIngestionResult {
+  const base = {
+    ...resetCounts(),
+    feedId: input.feed.id,
+    feedTitle: input.feed.title,
+  };
+  if (input.kind === "processed") {
+    return {
+      ...base,
+      status: "success",
+      fetched: input.items.length,
+      skippedAsDuplicate: input.items.length - input.uniqueItems.length,
+      skippedAsConsumed:
+        input.uniqueItems.length - input.unconsumedItems.length,
+      submittedForProcessing: input.unconsumedItems.length,
+      processed: input.processed.length,
+      irrelevant: input.processed.filter(({ isRelevant }) => !isRelevant)
+        .length,
+      savedArticles: input.saved.numberOfSavedArticles,
+      consumedArticles: input.saved.numberOfConsumedArticles,
+    };
+  }
+  if (input.kind === "skipped") {
+    return {
+      ...base,
+      status: "success",
+      fetched: input.items.length,
+      skippedAsDuplicate: input.items.length - input.uniqueItems.length,
+      skippedAsConsumed: input.uniqueItems.length,
+    };
+  }
+  if (input.kind === "failed") {
+    return {
+      ...base,
+      status: "failed",
+      error:
+        input.error instanceof Error
+          ? input.error.message
+          : String(input.error),
+    };
+  }
+
+  throw new Error(`Unsupported ingestion result kind: ${input.kind}`);
+}
+
 export function createIngestionReport(
+  startedAt: number,
   feeds: FeedIngestionResult[],
-  durationMs: number,
 ): IngestionReport {
   const counts = feeds.reduce<IngestionCounts>(
     (total, feed) => ({
@@ -159,8 +211,7 @@ export function createIngestionReport(
       processed: total.processed + feed.processed,
       irrelevant: total.irrelevant + feed.irrelevant,
       savedArticles: total.savedArticles + feed.savedArticles,
-      savedConsumedArticles:
-        total.savedConsumedArticles + feed.savedConsumedArticles,
+      consumedArticles: total.consumedArticles + feed.consumedArticles,
     }),
     resetCounts(),
   );
@@ -170,17 +221,20 @@ export function createIngestionReport(
     status: feeds.some((feed) => feed.status === "failed")
       ? "failed"
       : "success",
-    durationMs,
+    durationMs: performance.now() - startedAt,
     feeds,
   };
 }
 
-//Type Feed as it uses DB data for the call
-export async function getItems(feed: Feed): Promise<Item[]> {
-  const {
-    channel: { item: items },
-  } = await fetchFeed(feed.rssLink);
+export function createConsumedArticle(
+  feedId: number,
+  processed: ProcessedArticle[],
+): NewConsumedArticle[] {
+  const processedAt = new Date();
 
-  if (!items) return [];
-  return items;
+  return processed.map((article) => ({
+    feedId,
+    guid: article.id,
+    processedAt,
+  }));
 }

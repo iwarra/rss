@@ -1,15 +1,26 @@
 import "server-only";
-import { fetchFeed } from "@/utils/fetchFeed";
+import { fetchFeed } from "@/server/ingestion/fetchFeed";
 import { insertFeed } from "@/server/feed/repository";
 import { NewFeed } from "../db/schema";
+import { z } from "zod";
 
-export async function addFeed(rssLink: string) {
-  const { channel } = await fetchFeed(rssLink);
+const linkSchema = z.url().refine(
+  (url) => {
+    const protocol = new URL(url).protocol;
+    return protocol === "http:" || protocol === "https:";
+  },
+  { message: "RSS links must use HTTP or HTTPS" },
+);
+
+export async function addFeed(rssUrl: string) {
+  const validatedUrl = linkSchema.parse(rssUrl);
+  //TODO: What if invalid link is passed???
+  const { channel } = await fetchFeed(validatedUrl);
 
   const feed: NewFeed = {
     title: channel.title,
     link: channel.link,
-    rssLink,
+    rssLink: validatedUrl,
     description: channel.description,
     language: channel.language,
     sy_updatePeriod: channel["sy:updatePeriod"],
@@ -17,6 +28,7 @@ export async function addFeed(rssLink: string) {
     image: channel.image,
   };
   await insertFeed(feed);
+  //Do we need a return?
 }
 
 export function removeDuplicateLinks(links: string[]) {

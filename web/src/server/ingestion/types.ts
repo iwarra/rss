@@ -1,3 +1,6 @@
+import { Item, ProcessedArticle } from "@/shared/types";
+import { Feed } from "../db/schema";
+
 export interface IngestionCounts {
   fetched: number;
   skippedAsConsumed: number;
@@ -6,18 +9,19 @@ export interface IngestionCounts {
   processed: number;
   irrelevant: number;
   savedArticles: number;
-  savedConsumedArticles: number;
+  consumedArticles: number;
 }
 
-export interface SuccessfulFeedIngestion extends IngestionCounts {
-  feedId: number;
+export interface FeedIngestionBase extends IngestionCounts {
+  feedId: number | null;
   feedTitle: string;
+}
+
+export interface SuccessfulFeedIngestion extends FeedIngestionBase {
   status: "success";
 }
 
-export interface FailedFeedIngestion extends IngestionCounts {
-  feedId: number | null;
-  feedTitle: string;
+export interface FailedFeedIngestion extends FeedIngestionBase {
   status: "failed";
   error: string;
 }
@@ -29,6 +33,33 @@ export interface IngestionReport extends IngestionCounts {
   durationMs: number;
   feeds: FeedIngestionResult[];
 }
+
+export interface SaveIngestionResults {
+  numberOfSavedArticles: number;
+  numberOfConsumedArticles: number;
+}
+
+export type FeedIngestionInput =
+  | {
+      kind: "processed";
+      feed: Feed;
+      items: Item[];
+      uniqueItems: Item[];
+      unconsumedItems: Item[];
+      processed: ProcessedArticle[];
+      saved: SaveIngestionResults;
+    }
+  | {
+      kind: "skipped";
+      feed: Feed;
+      items: Item[];
+      uniqueItems: Item[];
+    }
+  | {
+      kind: "failed";
+      feed: Feed;
+      error: unknown;
+    };
 
 export interface IngestFeedsOptions {
   feedTitle?: string;

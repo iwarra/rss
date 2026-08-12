@@ -10,3 +10,5 @@ export async function getArticles() {
     .from(articlesTable)
     .orderBy(desc(articlesTable.pubDate), desc(articlesTable.id));
 }
+
+//TODO: pagination/filtering by feed/category/date, with stable limits

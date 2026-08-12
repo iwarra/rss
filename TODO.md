@@ -42,10 +42,10 @@ filterByTopic() // rename to getXArticles, X being the topic
 labelArticle()
 groupSimilarArticles() //use vectors
 
-## To do:
+# IMPORTANT
 
-- Improve types
-- Improve DB schema
+- Clustering doesn't take in any parameters and grous on similarity !!!
+- Add pagination to articles return (api/get-articles)
 
 ### Improvements for feed schema
 
@@ -53,12 +53,38 @@ groupSimilarArticles() //use vectors
     - sy_updatePeriod: text() - figure out what the value is and rename
     - sy_updateFrequency: text() - figure out what the value is and rename
 
-# IMPORTANT
+# Missing parts:
 
----Clustering doesn't take in any parameters and grous on similarity !!!
---- Add pagination to articles return (api/get-articles)
+- Jobs to trigger feed ingestion
+- Add messaging broker
+- Grouping the articles covering same news
+- Staleness policy: how old can a feed item be before it is ignored; how often do you re-check recent feed windows?
+- Caching
+- Which treshold to use for relevancy
+- Improve DB schemas
+- Find consumed guids should have a time restrain (look only at guids saved after this date - previous fetch call?)
+- Bun VS Hono
+- Proper DB to replace local SQLite ✓
 
-**TO DO for 03.08.26**
+---
+
+### Remaining ToDo (12/08/2026)
+
+- Replace useEffect to use SSR (Next)
+- Move APIkey to Headers instead of having it in request body
+- Isolate FE demo to separate directory
+- Decide what happens when one article, feed, or embedding request fails.
+- Articles are saved to DB with HTML tags - remove them before inserting ✓
+- Save ingestion report ✓
+- Improve types once the ingestion report format is decided upon ✓
+
+---
+
+## Older task lists
+
+---
+
+ToDO for 03/08
 
 - Stabilize the backend/worker contract: ✓
   - Define shared request/response types. ✓
@@ -78,39 +104,26 @@ groupSimilarArticles() //use vectors
   - Log ingestion start/end, feed identity, counts, duration, and failures. ✓
   - Use structured logs so scheduled executions can be inspected later. ✓
 
-INGESTION:
+- INGESTION:
+  - irrelevant articles will be reprocessed on every run. Persist processing status/GUIDs separately ✓
+  - Add `feedId` to failed results too. ✓
+  - Foreign key connecting article to feed! ✓
+  - Do I need to check both: ON CONFLICT (feedId, guid) when inserting articles ✓
 
-- irrelevant articles will be reprocessed on every run. Persist processing status/GUIDs separately ✓
-- Add `feedId` to failed results too. ✓
-- Foreign key connecting article to feed! ✓
-- Do I need to check both: ON CONFLICT (feedId, guid) when inserting articles
-
-Missing parts:
-
-- Jobs to trigger feed ingestion
-- Add messaging broker
-- ~~Proper DB to replace local SQLite~~ ✓
-- Grouping the articles covering same news
-- Staleness policy: how old can a feed item be before it is ignored; how often do you re-check recent feed windows?
-- Caching
+---
 
 ToDo for 05/08/26
 
-- ~~Do a single page in FE to display the results~~
-- Articles are saved to DB with HTML tags - remove or let frontend handle it?
-- Which treshold to use for relevancy ?
-- Shared direcory for types?
+- Do a single page in FE to display the results ✓
+- Shared direcory for types ✓
+
+---
 
 ToDo for 06/08/26
 
-- Move backend logic systematically to web (Next)
-- Use the AI suggested structure for route/repository pattern
-- Replace useEffect to use SSR (Next)
-- Replace types where needed with the shared ones
-- Isolate FE demo to separate directory
-- Improve DB schemas and migrate
-- Move APIkey to Headers instead of having it in request body ?
-
-Refactor `ingestFeed` into a small effectful pipeline plus pure result/count builders.
-Rename types : /Users/ivonajosipovic/Desktop/rss/web/src/server/ingestion/types.ts
-ConsumedArticle status should be defined
+- Move backend logic systematically to web (Next) ✓
+- Use the AI suggested structure for route/repository pattern ✓
+- Replace types where needed with the shared ones ✓
+- migrate DB ✓
+- Rename types : /Users/ivonajosipovic/Desktop/rss/web/src/server/ingestion/types.ts ✓
+- Refactor `ingestFeed` into a small effectful pipeline plus pure result/count builders. ✓

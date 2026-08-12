@@ -133,7 +133,6 @@ async function processArticles(articles: ArticleForProcessing[], env: Env): Prom
 	});
 
 	const categories = await getCategories(env);
-	const relevantArticles = relevanceChecked.filter((article) => article.isSubjectRelevant);
 
 	return relevanceChecked.map((article) => ({
 		id: article.id,

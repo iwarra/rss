@@ -1,5 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
-import type { RssObject } from "@/types";
+import type { RssObject } from "@/shared/types";
 
 export default function parseXML(
   xmlData: string | Uint8Array<ArrayBufferLike>,
