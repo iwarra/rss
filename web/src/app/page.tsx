@@ -1,55 +1,23 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import {
+  DEFAULT_ARTICLE_PAGE_SIZE,
+  getArticles,
+} from "@/server/articles/repository";
 import styles from "./page.module.css";
 
-type Article = {
-  id: number;
-  title: string;
-  link: string;
-  description: string | null;
-  pubDate: string;
-  sourceCategory: string | null;
-  categories: string[] | null;
-};
+export const dynamic = "force-dynamic";
 
-type ArticlesResponse = {
-  articles: Article[];
-  pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-  };
-};
+export default async function Home() {
+  let articles: Awaited<ReturnType<typeof getArticles>>["articles"] = [];
+  let error: string | null = null;
 
-export default function Home() {
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadArticles() {
-      try {
-        const response = await fetch("/api/articles");
-
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-
-        const payload: ArticlesResponse = await response.json();
-        setArticles(payload.articles);
-      } catch (error) {
-        setError(
-          error instanceof Error ? error.message : "Unable to load articles.",
-        );
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    void loadArticles();
-  }, []);
+  try {
+    ({ articles } = await getArticles({
+      page: 1,
+      limit: DEFAULT_ARTICLE_PAGE_SIZE,
+    }));
+  } catch (cause) {
+    error = cause instanceof Error ? cause.message : "Unable to load articles.";
+  }
 
   return (
     <main className={styles.page}>
@@ -60,8 +28,6 @@ export default function Home() {
 
       {error ? (
         <p className={styles.message}>Could not load articles: {error}</p>
-      ) : isLoading ? (
-        <p className={styles.message}>Loading articles…</p>
       ) : articles.length === 0 ? (
         <p className={styles.message}>No articles found.</p>
       ) : (
