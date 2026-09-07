@@ -1,5 +1,21 @@
-// Store data into a DB that is required for the frontend application
-// Store data in files/unstructured when not required for frontend application, but perhaps needed prior
+- NEW LIST:
+
+* Add pagination (and the noted feed/category/date filters) to `GET /api/articles`; the repository still has this explicit TODO. [repository.ts](/Users/ivonajosipovic/Desktop/rss/web/src/server/articles/repository.ts:14)
+* Replace the article-list client-side `useEffect` fetch with server-side rendering. [page.tsx](/Users/ivonajosipovic/Desktop/rss/web/src/app/page.tsx:1)
+* Move the feed API key out of the JSON body and into request headers. [route.ts](/Users/ivonajosipovic/Desktop/rss/web/src/app/api/feed/route.ts:5)
+* Separate the frontend demo from the `web` application/server code; it remains the root application page.
+* Add scheduled ingestion jobs/cron triggers. Ingestion is callable through `POST /api/ingestion`, but nothing schedules it.
+* Add a message broker/queue for ingestion ↔ embedding processing.
+* Implement similarity grouping/clustering of articles covering the same event. The worker imports clustering material, but the actual `similarTo` logic is commented out and no grouping is persisted. [index.ts](/Users/ivonajosipovic/Desktop/rss/services/embed-articles/src/index.ts:142)
+* Define and implement a staleness/re-fetch policy for feed items.
+* Add caching beyond the in-worker category/subject-embedding memory cache.
+* Restrict consumed-GUID lookups to a time window; current lookups consider all stored GUIDs.
+* Decide, document, and configure relevance/category similarity thresholds. A hard-coded default of `0.5` is currently used. [index.ts](/Users/ivonajosipovic/Desktop/rss/services/embed-articles/src/index.ts:107)
+* Improve the feed schema: decide the stored `image` representation and clarify/rename `sy_updatePeriod` and `sy_updateFrequency`. They are currently stored essentially as parsed RSS fields. [feed.ts](/Users/ivonajosipovic/Desktop/rss/web/src/server/db/schema/feed.ts:10)
+* Further improve the database schema (the TODO is broad; likely includes fields needed for grouping, staleness, and richer processing state).
+* Define finer-grained failure behavior. The code records a failed feed and continues with other feeds, but one item/embedding failure currently fails the whole feed batch; there is no retry or per-item policy. [service.ts](/Users/ivonajosipovic/Desktop/rss/web/src/server/ingestion/service.ts:77)
+
+# OLD LIST:
 
 # Subtasks of handling raw data
 
