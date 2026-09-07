@@ -13,6 +13,16 @@ type Article = {
   categories: string[] | null;
 };
 
+type ArticlesResponse = {
+  articles: Article[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+};
+
 export default function Home() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -27,7 +37,8 @@ export default function Home() {
           throw new Error(`Request failed with status ${response.status}`);
         }
 
-        setArticles(await response.json());
+        const payload: ArticlesResponse = await response.json();
+        setArticles(payload.articles);
       } catch (error) {
         setError(
           error instanceof Error ? error.message : "Unable to load articles.",

@@ -194,7 +194,7 @@ export function createFeedIngestionResult(
     };
   }
 
-  throw new Error(`Unsupported ingestion result kind: ${input.kind}`);
+  throw new Error("Unsupported ingestion result kind");
 }
 
 export function createIngestionReport(
