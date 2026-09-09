@@ -2,28 +2,9 @@ import "server-only";
 import { and, count, desc, eq, gte, lt, or, sql } from "drizzle-orm";
 import { getDb } from "@/server/db/client";
 import { articlesTable } from "../db/schema";
+import type { ArticleQuery, ArticlesPage } from "./types";
 
-export const DEFAULT_ARTICLE_PAGE_SIZE = 20;
-export const MAX_ARTICLE_PAGE_SIZE = 100;
-
-export type ArticleQuery = {
-  page: number;
-  limit: number;
-  feedId?: number;
-  category?: string;
-  startDate?: Date;
-  endDate?: Date;
-};
-
-export type ArticlesPage = {
-  articles: (typeof articlesTable.$inferSelect)[];
-  pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-  };
-};
+export type { ArticleQuery, ArticlesPage } from "./types";
 
 function buildArticleFilters(query: ArticleQuery) {
   const filters = [];
