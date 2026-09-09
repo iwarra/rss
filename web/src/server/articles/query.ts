@@ -6,6 +6,7 @@ import {
 import {
   ARTICLE_CATEGORIES,
   ARTICLE_FILTER_PARAMS,
+  ARTICLE_PAGE_PARAM,
   type ArticleCategory,
 } from "@/shared/types";
 
@@ -79,8 +80,13 @@ function parseCategory(searchParams: URLSearchParams): ArticleCategory | undefin
   return category as ArticleCategory;
 }
 
+function parseOptionalText(searchParams: URLSearchParams, name: string) {
+  const value = searchParams.get(name)?.trim();
+  return value || undefined;
+}
+
 /**
- * Supports page (default 1), limit (default 20, maximum 100), feedId,
+ * Supports page (default 1), limit (default 20, maximum 100), feed name,
  * category, startDate (inclusive), and endDate (inclusive for date-only
  * values, exclusive for timestamps).
  */
@@ -97,16 +103,14 @@ export function parseArticleQuery(
   }
 
   return {
-    page: parsePositiveInteger(searchParams, "page", 1),
+    page: parsePositiveInteger(searchParams, ARTICLE_PAGE_PARAM, 1),
     limit: parsePositiveInteger(
       searchParams,
       "limit",
       DEFAULT_ARTICLE_PAGE_SIZE,
       MAX_ARTICLE_PAGE_SIZE,
     ),
-    feedId: searchParams.has(ARTICLE_FILTER_PARAMS.feedId)
-      ? parsePositiveInteger(searchParams, ARTICLE_FILTER_PARAMS.feedId)
-      : undefined,
+    feedName: parseOptionalText(searchParams, ARTICLE_FILTER_PARAMS.feed),
     category: parseCategory(searchParams),
     startDate,
     endDate,

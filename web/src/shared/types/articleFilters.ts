@@ -1,9 +1,11 @@
 export const ARTICLE_FILTER_PARAMS = {
-  feedId: "feedId",
+  feed: "feed",
   category: "category",
   startDate: "startDate",
   endDate: "endDate",
 } as const;
+
+export const ARTICLE_PAGE_PARAM = "page";
 
 export type ArticleFilterName = keyof typeof ARTICLE_FILTER_PARAMS;
 
@@ -32,7 +34,7 @@ export function articleFilterValuesFromSearchParams(
   searchParams: URLSearchParams,
 ): ArticleFilterValues {
   return {
-    feedId: searchParams.get(ARTICLE_FILTER_PARAMS.feedId) ?? "",
+    feed: searchParams.get(ARTICLE_FILTER_PARAMS.feed) ?? "",
     category: searchParams.get(ARTICLE_FILTER_PARAMS.category) ?? "",
     startDate: searchParams.get(ARTICLE_FILTER_PARAMS.startDate) ?? "",
     endDate: searchParams.get(ARTICLE_FILTER_PARAMS.endDate) ?? "",
@@ -45,6 +47,19 @@ export function serializeArticleFilterValues(values: ArticleFilterValues) {
   for (const name of Object.keys(ARTICLE_FILTER_PARAMS) as ArticleFilterName[]) {
     const value = values[name].trim();
     if (value) params.set(ARTICLE_FILTER_PARAMS[name], value);
+  }
+
+  return params;
+}
+
+export function serializeArticleListQuery(
+  filters: ArticleFilterValues,
+  page = 1,
+) {
+  const params = serializeArticleFilterValues(filters);
+
+  if (page > 1) {
+    params.set(ARTICLE_PAGE_PARAM, String(page));
   }
 
   return params;

@@ -3,11 +3,13 @@ import { DEFAULT_ARTICLE_PAGE_SIZE } from '@/server/articles/types';
 import { parseArticleQuery } from '@/server/articles/query';
 import { getFeeds } from '@/server/feed/repository';
 import {
-	articleFilterValuesFromSearchParams,
-	toUrlSearchParams,
-	type ArticleSearchParams,
+  articleFilterValuesFromSearchParams,
+  serializeArticleListQuery,
+  toUrlSearchParams,
+  type ArticleSearchParams,
 } from '@/shared/types';
 import { ArticleFilters } from './article-filters';
+import { ArticlePagination } from './article-pagination';
 import styles from './page.module.css';
 
 export const dynamic = 'force-dynamic';
@@ -21,7 +23,9 @@ export default async function Home({
 	const urlSearchParams = toUrlSearchParams(rawSearchParams);
 	const filterValues = articleFilterValuesFromSearchParams(urlSearchParams);
 	let articles: Awaited<ReturnType<typeof getArticles>>['articles'] = [];
-	let feeds: { id: number; title: string }[] = [];
+	let pagination: Awaited<ReturnType<typeof getArticles>>['pagination'] | null =
+		null;
+	let feedNames: string[] = [];
 	let error: string | null = null;
 
 	try {
@@ -29,16 +33,16 @@ export default async function Home({
 		const [articlesPage, availableFeeds] = await Promise.all([
 			getArticles({
 				...query,
-				page: 1,
 				limit: DEFAULT_ARTICLE_PAGE_SIZE,
 			}),
 			getFeeds(),
 		]);
 
 		articles = articlesPage.articles;
-		feeds = availableFeeds
-			.map(({ id, title }) => ({ id, title }))
-			.sort((left, right) => left.title.localeCompare(right.title));
+		pagination = articlesPage.pagination;
+		feedNames = [...new Set(availableFeeds.map((feed) => feed.title))].sort(
+			(left, right) => left.localeCompare(right),
+		);
 	} catch (cause) {
 		error = cause instanceof Error ? cause.message : 'Unable to load articles.';
 	}
@@ -50,15 +54,28 @@ export default async function Home({
 			</header>
 
 			<ArticleFilters
-				feeds={feeds}
+				feedNames={feedNames}
 				values={filterValues}
 			/>
 
 			{error ? (
 				<p className={styles.message}>Could not load articles: {error}</p>
+			) : pagination &&
+				pagination.total > 0 &&
+				pagination.page > pagination.totalPages ? (
+				<p className={styles.message}>
+					Page {pagination.page} is unavailable.{' '}
+					<a
+						href={`/?${serializeArticleListQuery(
+							filterValues,
+							pagination.totalPages,
+						)}`}>
+						Go to page {pagination.totalPages}.
+					</a>
+				</p>
 			) : articles.length === 0 ? (
 				<p className={styles.message}>
-					{filterValues.feedId ||
+					{filterValues.feed ||
 					filterValues.category ||
 					filterValues.startDate ||
 					filterValues.endDate
@@ -91,6 +108,13 @@ export default async function Home({
 						</li>
 					))}
 				</ul>
+			)}
+
+			{!error && pagination && pagination.page <= pagination.totalPages && (
+				<ArticlePagination
+					filters={filterValues}
+					pagination={pagination}
+				/>
 			)}
 		</main>
 	);
