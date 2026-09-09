@@ -4,6 +4,7 @@ import type { Item, ProcessedArticle } from "@/types";
 import { mapItemsToRelevantArticles } from "@/utils/mapItemsToRelevantArticles";
 import { getProcessedArticles } from "@/utils/getProcessedArticles";
 import { getItems } from "@/rss/index";
+import { sql } from "drizzle-orm";
 
 export interface IngestionCounts {
   fetched: number;

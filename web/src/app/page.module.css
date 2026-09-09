@@ -1,52 +1,116 @@
 .page {
-  width: min(900px, 100%);
-  margin: 0 auto;
-  padding: 48px 24px;
+	width: min(900px, 100%);
+	margin: 0 auto;
+	padding: 48px 24px;
 }
 
 .eyebrow,
 .categories,
 .article p {
-  color: #666;
+	color: #666;
 }
 
 .eyebrow {
-  margin-bottom: 8px;
-  font-size: 0.875rem;
-  font-family: monospace;
+	margin-bottom: 8px;
+	font-size: 0.875rem;
+	font-family: monospace;
 }
 
 .page h1 {
-  font-size: 2rem;
+	font-size: 2rem;
+}
+
+.filters {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 16px;
+	align-items: end;
+	margin-top: 32px;
+}
+
+.filters label {
+	display: grid;
+	gap: 6px;
+	font-weight: 600;
+}
+
+.filters input,
+.filters select,
+.filterActions button {
+	min-height: 2.5rem;
+	padding: 0 8px;
+	font: inherit;
+}
+
+.filterActions {
+	min-width: 100vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+}
+
+.filterActions span {
+	color: #666;
+}
+
+.filterSkeleton {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 16px;
+	margin-top: 32px;
+}
+
+.skeleton {
+	min-height: 2.5rem;
+	border-radius: 8px;
+	background: linear-gradient(90deg, #eee 25%, #f6f6f6 50%, #eee 75%);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
+}
+
+.loadingMessage {
+	margin-top: 32px;
+}
+
+.article.skeleton {
+	min-height: 8rem;
+}
+
+@keyframes shimmer {
+	to {
+		background-position: -200% 0;
+	}
 }
 
 .articles {
-  display: grid;
-  gap: 16px;
-  margin-top: 32px;
-  list-style: none;
+	display: grid;
+	gap: 16px;
+	margin-top: 32px;
+	list-style: none;
 }
 
 .article {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
 }
 
 .article a {
-  font-weight: 600;
-  text-decoration: underline;
+	font-weight: 600;
+	text-decoration: underline;
 }
 
 .article p {
-  margin-top: 8px;
-  line-height: 1.5;
+	margin-top: 8px;
+	line-height: 1.5;
 }
 
 .categories {
-  font-size: 0.875rem;
+	font-size: 0.875rem;
 }
 
 .message {
-  margin-top: 32px;
+	margin-top: 32px;
 }
