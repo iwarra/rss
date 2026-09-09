@@ -1,7 +1,7 @@
 import "server-only";
 import { and, count, desc, eq, gte, lt, or, sql } from "drizzle-orm";
 import { getDb } from "@/server/db/client";
-import { articlesTable } from "../db/schema";
+import { articlesTable, feedsTable } from "../db/schema";
 import type { ArticleQuery, ArticlesPage } from "./types";
 
 export type { ArticleQuery, ArticlesPage } from "./types";
@@ -11,6 +11,15 @@ function buildArticleFilters(query: ArticleQuery) {
 
   if (query.feedId !== undefined) {
     filters.push(eq(articlesTable.feedId, query.feedId));
+  }
+
+  if (query.feedName !== undefined) {
+    filters.push(sql`EXISTS (
+      SELECT 1
+      FROM ${feedsTable}
+      WHERE ${feedsTable.id} = ${articlesTable.feedId}
+        AND ${feedsTable.title} = ${query.feedName}
+    )`);
   }
 
   if (query.category !== undefined) {

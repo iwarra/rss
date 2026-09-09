@@ -11,7 +11,7 @@ import {
 import styles from "./page.module.css";
 
 type ArticleFiltersProps = {
-  feeds: { id: number; title: string }[];
+  feedNames: string[];
   values: ArticleFilterValues;
 };
 
@@ -19,19 +19,18 @@ function queryFromForm(form: HTMLFormElement) {
   const formData = new FormData(form);
 
   return serializeArticleFilterValues({
-    feedId: String(formData.get(ARTICLE_FILTER_PARAMS.feedId) ?? ""),
+    feed: String(formData.get(ARTICLE_FILTER_PARAMS.feed) ?? ""),
     category: String(formData.get(ARTICLE_FILTER_PARAMS.category) ?? ""),
     startDate: String(formData.get(ARTICLE_FILTER_PARAMS.startDate) ?? ""),
     endDate: String(formData.get(ARTICLE_FILTER_PARAMS.endDate) ?? ""),
   });
 }
 
-export function ArticleFilters({ feeds, values }: ArticleFiltersProps) {
+export function ArticleFilters({ feedNames, values }: ArticleFiltersProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const selectedFeedIsMissing =
-    values.feedId !== "" &&
-    !feeds.some((feed) => String(feed.id) === values.feedId);
+    values.feed !== "" && !feedNames.includes(values.feed);
   const filterKey = serializeArticleFilterValues(values).toString();
 
   function navigate(params: URLSearchParams) {
@@ -55,16 +54,16 @@ export function ArticleFilters({ feeds, values }: ArticleFiltersProps) {
       <label>
         Feed
         <select
-          name={ARTICLE_FILTER_PARAMS.feedId}
-          defaultValue={values.feedId}
+          name={ARTICLE_FILTER_PARAMS.feed}
+          defaultValue={values.feed}
         >
           <option value="">All feeds</option>
           {selectedFeedIsMissing && (
-            <option value={values.feedId}>Unknown feed ({values.feedId})</option>
+            <option value={values.feed}>{values.feed}</option>
           )}
-          {feeds.map((feed) => (
-            <option key={feed.id} value={feed.id}>
-              {feed.title}
+          {feedNames.map((feedName) => (
+            <option key={feedName} value={feedName}>
+              {feedName}
             </option>
           ))}
         </select>

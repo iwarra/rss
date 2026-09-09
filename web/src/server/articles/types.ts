@@ -8,6 +8,7 @@ export type ArticleQuery = {
   page: number;
   limit: number;
   feedId?: number;
+  feedName?: string;
   category?: ArticleCategory;
   startDate?: Date;
   endDate?: Date;
