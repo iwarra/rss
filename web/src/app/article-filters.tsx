@@ -1,13 +1,15 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useTransition, type SubmitEvent } from "react";
+import { type JSX, type SubmitEvent, useTransition } from "react";
+
 import {
   ARTICLE_CATEGORIES,
   ARTICLE_FILTER_PARAMS,
-  serializeArticleFilterValues,
   type ArticleFilterValues,
+  serializeArticleFilterValues,
 } from "@/shared/types";
+
 import styles from "./page.module.css";
 
 type ArticleFiltersProps = {
@@ -15,30 +17,37 @@ type ArticleFiltersProps = {
   values: ArticleFilterValues;
 };
 
-function queryFromForm(form: HTMLFormElement) {
+function queryFromForm(form: HTMLFormElement): URLSearchParams {
   const formData = new FormData(form);
+  const textValue = (name: string): string => {
+    const value = formData.get(name);
+    return typeof value === "string" ? value : "";
+  };
 
   return serializeArticleFilterValues({
-    feed: String(formData.get(ARTICLE_FILTER_PARAMS.feed) ?? ""),
-    category: String(formData.get(ARTICLE_FILTER_PARAMS.category) ?? ""),
-    startDate: String(formData.get(ARTICLE_FILTER_PARAMS.startDate) ?? ""),
-    endDate: String(formData.get(ARTICLE_FILTER_PARAMS.endDate) ?? ""),
+    feed: textValue(ARTICLE_FILTER_PARAMS.feed),
+    category: textValue(ARTICLE_FILTER_PARAMS.category),
+    startDate: textValue(ARTICLE_FILTER_PARAMS.startDate),
+    endDate: textValue(ARTICLE_FILTER_PARAMS.endDate),
   });
 }
 
-export function ArticleFilters({ feedNames, values }: ArticleFiltersProps) {
+export function ArticleFilters({
+  feedNames,
+  values,
+}: ArticleFiltersProps): JSX.Element {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const selectedFeedIsMissing =
     values.feed !== "" && !feedNames.includes(values.feed);
   const filterKey = serializeArticleFilterValues(values).toString();
 
-  function navigate(params: URLSearchParams) {
+  function navigate(params: URLSearchParams): void {
     const query = params.toString();
     startTransition(() => router.push(query ? `/?${query}` : "/"));
   }
 
-  function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
+  function handleSubmit(event: SubmitEvent<HTMLFormElement>): void {
     event.preventDefault();
     navigate(queryFromForm(event.currentTarget));
   }
@@ -53,10 +62,7 @@ export function ArticleFilters({ feedNames, values }: ArticleFiltersProps) {
     >
       <label>
         Feed
-        <select
-          name={ARTICLE_FILTER_PARAMS.feed}
-          defaultValue={values.feed}
-        >
+        <select name={ARTICLE_FILTER_PARAMS.feed} defaultValue={values.feed}>
           <option value="">All feeds</option>
           {selectedFeedIsMissing && (
             <option value={values.feed}>{values.feed}</option>

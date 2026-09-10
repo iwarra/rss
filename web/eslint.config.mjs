@@ -26,6 +26,11 @@ const eslintConfig = defineConfig([
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    settings: {
+      next: {
+        rootDir: "web/",
+      },
+    },
     plugins: {
       "simple-import-sort": simpleImportSort,
     },

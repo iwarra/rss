@@ -11,12 +11,11 @@ export type ArticleFilterName = keyof typeof ARTICLE_FILTER_PARAMS;
 
 export type ArticleFilterValues = Record<ArticleFilterName, string>;
 
-export type ArticleSearchParams = Record<
-  string,
-  string | string[] | undefined
->;
+export type ArticleSearchParams = Record<string, string | string[] | undefined>;
 
-export function toUrlSearchParams(searchParams: ArticleSearchParams) {
+export function toUrlSearchParams(
+  searchParams: ArticleSearchParams,
+): URLSearchParams {
   const params = new URLSearchParams();
 
   for (const [name, value] of Object.entries(searchParams)) {
@@ -41,10 +40,14 @@ export function articleFilterValuesFromSearchParams(
   };
 }
 
-export function serializeArticleFilterValues(values: ArticleFilterValues) {
+export function serializeArticleFilterValues(
+  values: ArticleFilterValues,
+): URLSearchParams {
   const params = new URLSearchParams();
 
-  for (const name of Object.keys(ARTICLE_FILTER_PARAMS) as ArticleFilterName[]) {
+  for (const name of Object.keys(
+    ARTICLE_FILTER_PARAMS,
+  ) as ArticleFilterName[]) {
     const value = values[name].trim();
     if (value) params.set(ARTICLE_FILTER_PARAMS[name], value);
   }
@@ -55,7 +58,7 @@ export function serializeArticleFilterValues(values: ArticleFilterValues) {
 export function serializeArticleListQuery(
   filters: ArticleFilterValues,
   page = 1,
-) {
+): URLSearchParams {
   const params = serializeArticleFilterValues(filters);
 
   if (page > 1) {

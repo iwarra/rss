@@ -1,14 +1,15 @@
 import {
-  DEFAULT_ARTICLE_PAGE_SIZE,
-  MAX_ARTICLE_PAGE_SIZE,
-  type ArticleQuery,
-} from "./types";
-import {
   ARTICLE_CATEGORIES,
   ARTICLE_FILTER_PARAMS,
   ARTICLE_PAGE_PARAM,
   type ArticleCategory,
 } from "@/shared/types";
+
+import {
+  type ArticleQuery,
+  DEFAULT_ARTICLE_PAGE_SIZE,
+  MAX_ARTICLE_PAGE_SIZE,
+} from "./types";
 
 export class InvalidArticleQueryError extends Error {}
 
@@ -17,7 +18,7 @@ function parsePositiveInteger(
   name: string,
   defaultValue?: number,
   maximum?: number,
-) {
+): number {
   const value = searchParams.get(name);
 
   if (value === null && defaultValue !== undefined) {
@@ -44,7 +45,7 @@ function parseDate(
   searchParams: URLSearchParams,
   name: string,
   endOfDay = false,
-) {
+): Date | undefined {
   const value = searchParams.get(name);
   if (value === null || value === "") return undefined;
 
@@ -69,18 +70,25 @@ function parseDate(
   return date;
 }
 
-function parseCategory(searchParams: URLSearchParams): ArticleCategory | undefined {
+function parseCategory(
+  searchParams: URLSearchParams,
+): ArticleCategory | undefined {
   const category = searchParams.get(ARTICLE_FILTER_PARAMS.category)?.trim();
   if (!category) return undefined;
 
   if (!(ARTICLE_CATEGORIES as readonly string[]).includes(category)) {
-    throw new InvalidArticleQueryError("category must be a predefined category.");
+    throw new InvalidArticleQueryError(
+      "category must be a predefined category.",
+    );
   }
 
   return category as ArticleCategory;
 }
 
-function parseOptionalText(searchParams: URLSearchParams, name: string) {
+function parseOptionalText(
+  searchParams: URLSearchParams,
+  name: string,
+): string | undefined {
   const value = searchParams.get(name)?.trim();
   return value || undefined;
 }
@@ -90,13 +98,15 @@ function parseOptionalText(searchParams: URLSearchParams, name: string) {
  * category, startDate (inclusive), and endDate (inclusive for date-only
  * values, exclusive for timestamps).
  */
-export function parseArticleQuery(
-  searchParams: URLSearchParams,
-): ArticleQuery {
+export function parseArticleQuery(searchParams: URLSearchParams): ArticleQuery {
   const startDate = parseDate(searchParams, ARTICLE_FILTER_PARAMS.startDate);
   const endDate = parseDate(searchParams, ARTICLE_FILTER_PARAMS.endDate, true);
 
-  if (startDate !== undefined && endDate !== undefined && startDate >= endDate) {
+  if (
+    startDate !== undefined &&
+    endDate !== undefined &&
+    startDate >= endDate
+  ) {
     throw new InvalidArticleQueryError(
       "startDate must be earlier than endDate.",
     );
