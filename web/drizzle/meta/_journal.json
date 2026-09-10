@@ -15,6 +15,13 @@
       "when": 1786470629498,
       "tag": "0001_slim_serpent_society",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789035091497,
+      "tag": "0002_productive_gamora",
+      "breakpoints": true
     }
   ]
 }
