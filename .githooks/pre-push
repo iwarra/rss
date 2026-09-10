@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+PATH="$PWD/node_modules/.bin:$PATH"
+
+echo "Running typecheck..."
+bun run typecheck
+
+echo "Running ESLint..."
+bun run lint:ci
+
+echo "Checking formatting..."
+bun run format:ci
+
+echo "Running tests..."
+bun test --bail
+
+echo "Pre-push checks passed."

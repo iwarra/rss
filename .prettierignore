@@ -1,0 +1,9 @@
+**/node_modules/**
+**/.next/**
+**/.open-next/**
+**/drizzle/**
+**/logs/**
+**/build/**
+**/out/**
+**/coverage/**
+**/worker-configuration.d.ts

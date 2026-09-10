@@ -9,11 +9,15 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate:local": "wrangler d1 migrations apply DB --local",
     "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
-    "lint": "eslint",
+    "lint": "eslint --max-warnings=0",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "format": "prettier . --write --cache",
+    "format:ci": "prettier --check . --cache",
+    "typecheck": "tsc --noEmit",
+    "setup:hooks": "sh ../scripts/setup-git-hooks.sh"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.2",
@@ -25,13 +29,22 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.11",
+    "eslint-config-prettier": "^10",
+    "eslint-plugin-regexp": "^3",
+    "eslint-plugin-simple-import-sort": "^12",
+    "lint-staged": "^17.5.0",
+    "prettier": "^3",
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard": "^40.0.0",
     "typescript": "^5",
+    "typescript-eslint": "^8",
     "wrangler": "^4.119.0"
   }
 }

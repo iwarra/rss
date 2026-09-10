@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+cd "$REPOSITORY_ROOT"
+
+# Run checks against staged files.
+web/node_modules/.bin/lint-staged --config lint-staged.config.mjs
+
+# Optional repository-wide checks.
+npm --prefix web run typecheck
+web/node_modules/.bin/prettier --check . --cache
