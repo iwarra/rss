@@ -1,13 +1,16 @@
 import "server-only";
-import { and, count, desc, eq, gte, lt, or, sql } from "drizzle-orm";
+
+import { and, count, desc, eq, gte, lt, or, type SQL, sql } from "drizzle-orm";
+
 import { getDb } from "@/server/db/client";
+
 import { articlesTable, feedsTable } from "../db/schema";
 import type { ArticleQuery, ArticlesPage } from "./types";
 
 export type { ArticleQuery, ArticlesPage } from "./types";
 
-function buildArticleFilters(query: ArticleQuery) {
-  const filters = [];
+function buildArticleFilters(query: ArticleQuery): SQL | undefined {
+  const filters: SQL[] = [];
 
   if (query.feedId !== undefined) {
     filters.push(eq(articlesTable.feedId, query.feedId));
@@ -31,7 +34,7 @@ function buildArticleFilters(query: ArticleQuery) {
           FROM json_each(${articlesTable.categories})
           WHERE json_each.value = ${query.category}
         )`,
-      ),
+      )!,
     );
   }
 

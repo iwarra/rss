@@ -1,29 +1,37 @@
 import { fetchFeed } from "@/server/ingestion/fetchFeed";
+
+import { findExistingConsumedGuids } from "../consumedArticles/repository";
 import { getFeeds } from "../feed/repository";
-import { FeedIngestionResult, IngestFeedsOptions } from "./types";
+import { normalizeFeedItems } from "./normalizeFeedItems";
 import {
   createConsumedArticle,
+  createFeedIngestionResult,
   createIngestionReport,
   mapItemsToRelevantArticles,
   prepareArticlesForEmbedding,
   removeDuplicateItems,
-  createFeedIngestionResult,
   validateProcessedArticles,
 } from "./pipeline";
 import { getProcessedArticles } from "./processor-client";
+import { saveIngestionReport } from "./reportRepository";
 import { saveIngestionResults } from "./repository";
-import { findExistingConsumedGuids } from "../consumedArticles/repository";
-import { saveIngestionReport } from "./saveIngestionReport";
+import type {
+  FeedIngestionResult,
+  IngestFeedsOptions,
+  IngestionReport,
+} from "./types";
 
 //fetch → deduplicate → exclude consumed → prepare → process → validate → map relevant → mark all processed consumed → save
-export async function ingestFeeds(options: IngestFeedsOptions = {}) {
+export async function ingestFeeds(
+  options: IngestFeedsOptions = {},
+): Promise<IngestionReport> {
   const feeds = await getFeeds(options.feedTitle);
   const startedAt = performance.now();
   const results: FeedIngestionResult[] = [];
   for (const feed of feeds) {
     try {
       const rss = await fetchFeed(feed.rssLink);
-      const items = rss.channel.item ?? [];
+      const items = normalizeFeedItems(rss.channel.item ?? []);
       const uniqueItems = removeDuplicateItems(items);
 
       const consumedGuids = await findExistingConsumedGuids(
@@ -76,7 +84,6 @@ export async function ingestFeeds(options: IngestFeedsOptions = {}) {
       });
       results.push(ingestionInfo);
     } catch (error) {
-      console.error(error);
       results.push(
         createFeedIngestionResult({
           kind: "failed",

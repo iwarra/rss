@@ -2,6 +2,7 @@ import { type Feed, type NewFeed, type NewArticle } from "@/db/schema";
 import { db } from "@/db/client";
 import { sql } from "drizzle-orm";
 import { fetchFeed } from "@/utils/fetchFeed";
+import { normalizeFeedItems } from "@/utils/normalizeFeedItems";
 import type { RssFeed, Item } from "@/types";
 
 export async function getFeedsFromDatabase(title?: Feed["title"]) {
@@ -21,7 +22,7 @@ export async function getItems(feed: Feed): Promise<Item[]> {
   } = await fetchFeed(feed.rssLink);
 
   if (!items) return [];
-  return items;
+  return normalizeFeedItems(items);
 }
 
 export async function insertArticle(article: NewArticle) {

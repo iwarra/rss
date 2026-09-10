@@ -16,7 +16,7 @@ Bun.serve({
   fetch: app.fetch,
 });
 
-ingestFeeds({ feedTitle: "CERT-SE." })
+ingestFeeds()
   .then(async (report) => {
     const reportPath = await saveIngestionReport(report);
     console.log(JSON.stringify(report, null, 2));
