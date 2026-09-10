@@ -4,15 +4,15 @@ set -e
 PATH="$PWD/node_modules/.bin:$PATH"
 
 echo "Running typecheck..."
-bun run typecheck
+bun --cwd web run typecheck
 
 echo "Running ESLint..."
-bun run lint:ci
+bun --cwd web run lint:ci
 
 echo "Checking formatting..."
-bun run format:ci
+bun --cwd web run format:ci
 
 echo "Running tests..."
-bun test --bail
+bun --cwd backend test
 
 echo "Pre-push checks passed."
