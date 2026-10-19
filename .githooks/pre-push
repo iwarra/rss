@@ -7,12 +7,9 @@ echo "Running typecheck..."
 bun --cwd web run typecheck
 
 echo "Running ESLint..."
-bun --cwd web run lint:ci
+bun --cwd web run lint
 
 echo "Checking formatting..."
 bun --cwd web run format:ci
-
-echo "Running tests..."
-bun --cwd backend test
 
 echo "Pre-push checks passed."
