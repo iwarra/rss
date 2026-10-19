@@ -1,4 +1,5 @@
 import type { Rss } from "@/shared/types";
+
 import parseXML from "./parseXML";
 
 export async function fetchFeed(link: string): Promise<Rss> {

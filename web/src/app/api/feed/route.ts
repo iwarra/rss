@@ -1,6 +1,7 @@
 //import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { addFeed, removeDuplicateLinks } from "@/server/feed/service";
 import { env } from "process";
+
+import { addFeed, removeDuplicateLinks } from "@/server/feed/service";
 
 //TODO: Move APIkey to Headers
 type AddFeedsBody = {
@@ -8,8 +9,8 @@ type AddFeedsBody = {
   apiKey: string;
 };
 
-export async function POST(request: Request) {
-  const { links, apiKey } = (await request.json()) as AddFeedsBody;
+export async function POST(request: Request): Promise<Response> {
+  const { links, apiKey } = await request.json<AddFeedsBody>();
   //const { env } = await getCloudflareContext({ async: true });
 
   //Temporary! till the the one above is enabled

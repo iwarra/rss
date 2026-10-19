@@ -1,9 +1,11 @@
 import "server-only";
-import { eq } from "drizzle-orm";
-import { getDb } from "@/server/db/client";
-import { feedsTable, type NewFeed, type Feed } from "@/server/db/schema";
 
-export async function insertFeed(feed: NewFeed) {
+import { eq } from "drizzle-orm";
+
+import { getDb } from "@/server/db/client";
+import { type Feed, feedsTable, type NewFeed } from "@/server/db/schema";
+
+export async function insertFeed(feed: NewFeed): Promise<void> {
   const db = await getDb();
 
   await db
