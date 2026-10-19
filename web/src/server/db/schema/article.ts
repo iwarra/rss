@@ -4,6 +4,7 @@ import {
   text,
   uniqueIndex,
 } from "drizzle-orm/sqlite-core";
+
 import { feedsTable } from "@/server/db/schema";
 
 export const articlesTable = sqliteTable(

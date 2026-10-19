@@ -1,6 +1,6 @@
-import { type Category, categoryDefinitions } from './data/categories';
-import { subject } from './data/subject';
-import { clustering } from './data/clustering';
+import { type Category, categoryDefinitions } from "./data/categories";
+import { subject } from "./data/subject";
+import { clustering } from "./data/clustering";
 
 type ArticleForProcessing = {
 	id: string;
@@ -27,7 +27,7 @@ export default {
 	async fetch(request: Request, env: Env) {
 		const url = new URL(request.url);
 
-		if (url.pathname === '/api/process-articles') {
+		if (url.pathname === "/api/process-articles") {
 			const body = await request.json<ProcessArticlesRequest>();
 
 			const articles = await processArticles(body.articles, env);
@@ -35,16 +35,16 @@ export default {
 			return Response.json({ articles });
 		}
 
-		return new Response('Not found', { status: 404 });
+		return new Response("Not found", { status: 404 });
 	},
 };
 
 async function getEmbeddings(text: string[], env: Env): Promise<number[][]> {
-	const result = (await env.AI.run('@cf/baai/bge-m3', {
+	const result = (await env.AI.run("@cf/baai/bge-m3", {
 		text,
 	})) as Ai_Cf_Baai_Bge_M3_Output_Embedding;
 	if (!result.data || result.data.length !== text.length) {
-		throw new Error('Could not create an embedding for every article.');
+		throw new Error("Could not create an embedding for every article.");
 	}
 
 	return result.data;
@@ -59,7 +59,7 @@ async function getCategories(env: Env): Promise<Category[]> {
 	);
 	const embeddings = result;
 	if (!embeddings || embeddings.length !== categoryDefinitions.length) {
-		throw new Error('Could not create an embedding for every category.');
+		throw new Error("Could not create an embedding for every category.");
 	} else {
 		cachedCategories = categoryDefinitions.map((category, i) => ({
 			...category,
@@ -68,8 +68,13 @@ async function getCategories(env: Env): Promise<Category[]> {
 	}
 	return cachedCategories;
 }
-function addCategories(articleEmbedding: number[], categories: Category[]): string[] {
-	return categories.filter((category) => checkRelevancy(category.embedding, articleEmbedding)).map((category) => category.name);
+function addCategories(
+	articleEmbedding: number[],
+	categories: Category[],
+): string[] {
+	return categories
+		.filter((category) => checkRelevancy(category.embedding, articleEmbedding))
+		.map((category) => category.name);
 }
 let cachedSubjectEmbedding: number[] | undefined;
 async function getSubjectEmbedding(env: Env): Promise<number[]> {
@@ -77,14 +82,18 @@ async function getSubjectEmbedding(env: Env): Promise<number[]> {
 	const result = await getEmbeddings([subject], env);
 	const embedding = result.at(0);
 	if (!embedding) {
-		throw new Error('Could not create an embedding for every category.');
+		throw new Error("Could not create an embedding for every category.");
 	} else {
 		cachedSubjectEmbedding = embedding;
 	}
 	return cachedSubjectEmbedding;
 }
 
-function checkRelevancy(embedding1: number[], embedding2: number[], treshold?: number): boolean {
+function checkRelevancy(
+	embedding1: number[],
+	embedding2: number[],
+	treshold?: number,
+): boolean {
 	if (embedding1.length !== embedding2.length || embedding1.length === 0) {
 		return false;
 	}
@@ -103,12 +112,18 @@ function checkRelevancy(embedding1: number[], embedding2: number[], treshold?: n
 		return false;
 	}
 
-	const cosineSimilarity = dotProduct / (Math.sqrt(magnitude1) * Math.sqrt(magnitude2));
-	const isRelevant = treshold ? cosineSimilarity >= treshold : cosineSimilarity >= 0.5;
+	const cosineSimilarity =
+		dotProduct / (Math.sqrt(magnitude1) * Math.sqrt(magnitude2));
+	const isRelevant = treshold
+		? cosineSimilarity >= treshold
+		: cosineSimilarity >= 0.5;
 	return isRelevant;
 }
 
-async function processArticles(articles: ArticleForProcessing[], env: Env): Promise<ProcessedArticle[]> {
+async function processArticles(
+	articles: ArticleForProcessing[],
+	env: Env,
+): Promise<ProcessedArticle[]> {
 	if (articles.length === 0) return [];
 
 	const embeddings = await getEmbeddings(
@@ -116,10 +131,12 @@ async function processArticles(articles: ArticleForProcessing[], env: Env): Prom
 		env,
 	);
 
-	const embeddedArticles: EmbeddedArticle[] = articles.map((article, index) => ({
-		...article,
-		embedding: embeddings[index],
-	}));
+	const embeddedArticles: EmbeddedArticle[] = articles.map(
+		(article, index) => ({
+			...article,
+			embedding: embeddings[index],
+		}),
+	);
 
 	const subjectEmbedding = await getSubjectEmbedding(env);
 
@@ -138,7 +155,9 @@ async function processArticles(articles: ArticleForProcessing[], env: Env): Prom
 		id: article.id,
 		embedding: article.embedding,
 		isRelevant: article.isSubjectRelevant,
-		categories: article.isSubjectRelevant ? addCategories(article.embedding, categories) : [],
+		categories: article.isSubjectRelevant
+			? addCategories(article.embedding, categories)
+			: [],
 		//similarTo: article.isSubjectRelevant ? findSimilarArticleIds(article, relevantArticles) : [],
 	}));
 }

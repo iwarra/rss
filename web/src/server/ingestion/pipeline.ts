@@ -1,10 +1,12 @@
-import type { Item } from "@/shared/types";
+import { load } from "cheerio";
+
 import type { NewArticle, NewConsumedArticle } from "@/server/db/schema";
+import type { Item } from "@/shared/types";
 import type {
   ArticleForProcessing,
   ProcessedArticle,
 } from "@/shared/types/article";
-import { load } from "cheerio";
+
 import {
   FeedIngestionInput,
   FeedIngestionResult,

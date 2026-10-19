@@ -1,7 +1,7 @@
 import {
+  type ArticleForProcessing,
   processArticlesResponseSchema,
   type ProcessedArticle,
-  type ArticleForProcessing,
 } from "@/shared/types";
 
 const workerUrl = process.env.WORKER_URL;
@@ -35,5 +35,5 @@ export async function fetchEmbeddings(content: string[]): Promise<number[][]> {
     );
   }
 
-  return response.json() as Promise<number[][]>;
+  return response.json();
 }

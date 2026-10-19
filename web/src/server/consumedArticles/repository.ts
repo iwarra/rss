@@ -1,5 +1,7 @@
 import "server-only";
-import { eq, and, inArray } from "drizzle-orm";
+
+import { and, eq, inArray } from "drizzle-orm";
+
 import { getDb } from "../db/client";
 import { consumedArticlesTable } from "../db/schema";
 
