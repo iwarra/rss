@@ -1,24 +1,28 @@
-//import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { env } from "process";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { z } from "zod";
 
+import { isFeedRequestAuthorized } from "@/server/feed/feed-auth";
 import { addFeed, removeDuplicateLinks } from "@/server/feed/service";
 
-//TODO: Move APIkey to Headers
-type AddFeedsBody = {
-  links: string[];
-  apiKey: string;
+const addFeedsBodySchema = z.object({
+  links: z.array(z.string()),
+});
+
+type FeedEnv = {
+  API_KEY?: string;
 };
 
 export async function POST(request: Request): Promise<Response> {
-  const { links, apiKey } = await request.json<AddFeedsBody>();
-  //const { env } = await getCloudflareContext({ async: true });
+  const { env } = await getCloudflareContext({ async: true });
+  const { API_KEY } = env as FeedEnv;
 
-  //Temporary! till the the one above is enabled
-  if (apiKey !== env.API_KEY) {
+  if (!isFeedRequestAuthorized(request, API_KEY)) {
     return Response.json({ error: "Unauthorized." }, { status: 401 });
   }
 
-  if (!Array.isArray(links) || links.length === 0) {
+  const body = addFeedsBodySchema.safeParse(await request.json());
+
+  if (!body.success || body.data.links.length === 0) {
     return Response.json(
       { error: "At least one link is required." },
       { status: 400 },
@@ -26,7 +30,7 @@ export async function POST(request: Request): Promise<Response> {
   }
 
   try {
-    const uniqueLinks = removeDuplicateLinks(links);
+    const uniqueLinks = removeDuplicateLinks(body.data.links);
     for (const link of uniqueLinks) {
       await addFeed(link);
     }
