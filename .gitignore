@@ -4,7 +4,5 @@
 *notes.md
 *.editorconfig
 *AGENTS.md
-*.prettierrc
-services/embed-articles/.prettierrc
 **/logs
 backend/src/rss/seed.ts

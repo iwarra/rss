@@ -28,7 +28,7 @@ const eslintConfig = defineConfig([
     },
     settings: {
       next: {
-        rootDir: "web/",
+        rootDir: import.meta.dirname,
       },
     },
     plugins: {

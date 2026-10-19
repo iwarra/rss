@@ -1,10 +1,10 @@
-import { getArticles } from "@/server/articles/repository";
 import {
   InvalidArticleQueryError,
   parseArticleQuery,
 } from "@/server/articles/query";
+import { getArticles } from "@/server/articles/repository";
 
-export async function GET(request: Request) {
+export async function GET(request: Request): Promise<Response> {
   try {
     return Response.json(
       await getArticles(parseArticleQuery(new URL(request.url).searchParams)),

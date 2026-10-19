@@ -1,4 +1,5 @@
 import "server-only";
+
 import { getDb } from "@/server/db/client";
 import {
   articlesTable,
@@ -6,6 +7,7 @@ import {
   type NewArticle,
   type NewConsumedArticle,
 } from "@/server/db/schema";
+
 import { SaveIngestionResults } from "./types";
 
 type SaveIngestionInput = {
